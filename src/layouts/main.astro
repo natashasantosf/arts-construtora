@@ -1,0 +1,17 @@
+---
+import Head from "./head.astro"
+
+const { meta } = Astro.props;
+---
+<!doctype html>
+<html lang="en">
+	<head>
+		<Head {...meta} />
+	</head>
+	<body>
+		<slot />
+		<script>
+			import "@/utils/animation-classes";
+		</script>
+	</body>
+</html>
