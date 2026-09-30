@@ -1,0 +1,38 @@
+---
+import Container from "@/components/atoms/Container.astro";
+import Section from "@/components/atoms/Section.astro";
+import Chip from "@/components/atoms/Chip.astro";
+import Icon from "@/components/atoms/Icon.astro";
+import SectionHeading from "@/components/molecules/SectionHeading.astro";
+
+// Coverage teaser: city chips + link to the full coverage page.
+interface Props {
+  eyebrow?: string;
+  heading: string;
+  text?: string;
+  cities: string[];
+  link?: { label: string; href: string };
+  class?: string;
+}
+
+const { eyebrow, heading, text, cities, link, class: className } = Astro.props;
+---
+
+<Section tone="muted" class={className}>
+  <Container>
+    <SectionHeading eyebrow={eyebrow} heading={heading} text={text} textWidth="lg" class="mb-12" />
+    <div class="mx-auto grid max-w-4xl grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
+      {cities.map((city) => <Chip variant="city" icon="map-pin">{city}</Chip>)}
+    </div>
+    {
+      link && (
+        <div class="mt-8 text-center">
+          <a href={link.href} class="inline-flex items-center gap-2 font-bold text-primary hover:underline">
+            {link.label}
+            <Icon name="arrow-right" class="size-4" />
+          </a>
+        </div>
+      )
+    }
+  </Container>
+</Section>

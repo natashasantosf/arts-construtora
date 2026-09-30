@@ -1,0 +1,29 @@
+---
+import type { IconName } from "@/components/atoms/icons";
+import Container from "@/components/atoms/Container.astro";
+import Icon from "@/components/atoms/Icon.astro";
+
+// Dark strip of credentials right under the home hero.
+interface Props {
+  items: { icon: IconName; label: string }[];
+  id?: string;
+  class?: string;
+}
+
+const { items, id, class: className } = Astro.props;
+---
+
+<section id={id} class:list={["border-b border-inverse/5 bg-accent py-5", className]}>
+  <Container>
+    <div class="grid grid-cols-2 gap-6 text-center md:grid-cols-4">
+      {
+        items.map((item) => (
+          <div class="flex items-center justify-center gap-2 py-2 text-sm font-medium text-inverse/70">
+            <Icon name={item.icon} class="size-4 text-primary" />
+            {item.label}
+          </div>
+        ))
+      }
+    </div>
+  </Container>
+</section>

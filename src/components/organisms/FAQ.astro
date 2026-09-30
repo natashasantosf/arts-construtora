@@ -1,8 +1,8 @@
 ---
 import Container from "@/components/atoms/Container.astro";
-import Eyebrow from "@/components/atoms/Eyebrow.astro";
-import Heading from "@/components/atoms/Heading.astro";
+import Section from "@/components/atoms/Section.astro";
 import FaqItem from "@/components/molecules/FaqItem.astro";
+import SectionHeading from "@/components/molecules/SectionHeading.astro";
 
 interface Item {
   question: string;
@@ -19,16 +19,11 @@ interface Props {
 const { eyebrow, heading, items, class: className } = Astro.props;
 ---
 
-<section class:list={["py-16 md:py-24", className]}>
-  <Container size="md">
-    <div class="max-w-2xl space-y-4">
-      {eyebrow && <Eyebrow>{eyebrow}</Eyebrow>}
-      <Heading as="h2" size="2xl">
-        {heading}
-      </Heading>
-    </div>
-    <div class="mt-10 border-t border-border">
+<Section class={className}>
+  <Container size="sm">
+    <SectionHeading eyebrow={eyebrow} heading={heading} class="mb-16" />
+    <div class="space-y-2">
       {items.map((item) => <FaqItem question={item.question}>{item.answer}</FaqItem>)}
     </div>
   </Container>
-</section>
+</Section>

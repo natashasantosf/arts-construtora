@@ -1,0 +1,52 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "@/layouts/main.astro";
+import PageHero from "@/components/organisms/PageHero.astro";
+import LeadSection from "@/components/organisms/LeadSection.astro";
+import Services from "@/components/organisms/Services.astro";
+import CTASection from "@/components/organisms/CTASection.astro";
+import heroImage from "@/assets/heroes/page-servicos.jpg";
+import { whatsappUrl } from "@/data/site";
+
+const services = (await getCollection("services")).sort((a, b) => a.data.order - b.data.order);
+
+const meta = {
+  title: "Serviços Especializados",
+  description:
+    "Pintura predial, alpinismo, impermeabilização, reforma de fachadas, lavagem e instalação de revestimentos em Porto Alegre, Canoas e Região Metropolitana RS.",
+  img: { src: heroImage, alt: "Serviços Art's Construtora" },
+};
+---
+
+<Layout {meta}>
+  <PageHero image={heroImage} imageAlt="Serviços Art's Construtora" eyebrow="O que fazemos">
+    Serviços Especializados
+  </PageHero>
+
+  <LeadSection>
+    <p>
+      Da limpeza técnica à reforma completa de fachadas — executamos obras que exigem know-how técnico, equipamento
+      especializado e engenharia responsável. Cada serviço com ART, seguro de RC e garantia contratual.
+    </p>
+  </LeadSection>
+
+  <Services
+    spacing="md"
+    items={services.map((s) => ({
+      title: s.data.title,
+      description: s.data.summary,
+      icon: s.data.icon,
+      href: `/servicos/${s.id}`,
+    }))}
+    linkLabel="Ver detalhes"
+    cardHeadingAs="h2"
+    cardSize="lg"
+  />
+
+  <CTASection
+    size="sm"
+    heading="Não encontrou o que precisa?"
+    text="Entre em contato. Nossa equipe realiza uma avaliação técnica do local e desenvolve uma proposta personalizada para a sua demanda."
+    ctas={[{ label: "Falar com um Especialista", href: whatsappUrl(), icon: "whatsapp", external: true }]}
+  />
+</Layout>

@@ -1,0 +1,42 @@
+---
+import Container from "@/components/atoms/Container.astro";
+import Section from "@/components/atoms/Section.astro";
+import Button from "@/components/atoms/Button.astro";
+import Icon from "@/components/atoms/Icon.astro";
+import SectionHeading from "@/components/molecules/SectionHeading.astro";
+import FeatureItem from "@/components/molecules/FeatureItem.astro";
+
+// Dark split section: pitch + CTA on the left, feature tiles on the right.
+interface Props {
+  eyebrow?: string;
+  heading: string;
+  text?: string;
+  cta?: { label: string; href: string };
+  items: { title: string; description: string }[];
+  class?: string;
+}
+
+const { eyebrow, heading, text, cta, items, class: className } = Astro.props;
+---
+
+<Section tone="accent" class={className}>
+  <Container>
+    <div class="grid items-center gap-16 lg:grid-cols-2">
+      <div>
+        <SectionHeading eyebrow={eyebrow} heading={heading} align="left" tone="inverse" class="mb-6 [&_h2]:leading-tight" />
+        {text && <p class="mb-8 leading-relaxed text-inverse/60">{text}</p>}
+        {
+          cta && (
+            <Button as="a" href={cta.href} target="_blank" rel="noopener noreferrer">
+              <Icon name="whatsapp" class="size-4" />
+              {cta.label}
+            </Button>
+          )
+        }
+      </div>
+      <div class="motion-cards grid grid-cols-1 gap-4 sm:grid-cols-2">
+        {items.map((item) => <FeatureItem title={item.title}>{item.description}</FeatureItem>)}
+      </div>
+    </div>
+  </Container>
+</Section>

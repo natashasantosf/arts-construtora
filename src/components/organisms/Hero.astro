@@ -1,60 +1,119 @@
 ---
+import { Image } from "astro:assets";
+import type { ImageMetadata } from "astro";
 import Container from "@/components/atoms/Container.astro";
-import Eyebrow from "@/components/atoms/Eyebrow.astro";
 import Heading from "@/components/atoms/Heading.astro";
-import Text from "@/components/atoms/Text.astro";
 import Button from "@/components/atoms/Button.astro";
+import Icon from "@/components/atoms/Icon.astro";
 
 interface Cta {
   label: string;
   href: string;
+  external?: boolean;
 }
 
+// Full-screen home hero over a darkened photo.
 interface Props {
-  eyebrow?: string;
+  badge?: string;
   heading: string;
+  /** Second part of the heading, rendered in the primary color. */
+  highlight?: string;
   subheading?: string;
+  checks?: string[];
+  image: ImageMetadata;
+  imageAlt?: string;
   primaryCta?: Cta;
   secondaryCta?: Cta;
+  /** id of the element the bouncing arrow scrolls to */
+  nextSectionId?: string;
   class?: string;
 }
 
-const { eyebrow, heading, subheading, primaryCta, secondaryCta, class: className } = Astro.props;
+const {
+  badge,
+  heading,
+  highlight,
+  subheading,
+  checks = [],
+  image,
+  imageAlt = "",
+  primaryCta,
+  secondaryCta,
+  nextSectionId,
+  class: className,
+} = Astro.props;
 
-const hasMedia = Astro.slots.has("media");
+const ext = (cta?: Cta) => (cta?.external ? { target: "_blank", rel: "noopener noreferrer" } : {});
 ---
 
-<section class:list={["py-16 md:py-24", className]}>
-  <Container size="lg">
-    <div class:list={["grid gap-10", hasMedia && "md:grid-cols-2 md:items-center"]}>
-      <div class="motion-slide-up max-w-2xl space-y-6">
-        {eyebrow && <Eyebrow>{eyebrow}</Eyebrow>}
-        <Heading as="h1" size="4xl">{heading}</Heading>
-        {subheading && (
-          <Text size="lg" tone="muted">
-            {subheading}
-          </Text>
-        )}
-        {(primaryCta || secondaryCta) && (
-          <div class="flex flex-wrap gap-3">
+<section class:list={["relative flex min-h-screen items-center justify-center overflow-hidden", className]}>
+  <Image
+    src={image}
+    alt={imageAlt}
+    widths={[768, 1280, 1920]}
+    sizes="100vw"
+    loading="eager"
+    fetchpriority="high"
+    class="absolute inset-0 h-full w-full object-cover"
+  />
+  <div class="absolute inset-0 bg-gradient-to-r from-accent-deep/95 via-accent-deep/75 to-accent-deep/40"></div>
+
+  <Container class="relative pt-32 pb-20">
+    <div class="max-w-3xl">
+      {
+        badge && (
+          <div class="motion-slide-up mb-8 inline-flex items-center gap-2 border border-primary/40 bg-primary/20 px-4 py-2 text-xs font-bold tracking-widest text-primary uppercase">
+            {badge}
+          </div>
+        )
+      }
+      <Heading as="h1" size="display" tone="inverse" class="mb-6">
+        {heading}
+        {highlight && <span class="text-primary">{highlight}</span>}
+      </Heading>
+      {subheading && <p class="mb-4 max-w-2xl text-base leading-relaxed text-inverse/70 md:text-xl">{subheading}</p>}
+      {
+        checks.length > 0 && (
+          <div class="mb-10 flex flex-wrap gap-4">
+            {checks.map((check) => (
+              <div class="flex items-center gap-2 text-sm text-inverse/60">
+                <Icon name="circle-check" class="size-4 text-primary" />
+                {check}
+              </div>
+            ))}
+          </div>
+        )
+      }
+      {
+        (primaryCta || secondaryCta) && (
+          <div class="flex flex-col gap-4 sm:flex-row">
             {primaryCta && (
-              <Button as="a" href={primaryCta.href} size="lg">
+              <Button as="a" href={primaryCta.href} size="lg" class="group" {...ext(primaryCta)}>
+                <Icon name="whatsapp" class="size-5" />
                 {primaryCta.label}
+                <Icon name="arrow-right" class="size-4 transition-transform group-hover:translate-x-1" />
               </Button>
             )}
             {secondaryCta && (
-              <Button as="a" href={secondaryCta.href} size="lg" variant="outline">
+              <Button as="a" href={secondaryCta.href} size="lg" variant="outline-inverse" {...ext(secondaryCta)}>
                 {secondaryCta.label}
               </Button>
             )}
           </div>
-        )}
-      </div>
-      {hasMedia && (
-        <div>
-          <slot name="media" />
-        </div>
-      )}
+        )
+      }
     </div>
   </Container>
+
+  {
+    nextSectionId && (
+      <a
+        href={`#${nextSectionId}`}
+        aria-label="Rolar para a próxima seção"
+        class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce text-inverse/40 transition-colors hover:text-primary"
+      >
+        <Icon name="chevron-down" class="size-7" />
+      </a>
+    )
+  }
 </section>

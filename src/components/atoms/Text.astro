@@ -2,22 +2,30 @@
 import type { HTMLTag, Polymorphic } from "astro/types";
 
 type Props<Tag extends HTMLTag = "p"> = Polymorphic<{ as: Tag }> & {
-  size?: "sm" | "base" | "lg";
-  tone?: "default" | "muted";
+  size?: "xs" | "sm" | "base" | "lg" | "xl";
+  tone?: "default" | "muted" | "inverse" | "inverse-muted";
+  leading?: "normal" | "relaxed";
 };
 
 const {
   as: Tag = "p",
   size = "base",
-  tone = "default",
+  tone = "muted",
+  leading = "relaxed",
   class: className,
   ...rest
 } = Astro.props;
 
-const sizes = { sm: "text-sm", base: "text-base", lg: "text-lg" } as const;
-const tones = { default: "text-foreground", muted: "text-muted-foreground" } as const;
+const sizes = { xs: "text-xs", sm: "text-sm", base: "text-base", lg: "text-lg", xl: "text-base md:text-xl" } as const;
+// inverse tones are for copy on primary/accent bands (white at reduced opacity, as in the original).
+const tones = {
+  default: "text-foreground",
+  muted: "text-muted-foreground",
+  inverse: "text-inverse/80",
+  "inverse-muted": "text-inverse/60",
+} as const;
 ---
 
-<Tag class:list={["font-sans leading-relaxed", sizes[size], tones[tone], className]} {...rest}>
+<Tag class:list={["font-sans", leading === "relaxed" ? "leading-relaxed" : "leading-normal", sizes[size], tones[tone], className]} {...rest}>
   <slot />
 </Tag>

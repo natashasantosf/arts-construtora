@@ -1,0 +1,43 @@
+---
+import { Image } from "astro:assets";
+import type { ImageMetadata } from "astro";
+import Container from "@/components/atoms/Container.astro";
+import Section from "@/components/atoms/Section.astro";
+import Eyebrow from "@/components/atoms/Eyebrow.astro";
+
+// Company story: justified paragraphs beside a framed photo.
+interface Props {
+  eyebrow: string;
+  paragraphs: string[];
+  image: ImageMetadata;
+  imageAlt: string;
+  class?: string;
+}
+
+const { eyebrow, paragraphs, image, imageAlt, class: className } = Astro.props;
+---
+
+<Section spacing="lg" class:list={["overflow-hidden", className]}>
+  <Container>
+    <div class="grid items-center gap-16 md:grid-cols-2">
+      <div class="motion-slide-from-left">
+        <Eyebrow line class="mb-6">{eyebrow}</Eyebrow>
+        <div class="space-y-4 text-justify text-sm leading-relaxed text-muted-foreground">
+          {paragraphs.map((p) => <p>{p}</p>)}
+        </div>
+      </div>
+      <div class="motion-slide-from-right relative">
+        <div class="absolute -top-4 -right-4 z-0 h-full w-full border-2 border-primary/30" aria-hidden="true"></div>
+        <div class="relative z-10 overflow-hidden">
+          <Image
+            src={image}
+            alt={imageAlt}
+            widths={[640, 960]}
+            sizes="(min-width: 768px) 50vw, 100vw"
+            class="h-[420px] w-full object-cover object-center"
+          />
+        </div>
+      </div>
+    </div>
+  </Container>
+</Section>

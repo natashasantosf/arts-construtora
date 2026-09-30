@@ -1,70 +1,137 @@
 ---
+import type { IconName } from "@/components/atoms/icons";
 import Container from "@/components/atoms/Container.astro";
-import BrandMark from "@/components/atoms/BrandMark.astro";
+import Icon from "@/components/atoms/Icon.astro";
+import Logo from "@/components/atoms/Logo.astro";
 import SocialLinks from "@/components/molecules/SocialLinks.astro";
 
-interface Column {
-  title: string;
-  links: { label: string; href: string }[];
+
+interface Link {
+  label: string;
+  href: string;
 }
 
 interface Props {
-  columns?: Column[];
-  socialLinks?: { label: string; href: string }[];
+  siteName: string;
+  taglines: string[];
+  contacts: { icon: IconName; label: string; href?: string; external?: boolean }[];
+  social: { label: string; href: string; icon: IconName }[];
+  services: Link[];
+  areas: { title: string; primary: Link[]; secondaryTitle: string; secondary: Link[] };
+  guarantees: { icon: IconName; text: string }[];
+  bottom: string[];
   class?: string;
 }
 
-const { columns = [], socialLinks = [], class: className } = Astro.props;
-
-const year = new Date().getFullYear();
-const hasLogo = Astro.slots.has("logo");
+const { siteName, taglines, contacts, social, services, areas, guarantees, bottom, class: className } = Astro.props;
 ---
 
-<footer class:list={["border-t border-border bg-background", className]}>
-  <Container size="xl">
-    <div class="grid gap-10 py-12 md:grid-cols-[2fr_repeat(auto-fit,minmax(120px,1fr))]">
+<footer class:list={["bg-accent-deep text-accent-deep-foreground", className]}>
+  <Container class="pt-6 pb-16">
+    <div class="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-4">
       <div class="space-y-4">
-        <div class="flex items-center gap-2 font-semibold text-foreground">
+        <a href="/" class="block">
+          <Logo tone="inverse" alt={siteName} class="h-14 w-auto" />
+        </a>
+        <p class="text-sm leading-relaxed text-inverse/60">
+          {taglines.map((line, i) => (i ? [<br />, line] : line))}
+        </p>
+        <div class="space-y-3">
           {
-            hasLogo ? (
-              <slot name="logo" />
-            ) : (
-              <>
-                <BrandMark size="sm" />
-                <span>Site Name</span>
-              </>
-            )
+            contacts.map((item) => {
+              const Tag = item.href ? "a" : "div";
+              return (
+                <Tag
+                  href={item.href}
+                  target={item.external ? "_blank" : undefined}
+                  rel={item.external ? "noopener noreferrer" : undefined}
+                  class:list={[
+                    "flex gap-3 text-sm text-inverse/60",
+                    item.href ? "items-center transition-colors hover:text-primary" : "items-start",
+                  ]}
+                >
+                  <Icon name={item.icon} class={item.href ? "size-4 text-primary" : "mt-0.5 size-4 text-primary"} />
+                  {item.label}
+                </Tag>
+              );
+            })
           }
         </div>
-        <p class="max-w-sm text-sm text-muted-foreground">
-          <slot />
-        </p>
-        {socialLinks.length > 0 && <SocialLinks links={socialLinks} />}
+        <SocialLinks links={social} tone="inverse" />
       </div>
 
-      {
-        columns.map((col) => (
-          <div class="space-y-3">
-            <p class="text-sm font-medium text-foreground">{col.title}</p>
-            <ul class="space-y-2">
-              {col.links.map((link) => (
+      <div>
+        <h3 class="mb-6 border-b border-inverse/10 pb-3 text-sm font-bold tracking-widest text-inverse uppercase">
+          Nossos Serviços
+        </h3>
+        <ul class="space-y-2.5">
+          {
+            services.map((link) => (
+              <li>
+                <a href={link.href} class="group flex items-center gap-2 text-sm text-inverse/60 transition-colors hover:text-primary">
+                  <Icon name="chevron-right" class="size-3 text-primary opacity-0 transition-opacity group-hover:opacity-100" />
+                  {link.label}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="mb-6 border-b border-inverse/10 pb-3 text-sm font-bold tracking-widest text-inverse uppercase">
+          {areas.title}
+        </h3>
+        <div class="grid grid-cols-2 gap-x-4">
+          <ul class="space-y-2.5">
+            {
+              areas.primary.map((link) => (
                 <li>
-                  <a
-                    href={link.href}
-                    class="text-sm text-muted-foreground transition-colors hover:text-foreground"
-                  >
+                  <a href={link.href} class="flex items-center gap-1.5 text-sm text-inverse/60 transition-colors hover:text-primary">
+                    <Icon name="chevron-right" class="size-3 text-primary" />
                     {link.label}
                   </a>
                 </li>
-              ))}
-            </ul>
-          </div>
-        ))
-      }
-    </div>
+              ))
+            }
+          </ul>
+          <ul class="space-y-2.5 border-l border-inverse/10 pl-4">
+            <li class="pb-1 text-[10px] font-bold tracking-widest text-primary uppercase">{areas.secondaryTitle}</li>
+            {
+              areas.secondary.map((link) => (
+                <li>
+                  <a href={link.href} class="flex items-center gap-1.5 text-sm text-inverse/60 transition-colors hover:text-primary">
+                    <Icon name="chevron-right" class="size-3 text-primary" />
+                    {link.label}
+                  </a>
+                </li>
+              ))
+            }
+          </ul>
+        </div>
+      </div>
 
-    <div class="border-t border-border py-6 text-sm text-muted-foreground">
-      &copy; {year} Site Name. All rights reserved.
+      <div>
+        <h3 class="mb-6 border-b border-inverse/10 pb-3 text-sm font-bold tracking-widest text-inverse uppercase">
+          Nossas Garantias
+        </h3>
+        <div class="space-y-4">
+          {
+            guarantees.map((item) => (
+              <div class="flex items-start gap-3">
+                <Icon name={item.icon} class="mt-0.5 size-4 text-primary" />
+                <p class="text-sm leading-relaxed text-inverse/60">{item.text}</p>
+              </div>
+            ))
+          }
+        </div>
+      </div>
     </div>
   </Container>
+
+  <div class="border-t border-inverse/10 py-6">
+    <Container class="flex flex-col items-center justify-between gap-3 text-xs text-inverse/40 md:flex-row">
+      {bottom.map((line) => <p>{line}</p>)}
+    </Container>
+  </div>
 </footer>

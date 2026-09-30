@@ -1,0 +1,27 @@
+---
+import Container from "@/components/atoms/Container.astro";
+import Section from "@/components/atoms/Section.astro";
+
+// Side-by-side statement cards with a primary left rule (mission / vision).
+interface Props {
+  items: { title: string; text: string }[];
+  class?: string;
+}
+
+const { items, class: className } = Astro.props;
+---
+
+<Section tone="muted" spacing="lg" class:list={["border-y border-border", className]}>
+  <Container>
+    <div class="grid gap-8 md:grid-cols-2">
+      {
+        items.map((item) => (
+          <div class="border-l-4 border-primary bg-card p-8">
+            <h2 class="mb-4 text-xl font-black text-foreground">{item.title}</h2>
+            <p class="text-justify leading-relaxed text-muted-foreground">{item.text}</p>
+          </div>
+        ))
+      }
+    </div>
+  </Container>
+</Section>

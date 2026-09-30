@@ -1,0 +1,24 @@
+---
+import Container from "@/components/atoms/Container.astro";
+import Button from "@/components/atoms/Button.astro";
+import Icon from "@/components/atoms/Icon.astro";
+
+// Thin primary band with one sentence and a WhatsApp button.
+interface Props {
+  text: string;
+  cta: { label: string; href: string };
+  class?: string;
+}
+
+const { text, cta, class: className } = Astro.props;
+---
+
+<section class:list={["bg-primary py-5", className]}>
+  <Container class="flex flex-col items-center justify-between gap-4 sm:flex-row">
+    <p class="font-semibold text-inverse">{text}</p>
+    <Button as="a" href={cta.href} target="_blank" rel="noopener noreferrer" variant="secondary" size="base" class="shrink-0">
+      <Icon name="whatsapp" class="size-4" />
+      {cta.label}
+    </Button>
+  </Container>
+</section>

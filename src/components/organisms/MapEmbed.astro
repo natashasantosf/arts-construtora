@@ -1,0 +1,41 @@
+---
+import Container from "@/components/atoms/Container.astro";
+import Heading from "@/components/atoms/Heading.astro";
+
+// Google Maps iframe, optionally with a heading block (areas page) or edge-to-edge (contact page).
+interface Props {
+  src: string;
+  title: string;
+  heading?: string;
+  text?: string;
+  /** contained: inside the page container, 16:9 · wide: full width, 16:5 */
+  layout?: "contained" | "wide";
+  class?: string;
+}
+
+const { src, title, heading, text, layout = "contained", class: className } = Astro.props;
+---
+
+{
+  layout === "contained" ? (
+    <section class:list={["border-b border-border bg-background", className]}>
+      <Container class="py-12">
+        {heading && (
+          <div class="mb-8 text-center">
+            <Heading size="xl" class="mb-3">{heading}</Heading>
+            {text && <p class="text-muted-foreground">{text}</p>}
+          </div>
+        )}
+        <div class="aspect-video overflow-hidden border border-border">
+          <iframe src={src} title={title} class="h-full w-full border-0" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen />
+        </div>
+      </Container>
+    </section>
+  ) : (
+    <section class:list={["border-t border-border", className]}>
+      <div class="aspect-[16/5] overflow-hidden">
+        <iframe src={src} title={title} class="h-full w-full border-0" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen />
+      </div>
+    </section>
+  )
+}

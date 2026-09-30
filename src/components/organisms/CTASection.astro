@@ -1,45 +1,82 @@
 ---
-import Section from "@/components/atoms/Section.astro";
+import type { IconName } from "@/components/atoms/icons";
 import Container from "@/components/atoms/Container.astro";
+import Section from "@/components/atoms/Section.astro";
 import Heading from "@/components/atoms/Heading.astro";
-import Text from "@/components/atoms/Text.astro";
 import Button from "@/components/atoms/Button.astro";
+import Icon from "@/components/atoms/Icon.astro";
+
 
 interface Cta {
   label: string;
   href: string;
+  icon?: IconName;
+  external?: boolean;
 }
 
+// Closing call-to-action band. `primary` = green band (white buttons); `muted` = light band (green button).
 interface Props {
   heading: string;
   text?: string;
-  cta: Cta;
-  tone?: "default" | "primary";
+  ctas: Cta[];
+  icon?: IconName;
+  tone?: "primary" | "muted";
+  /** lg: home closing band · md: page closing band · sm: compact band */
+  size?: "lg" | "md" | "sm";
+  justifyText?: boolean;
   class?: string;
 }
 
-const { heading, text, cta, tone = "primary", class: className } = Astro.props;
+const { heading, text, ctas, icon, tone = "primary", size = "md", justifyText = false, class: className } = Astro.props;
+
+const spacing = { lg: "py-24", md: "py-20", sm: "py-16" } as const;
+const headingSize = { lg: "4xl", md: "3xl", sm: "2xl" } as const;
+const [first, second] = ctas;
+const ext = (cta: Cta) => (cta.external ? { target: "_blank", rel: "noopener noreferrer" } : {});
 ---
 
-<Section tone={tone} class={className}>
-  <Container size="md">
-    <div class="space-y-6 text-center">
-      <Heading as="h2" size="2xl">
+<Section
+  tone={tone}
+  spacing="none"
+  class:list={[spacing[size], "text-center", tone === "muted" && "border-t border-border", className]}
+>
+  <Container>
+    <div class="motion-slide-up">
+      {icon && <Icon name={icon} class="mx-auto mb-6 size-10 text-inverse/60" />}
+      <Heading size={headingSize[size]} tone={tone === "primary" ? "inverse" : "default"} class="mb-4">
         {heading}
       </Heading>
-      {text && (
-        <Text
-          size="lg"
-          tone={tone === "primary" ? "default" : "muted"}
-          class={tone === "primary" ? "opacity-90" : undefined}
-        >
-          {text}
-        </Text>
-      )}
-      <div>
-        <Button as="a" href={cta.href} size="lg" variant={tone === "primary" ? "secondary" : "primary"}>
-          {cta.label}
-        </Button>
+      {
+        text && (
+          <p
+            class:list={[
+              "mx-auto max-w-xl",
+              tone === "primary" ? "text-inverse/80" : "text-muted-foreground",
+              size === "lg" ? "mb-10 text-lg" : "mb-8",
+              justifyText && "text-justify",
+            ]}
+          >
+            {text}
+          </p>
+        )
+      }
+      <div class="flex flex-col justify-center gap-4 sm:flex-row">
+        {
+          first && (
+            <Button as="a" href={first.href} size="lg" variant={tone === "primary" ? "secondary" : "primary"} {...ext(first)}>
+              {first.icon && <Icon name={first.icon} class="size-5" />}
+              {first.label}
+            </Button>
+          )
+        }
+        {
+          second && (
+            <Button as="a" href={second.href} size="lg" variant="outline-inverse" {...ext(second)}>
+              {second.icon && <Icon name={second.icon} class="size-5" />}
+              {second.label}
+            </Button>
+          )
+        }
       </div>
     </div>
   </Container>

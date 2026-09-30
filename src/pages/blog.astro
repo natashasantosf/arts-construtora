@@ -1,0 +1,38 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "@/layouts/main.astro";
+import PageHero from "@/components/organisms/PageHero.astro";
+import TagBar from "@/components/organisms/TagBar.astro";
+import PostsSection from "@/components/organisms/PostsSection.astro";
+import heroImage from "@/assets/heroes/page-blog.jpg";
+
+// The original blog lists posts but has no article pages — cards are intentionally not links.
+const posts = (await getCollection("posts")).sort((a, b) => b.data.publishedAt.getTime() - a.data.publishedAt.getTime());
+const toCard = (p: (typeof posts)[number]) => ({
+  title: p.data.title,
+  category: p.data.category,
+  excerpt: p.data.excerpt,
+  date: p.data.publishedAt,
+  readingTime: p.data.readingTime,
+  image: p.data.image,
+  imageAlt: p.data.imageAlt,
+});
+const featured = posts.find((p) => p.data.featured);
+
+const meta = {
+  title: "Blog — Dicas Técnicas em Manutenção Predial",
+  description:
+    "Artigos técnicos sobre pintura predial, alpinismo, impermeabilização e manutenção de condomínios em Porto Alegre e RS — produzidos por engenheiros para síndicos e gestores.",
+  img: { src: heroImage, alt: "Blog Art's Construtora" },
+};
+---
+
+<Layout {meta}>
+  <PageHero image={heroImage} imageAlt="Blog Art's Construtora" eyebrow="Blog Técnico">
+    Conhecimento de Engenharia<br />para Síndicos e Gestores
+  </PageHero>
+
+  <TagBar tags={posts.map((p) => p.data.category)} />
+
+  <PostsSection featured={featured && toCard(featured)} posts={posts.filter((p) => p !== featured).map(toCard)} />
+</Layout>

@@ -1,29 +1,40 @@
 ---
+import type { IconName } from "@/components/atoms/icons";
+import Icon from "@/components/atoms/Icon.astro";
+
 interface Item {
   label: string;
   href: string;
+  icon: IconName;
 }
 
 interface Props {
   links: Item[];
+  /** inverse: for dark backgrounds (footer) */
+  tone?: "default" | "inverse";
+  size?: "sm" | "md";
   class?: string;
 }
 
-const { links, class: className } = Astro.props;
+const { links, tone = "default", size = "sm", class: className } = Astro.props;
 ---
 
-<ul class:list={["flex items-center gap-4", className]}>
+<ul class:list={["flex items-center", size === "sm" ? "gap-4" : "gap-3", className]}>
   {
-    links.map((link, i) => (
+    links.map((link) => (
       <li>
         <a
           href={link.href}
-          class="text-muted-foreground transition-colors hover:text-foreground"
           aria-label={link.label}
           target="_blank"
           rel="noopener noreferrer"
+          class:list={[
+            "flex items-center justify-center border transition-colors hover:border-primary hover:text-primary",
+            size === "sm" ? "size-9" : "size-10",
+            tone === "inverse" ? "border-inverse/20 text-inverse/60" : "border-border text-muted-foreground/80",
+          ]}
         >
-          <slot name={`icon-${i}`}>{link.label}</slot>
+          <Icon name={link.icon} class="size-4" />
         </a>
       </li>
     ))

@@ -8,14 +8,24 @@
 @custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
 
 @theme {
-  /* ---------- Fonts (system stack only — no webfonts) ---------- */
-  --font-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji";
+  /* ---------- Fonts ----------
+   * Montserrat is loaded by the Astro Fonts API (astro.config.mjs → --font-montserrat).
+   * The original site also requested Playfair Display but never rendered it, so it is not loaded.
+   */
+  --font-sans: var(--font-montserrat), ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas,
     "Liberation Mono", monospace;
 
-  /* ---------- Neutral scale (true gray, chroma 0) — single source of truth for surfaces ---------- */
+  /* ---------- Shape — the brand is square-cornered ---------- */
+  --radius-xs: 0;
+  --radius-sm: 0;
+  --radius-md: 0;
+  --radius-lg: 0;
+  --radius-xl: 0;
+  --radius-2xl: 0;
+
+  /* ---------- Neutral scale (true gray, chroma 0) ---------- */
   --color-neutral-50: oklch(98.5% 0 0);
   --color-neutral-100: oklch(97% 0 0);
   --color-neutral-200: oklch(92% 0 0);
@@ -29,29 +39,39 @@
   --color-neutral-950: oklch(12% 0 0);
 
   /* ---------- Base / surface roles (light mode = default values) ---------- */
-  --color-background: var(--color-neutral-50);
-  --color-foreground: var(--color-neutral-900);
+  --color-background: oklch(100% 0 0);
+  --color-foreground: oklch(34.8% 0 0); /* #3A3A3A — headings and strong text */
   --color-card: oklch(100% 0 0);
-  --color-card-foreground: var(--color-neutral-900);
-  --color-muted: var(--color-neutral-100);
-  --color-muted-foreground: var(--color-neutral-500);
-  --color-border: var(--color-neutral-200);
-  --color-ring: var(--color-neutral-400);
+  --color-card-foreground: oklch(34.8% 0 0);
+  --color-muted: oklch(98.5% 0.002 247.8); /* #F9FAFB — alternating light sections */
+  --color-muted-foreground: oklch(55.1% 0.023 264.4); /* #6B7280 — body copy */
+  --color-border: oklch(92.8% 0.006 264.5); /* #E5E7EB */
+  --color-ring: oklch(65.9% 0.148 131.9);
 
-  /*
-   * ---------- Semantic brand roles ----------
-   * Placeholder hues — this is the part a new project should reskin.
-   * Swap the hue angle (the 3rd oklch() number) and lightness/chroma to
-   * match a brand, keep the -foreground pairing legible against it.
-   */
-  --color-primary: oklch(58% 0.19 45);
-  --color-primary-foreground: oklch(99% 0.01 45);
+  /* ---------- Semantic brand roles ---------- */
+  --color-primary: oklch(65.9% 0.148 131.9); /* #6FA43A */
+  --color-primary-hover: oklch(53.8% 0.124 134.2); /* #4E7D2B */
+  --color-primary-foreground: oklch(100% 0 0);
 
-  --color-secondary: oklch(96% 0.02 45);
-  --color-secondary-foreground: oklch(26% 0.03 45);
+  /* Inverse action: white button with brand text, used on primary-colored bands */
+  --color-secondary: oklch(100% 0 0);
+  --color-secondary-hover: oklch(96.7% 0.003 264.5);
+  --color-secondary-foreground: oklch(65.9% 0.148 131.9);
 
-  --color-accent: oklch(30% 0.02 45);
-  --color-accent-foreground: oklch(97% 0.01 45);
+  /* Dark bands: top bar, "why us", testimonials, mobile menu */
+  --color-accent: oklch(29.7% 0 0); /* #2D2D2D */
+  --color-accent-foreground: oklch(100% 0 0);
+  /* Deepest surface: footer, hero overlays, timeline band */
+  --color-accent-deep: oklch(23.5% 0 0); /* #1E1E1E (≈ #222 / #1A1A1A) */
+  --color-accent-deep-foreground: oklch(100% 0 0);
+  /* Text/lines on any dark or primary band (used with opacity: text-inverse/70, border-inverse/10) */
+  --color-inverse: oklch(100% 0 0);
+  /* Photo overlays and translucent bars over images (used with opacity) */
+  --color-scrim: oklch(0% 0 0);
+
+  --color-rating: oklch(73.9% 0.121 88.9); /* #C9A646 — review stars */
+  --color-whatsapp: oklch(76.1% 0.201 149.7); /* #25D366 */
+  --color-whatsapp-foreground: oklch(100% 0 0);
 
   --color-success: oklch(60% 0.15 145);
   --color-success-foreground: oklch(98% 0.02 145);
@@ -65,23 +85,27 @@
 
 /* ---------- Dark-mode overrides — keyed off darkMode.astro's data-theme attribute ---------- */
 :root[data-theme="dark"] {
-  --color-background: var(--color-neutral-950);
-  --color-foreground: var(--color-neutral-100);
-  --color-card: var(--color-neutral-900);
-  --color-card-foreground: var(--color-neutral-100);
-  --color-muted: var(--color-neutral-800);
-  --color-muted-foreground: var(--color-neutral-400);
-  --color-border: var(--color-neutral-800);
-  --color-ring: var(--color-neutral-600);
+  --color-background: oklch(21.8% 0 0);
+  --color-foreground: oklch(95% 0 0);
+  --color-card: oklch(25.2% 0 0);
+  --color-card-foreground: oklch(95% 0 0);
+  --color-muted: oklch(19% 0 0);
+  --color-muted-foreground: oklch(72% 0.015 264);
+  --color-border: oklch(33% 0 0);
+  --color-ring: oklch(70% 0.148 131.9);
 
-  --color-primary: oklch(72% 0.17 45);
-  --color-primary-foreground: oklch(16% 0.02 45);
+  --color-primary: oklch(65.9% 0.148 131.9);
+  --color-primary-hover: oklch(72% 0.14 131.9);
+  --color-primary-foreground: oklch(100% 0 0);
 
-  --color-secondary: oklch(26% 0.03 45);
-  --color-secondary-foreground: oklch(92% 0.02 45);
+  --color-secondary: oklch(25.2% 0 0);
+  --color-secondary-hover: oklch(29.7% 0 0);
+  --color-secondary-foreground: oklch(72% 0.148 131.9);
 
-  --color-accent: oklch(55% 0.03 45);
-  --color-accent-foreground: oklch(97% 0.01 45);
+  --color-accent: oklch(17% 0 0);
+  --color-accent-foreground: oklch(95% 0 0);
+  --color-accent-deep: oklch(14% 0 0);
+  --color-accent-deep-foreground: oklch(95% 0 0);
 
   --color-success: oklch(70% 0.14 145);
   --color-success-foreground: oklch(15% 0.03 145);
@@ -97,5 +121,11 @@
 @layer base {
   body {
     @apply bg-background text-foreground font-sans antialiased;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply tracking-tight;
   }
 }

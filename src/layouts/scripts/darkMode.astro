@@ -1,6 +1,9 @@
 <script is:inline>
 // On page load or when changing themes, best to add inline in `head` to avoid FOUC
-if(localStorage.theme === "dark" || (!("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)){
+// FOLLOW_OS_BY_DEFAULT is off: the converted site had no dark mode, so it opens light
+// unless the visitor explicitly chooses dark (or respectOSPreference() is called).
+const FOLLOW_OS_BY_DEFAULT = false;
+if(localStorage.theme === "dark" || (FOLLOW_OS_BY_DEFAULT && !("theme" in localStorage) && window.matchMedia("(prefers-color-scheme: dark)").matches)){
     document.documentElement.dataset['theme'] = "dark"  
 }
 

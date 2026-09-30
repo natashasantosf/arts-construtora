@@ -1,33 +1,45 @@
 ---
+import { getCollection } from "astro:content";
 import Layout from "@/layouts/main.astro";
 import Container from "@/components/atoms/Container.astro";
 import Heading from "@/components/atoms/Heading.astro";
 import Text from "@/components/atoms/Text.astro";
 import Button from "@/components/atoms/Button.astro";
 import Badge from "@/components/atoms/Badge.astro";
+import Chip from "@/components/atoms/Chip.astro";
 import Divider from "@/components/atoms/Divider.astro";
 import Eyebrow from "@/components/atoms/Eyebrow.astro";
-import BrandMark from "@/components/atoms/BrandMark.astro";
+import Icon from "@/components/atoms/Icon.astro";
+import IconBox from "@/components/atoms/IconBox.astro";
+import Logo from "@/components/atoms/Logo.astro";
+import DividedGrid from "@/components/atoms/DividedGrid.astro";
+import { iconNames } from "@/components/atoms/icons";
 import Alert from "@/components/molecules/Alert.astro";
-import Card from "@/components/molecules/Card.astro";
-import Stat from "@/components/molecules/Stat.astro";
-import Testimonial from "@/components/molecules/Testimonial.astro";
 import Breadcrumbs from "@/components/molecules/Breadcrumbs.astro";
 import ThemeToggle from "@/components/molecules/ThemeToggle.astro";
-import FeatureGrid from "@/components/organisms/FeatureGrid.astro";
-import LogoCloud from "@/components/organisms/LogoCloud.astro";
-import Services from "@/components/organisms/Services.astro";
-import Process from "@/components/organisms/Process.astro";
-import Pricing from "@/components/organisms/Pricing.astro";
-import TestimonialsSection from "@/components/organisms/TestimonialsSection.astro";
-import FAQ from "@/components/organisms/FAQ.astro";
+import ServiceCard from "@/components/molecules/ServiceCard.astro";
+import ProjectCard from "@/components/molecules/ProjectCard.astro";
+import CheckItem from "@/components/molecules/CheckItem.astro";
+import ProcessStep from "@/components/molecules/ProcessStep.astro";
+import FaqItem from "@/components/molecules/FaqItem.astro";
+import FeatureItem from "@/components/molecules/FeatureItem.astro";
+import Stat from "@/components/molecules/Stat.astro";
+import Testimonial from "@/components/molecules/Testimonial.astro";
+import QuoteCard from "@/components/molecules/QuoteCard.astro";
+import InfoItem from "@/components/molecules/InfoItem.astro";
+import RegionCard from "@/components/molecules/RegionCard.astro";
+import SectionHeading from "@/components/molecules/SectionHeading.astro";
 import CTASection from "@/components/organisms/CTASection.astro";
+import { site, whatsappUrl } from "@/data/site";
 
 const meta = {
   title: "Design System",
-  description: "Tokens and components available in this template",
+  description: "Tokens e componentes do site da Art's Construtora",
   noindex: true,
 };
+
+const [featured] = await getCollection("featuredProjects");
+const [region] = await getCollection("regions");
 
 // Literal class strings on purpose — Tailwind's build-time scanner can only
 // see classes that appear as-written in source, not ones assembled from
@@ -36,7 +48,6 @@ const surfaceTokens = [
   { name: "background", class: "bg-background" },
   { name: "foreground", class: "bg-foreground" },
   { name: "card", class: "bg-card" },
-  { name: "card-foreground", class: "bg-card-foreground" },
   { name: "muted", class: "bg-muted" },
   { name: "muted-foreground", class: "bg-muted-foreground" },
   { name: "border", class: "bg-border" },
@@ -45,288 +56,174 @@ const surfaceTokens = [
 
 const brandTokens = [
   { name: "primary", class: "bg-primary" },
+  { name: "primary-hover", class: "bg-primary-hover" },
   { name: "primary-foreground", class: "bg-primary-foreground" },
   { name: "secondary", class: "bg-secondary" },
   { name: "secondary-foreground", class: "bg-secondary-foreground" },
   { name: "accent", class: "bg-accent" },
+  { name: "accent-deep", class: "bg-accent-deep" },
   { name: "accent-foreground", class: "bg-accent-foreground" },
 ];
 
-const feedbackTokens = [
+const extraTokens = [
+  { name: "rating", class: "bg-rating" },
+  { name: "whatsapp", class: "bg-whatsapp" },
   { name: "success", class: "bg-success" },
-  { name: "success-foreground", class: "bg-success-foreground" },
   { name: "warning", class: "bg-warning" },
-  { name: "warning-foreground", class: "bg-warning-foreground" },
   { name: "danger", class: "bg-danger" },
-  { name: "danger-foreground", class: "bg-danger-foreground" },
 ];
 
-const neutralRamp = [
-  { name: "50", class: "bg-neutral-50" },
-  { name: "100", class: "bg-neutral-100" },
-  { name: "200", class: "bg-neutral-200" },
-  { name: "300", class: "bg-neutral-300" },
-  { name: "400", class: "bg-neutral-400" },
-  { name: "500", class: "bg-neutral-500" },
-  { name: "600", class: "bg-neutral-600" },
-  { name: "700", class: "bg-neutral-700" },
-  { name: "800", class: "bg-neutral-800" },
-  { name: "900", class: "bg-neutral-900" },
-  { name: "950", class: "bg-neutral-950" },
-];
-
-const headingSizes = ["sm", "md", "lg", "xl", "2xl", "3xl", "4xl"] as const;
-const buttonVariants = ["primary", "secondary", "accent", "outline", "ghost", "danger"] as const;
-const buttonSizes = ["sm", "md", "lg"] as const;
-const badgeVariants = ["primary", "secondary", "accent", "success", "warning", "danger", "neutral"] as const;
-
-const features = [
-  { title: "Reskin in one file", description: "Every color a project needs lives in global.css — swap the OKLCH values and everything downstream updates." },
-  { title: "Composable by default", description: "Organisms are built from molecules, molecules from atoms — extend the set without breaking the pattern." },
-  { title: "No hidden dependencies", description: "class:list and typed Props only — no cva/clsx, no icon library, no extra runtime cost." },
-];
-
-// Example content for the service-site organisms below — placeholder data
-// to show each organism populated, not a real offering.
-const exampleServices = [
-  { title: "Service one", description: "A short description of what this service covers and who it's for.", href: "#" },
-  { title: "Service two", description: "Another service, with enough copy to show how the card wraps text.", href: "#" },
-  { title: "Service three", description: "A third example — swap these for whatever a project actually offers.", href: "#" },
-];
-
-const exampleProcess = [
-  { title: "Discover", description: "First step in the engagement — scope, constraints, goals." },
-  { title: "Design", description: "Second step — the shape of the solution before it's built." },
-  { title: "Build", description: "Third step — implementation, with checkpoints along the way." },
-  { title: "Support", description: "Fourth step — what happens after delivery." },
-];
-
-const examplePlans = [
-  { name: "Basic", price: "$X", period: "mo", features: ["Feature one", "Feature two"], ctaLabel: "Choose plan", ctaHref: "#" },
-  { name: "Pro", price: "$Y", period: "mo", features: ["Everything in Basic", "Feature three", "Feature four"], ctaLabel: "Choose plan", ctaHref: "#", featured: true },
-  { name: "Enterprise", price: "Custom", features: ["Everything in Pro", "Dedicated support"], ctaLabel: "Contact us", ctaHref: "#" },
-];
-
-const exampleFaqs = [
-  { question: "Example question one?", answer: "Example answer — FaqItem is a zero-JS <details>/<summary> disclosure, same pattern as the header's mobile nav." },
-  { question: "Example question two?", answer: "Each item is independent — open more than one at a time." },
-];
+const headingSizes = ["xs", "sm", "md", "lg", "xl", "2xl", "3xl", "4xl", "5xl", "6xl", "display"] as const;
+const lightButtons = ["primary", "outline", "accent", "ghost", "danger"] as const;
+const buttonSizes = ["sm", "base", "md", "lg"] as const;
+const badgeVariants = ["primary", "soft", "outline", "accent", "neutral"] as const;
 ---
 
 <Layout {meta}>
-  <Container size="xl" class="py-10">
-    <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Design system" }]} />
+  <Container class="py-10">
+    <Breadcrumbs items={[{ label: "Início", href: "/" }, { label: "Design system" }]} />
 
     <div class="mt-4 flex flex-wrap items-start justify-between gap-6">
       <div class="max-w-2xl space-y-2">
-        <Heading as="h1" size="3xl">Design system</Heading>
-        <Text tone="muted">
-          A live reference for the tokens and components defined in this template. Delete this
-          page once a project's design diverges from these defaults — it isn't linked from
-          production navigation.
+        <Heading as="h1" size="4xl">Design system</Heading>
+        <Text>
+          Referência viva dos tokens e componentes do site, convertidos do site original. Toda cor vem de
+          <code>src/styles/global.css</code>; todo bloco de página é um componente em <code>src/components</code>.
+          Esta página não é indexada nem aparece na navegação.
         </Text>
       </div>
-      <div class="flex gap-2">
-        <Button size="sm" variant="outline" onclick="setLightMode()">Light</Button>
-        <Button size="sm" variant="outline" onclick="setDarkMode()">Dark</Button>
-        <Button size="sm" variant="outline" onclick="respectOSPreference()">System</Button>
+      <div class="flex items-center gap-2">
+        <Button size="sm" variant="outline" onclick="setLightMode()">Claro</Button>
+        <Button size="sm" variant="outline" onclick="setDarkMode()">Escuro</Button>
+        <ThemeToggle />
       </div>
     </div>
   </Container>
 
   <Divider />
 
-  <Container size="xl" class="space-y-16 py-12">
+  <Container class="space-y-16 py-12">
     <section class="space-y-6">
-      <Heading as="h2" size="xl">Color tokens</Heading>
-
-      <div class="space-y-4">
-        <p class="text-sm font-medium text-muted-foreground">Surface &amp; text roles</p>
-        <div class="grid grid-cols-2 gap-4 sm:grid-cols-4 lg:grid-cols-8">
-          {surfaceTokens.map((token) => (
-            <div class="space-y-2">
-              <div class={`h-16 rounded-md border border-border ${token.class}`} />
-              <p class="text-xs text-muted-foreground">{token.name}</p>
+      <Heading size="xl">Cores</Heading>
+      {
+        [
+          { label: "Superfícies e texto", tokens: surfaceTokens },
+          { label: "Marca", tokens: brandTokens },
+          { label: "Complementares", tokens: extraTokens },
+        ].map((group) => (
+          <div class="space-y-3">
+            <p class="text-sm font-semibold text-muted-foreground">{group.label}</p>
+            <div class="grid grid-cols-2 gap-4 sm:grid-cols-4 lg:grid-cols-8">
+              {group.tokens.map((token) => (
+                <div class="space-y-2">
+                  <div class:list={["h-16 border border-border", token.class]} />
+                  <p class="text-xs text-muted-foreground">{token.name}</p>
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
-      </div>
+          </div>
+        ))
+      }
+    </section>
 
-      <div class="space-y-4">
-        <p class="text-sm font-medium text-muted-foreground">Brand roles</p>
-        <div class="grid grid-cols-2 gap-4 sm:grid-cols-4 lg:grid-cols-6">
-          {brandTokens.map((token) => (
-            <div class="space-y-2">
-              <div class={`h-16 rounded-md border border-border ${token.class}`} />
-              <p class="text-xs text-muted-foreground">{token.name}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      <div class="space-y-4">
-        <p class="text-sm font-medium text-muted-foreground">Feedback roles</p>
-        <div class="grid grid-cols-2 gap-4 sm:grid-cols-4 lg:grid-cols-6">
-          {feedbackTokens.map((token) => (
-            <div class="space-y-2">
-              <div class={`h-16 rounded-md border border-border ${token.class}`} />
-              <p class="text-xs text-muted-foreground">{token.name}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      <div class="space-y-4">
-        <p class="text-sm font-medium text-muted-foreground">Neutral ramp</p>
-        <div class="grid grid-cols-4 gap-4 sm:grid-cols-6 lg:grid-cols-11">
-          {neutralRamp.map((token) => (
-            <div class="space-y-2">
-              <div class={`h-16 rounded-md border border-border ${token.class}`} />
-              <p class="text-xs text-muted-foreground">{token.name}</p>
-            </div>
-          ))}
-        </div>
+    <section class="space-y-6">
+      <Heading size="xl">Marca</Heading>
+      <div class="flex flex-wrap items-center gap-8">
+        <Logo class="h-14 w-auto" />
+        <div class="bg-accent-deep p-4"><Logo tone="inverse" class="h-14 w-auto" /></div>
+        <Eyebrow>Eyebrow</Eyebrow>
+        <Eyebrow line>Eyebrow com linha</Eyebrow>
       </div>
     </section>
 
     <section class="space-y-6">
-      <Heading as="h2" size="xl">Brand</Heading>
-      <Text tone="muted">
-        The Eyebrow label, BrandMark and ThemeToggle are the three pieces that carry the
-        primary/accent tokens into real UI — swap the token values in global.css and all three
-        follow.
-      </Text>
-      <div class="flex flex-wrap items-center gap-8 rounded-lg border border-border bg-card p-6">
-        <div class="flex items-center gap-3">
-          <BrandMark size="lg" />
-          <span class="text-sm text-muted-foreground">BrandMark</span>
-        </div>
-        <div class="flex items-center gap-3">
-          <ThemeToggle />
-          <span class="text-sm text-muted-foreground">ThemeToggle (also in the header)</span>
-        </div>
-      </div>
-      <Eyebrow>This is an Eyebrow label</Eyebrow>
-    </section>
-
-    <section class="space-y-6">
-      <Heading as="h2" size="xl">Typography</Heading>
+      <Heading size="xl">Tipografia — Montserrat</Heading>
       <div class="space-y-3">
-        {headingSizes.map((size) => (
-          <Heading as="p" size={size}>{`Heading — ${size}`}</Heading>
-        ))}
+        {headingSizes.map((size) => <Heading as="p" size={size}>{`Heading ${size}`}</Heading>)}
+        <Heading as="p" size="md" weight="bold">Heading md, weight bold</Heading>
       </div>
-      <div class="space-y-2">
-        <Text size="lg">Text — lg, default tone</Text>
-        <Text size="base">Text — base, default tone</Text>
-        <Text size="sm">Text — sm, default tone</Text>
-        <Text size="base" tone="muted">Text — base, muted tone</Text>
+      <div class="max-w-2xl space-y-2">
+        <Text size="lg">Text lg — parágrafos de introdução.</Text>
+        <Text>Text base — corpo padrão, tom muted.</Text>
+        <Text size="sm" tone="default">Text sm, tom default.</Text>
       </div>
     </section>
 
     <section class="space-y-6">
-      <Heading as="h2" size="xl">Button</Heading>
-      <div class="space-y-4">
-        <p class="text-sm font-medium text-muted-foreground">Variants</p>
-        <div class="flex flex-wrap gap-3">
-          {buttonVariants.map((variant) => (
-            <Button variant={variant}>{variant}</Button>
-          ))}
-        </div>
-      </div>
-      <div class="space-y-4">
-        <p class="text-sm font-medium text-muted-foreground">Sizes</p>
-        <div class="flex flex-wrap items-center gap-3">
-          {buttonSizes.map((size) => (
-            <Button size={size}>{`size ${size}`}</Button>
-          ))}
-        </div>
-      </div>
-    </section>
-
-    <section class="space-y-6">
-      <Heading as="h2" size="xl">Badge</Heading>
+      <Heading size="xl">Botões</Heading>
       <div class="flex flex-wrap gap-3">
-        {badgeVariants.map((variant) => (
-          <Badge variant={variant}>{variant}</Badge>
+        {lightButtons.map((variant) => <Button variant={variant}>{variant}</Button>)}
+      </div>
+      <div class="flex flex-wrap gap-3 bg-primary p-6">
+        <Button variant="secondary">secondary</Button>
+        <Button variant="outline-inverse">outline-inverse</Button>
+      </div>
+      <div class="flex flex-wrap items-center gap-3">
+        {buttonSizes.map((size) => <Button size={size}>{`size ${size}`}</Button>)}
+      </div>
+    </section>
+
+    <section class="space-y-6">
+      <Heading size="xl">Badges, chips e ícones</Heading>
+      <div class="flex flex-wrap gap-3">
+        {badgeVariants.map((variant) => <Badge variant={variant}>{variant}</Badge>)}
+      </div>
+      <div class="flex flex-wrap gap-3">
+        <Chip>tag</Chip>
+        <Chip variant="city" icon="map-pin">city</Chip>
+        <Chip variant="small">small</Chip>
+      </div>
+      <div class="flex flex-wrap gap-4 text-foreground">
+        {iconNames.map((name) => (
+          <span class="flex w-24 flex-col items-center gap-1 text-center">
+            <Icon name={name} class="size-5" />
+            <span class="text-[10px] text-muted-foreground">{name}</span>
+          </span>
         ))}
       </div>
-    </section>
-
-    <section class="space-y-6">
-      <Heading as="h2" size="xl">Alert</Heading>
-      <div class="space-y-3">
-        <Alert variant="info" title="Info">Neutral, informational message.</Alert>
-        <Alert variant="success" title="Success">Something completed as expected.</Alert>
-        <Alert variant="warning" title="Warning">Worth a second look before continuing.</Alert>
-        <Alert variant="danger" title="Danger">Something needs attention now.</Alert>
+      <div class="flex gap-3">
+        <IconBox icon="hard-hat" />
+        <IconBox icon="map-pin" size="md" variant="solid" />
       </div>
     </section>
 
     <section class="space-y-6">
-      <Heading as="h2" size="xl">Card, Stat &amp; Testimonial</Heading>
-      <div class="grid gap-6 md:grid-cols-3">
-        <Card>
-          <Fragment slot="header">
-            <p class="font-medium text-foreground">Card header</p>
-          </Fragment>
-          <p class="text-sm text-muted-foreground">Card body content goes here, in the default slot.</p>
-          <Fragment slot="footer">
-            <p class="text-xs text-muted-foreground">Card footer</p>
-          </Fragment>
-        </Card>
-
-        <div class="flex items-center justify-around rounded-lg border border-border bg-card p-6">
-          <Stat value={128} label="Projects shipped" />
-        </div>
-
-        <Testimonial
-          quote="A sensible set of defaults we didn't have to think about twice."
-          name="Jordan Rivera"
-          role="Engineering Lead"
+      <Heading size="xl">Moléculas</Heading>
+      <SectionHeading eyebrow="SectionHeading" heading="Título de seção" text="Texto de apoio centralizado, como nas seções da home." />
+      <DividedGrid>
+        <div><ServiceCard title="ServiceCard com link" icon="paint-roller" href="#">Passe o mouse: o card inteiro assume a cor primária.</ServiceCard></div>
+        <div><ServiceCard title="ServiceCard sem link" icon="users" size="sm" justify>Variante usada nos valores da página Empresa.</ServiceCard></div>
+        {featured && <ProjectCard variant="overlay" title={featured.data.title} category={featured.data.category} image={featured.data.image} imageAlt={featured.data.imageAlt} />}
+      </DividedGrid>
+      <div class="grid gap-3 md:grid-cols-2">
+        <CheckItem>CheckItem — item de "O que está incluído"</CheckItem>
+        <ProcessStep index={1} title="ProcessStep">Etapa numerada de "Como trabalhamos".</ProcessStep>
+      </div>
+      <div class="grid gap-6 md:grid-cols-2">
+        <FaqItem question="FaqItem — pergunta?">Resposta em &lt;details&gt;, sem JavaScript.</FaqItem>
+        <InfoItem icon="phone" label="InfoItem"><p class="text-sm text-muted-foreground">{site.phone.display}</p></InfoItem>
+      </div>
+      <div class="grid gap-6 bg-accent p-6 md:grid-cols-2">
+        <FeatureItem title="FeatureItem">Tile para faixas escuras.</FeatureItem>
+        <Testimonial quote="Testimonial — depoimento com estrelas." name="Nome" role="Cargo" />
+      </div>
+      <div class="grid gap-6 md:grid-cols-2">
+        <div class="bg-primary py-8 text-primary-foreground"><Stat value="480+" label="Stat" /></div>
+        <QuoteCard
+          heading="QuoteCard"
+          text={site.quoteText}
+          whatsapp={{ label: "WhatsApp", href: whatsappUrl() }}
+          phone={{ label: site.phone.display, href: site.phone.href }}
         />
       </div>
+      {region && <DividedGrid cols="md2"><RegionCard {...region.data} /></DividedGrid>}
+      <Alert variant="info" title="Alert">Mantido do template para mensagens de sistema.</Alert>
     </section>
   </Container>
 
-  <div class="bg-muted">
-    <Container size="xl" class="space-y-2 pt-16 text-center md:pt-24">
-      <Heading as="h2" size="xl">Organisms compose the atoms and molecules above</Heading>
-      <Text tone="muted">
-        FeatureGrid, shown here with the same content as the homepage. Header and Footer wrap
-        every page (see the top and bottom of this one). The organisms below — aimed at a
-        services-business site — are shown with placeholder content so you can see them
-        populated; swap the data, not the markup.
-      </Text>
-    </Container>
-    <FeatureGrid items={features} class="bg-muted" />
-  </div>
-
-  <LogoCloud logos={["Example Co", "Another Inc", "Third Party", "Fourth LLC", "Fifth Group"]} />
-
-  <Services
-    heading="Services organism"
-    text="A grid of ServiceCard molecules, each with an optional link slot."
-    items={exampleServices}
+  <CTASection
+    heading="CTASection"
+    text="Organismos usados nas páginas: Hero, PageHero, TrustBar, Services, WhyUs, StatsSection, ProjectShowcase, CityGrid, TestimonialsSection, FAQ, CTASection, LeadSection, TagBar, ServiceDetail, ProjectGrid, PostsSection, RegionsGrid, CityColumns, MapEmbed, ContactStrip, ContactSection, AboutStory, MissionVision, Timeline."
+    ctas={[{ label: "Ver a home", href: "/" }]}
   />
-
-  <Process heading="Process organism" items={exampleProcess} class="bg-muted" />
-
-  <Pricing
-    heading="Pricing organism"
-    text="Three PricingCard molecules; the middle one shown with featured={true}."
-    plans={examplePlans}
-  />
-
-  <TestimonialsSection
-    items={[
-      { quote: "Example testimonial — swap for a real quote.", name: "Alex Doe", role: "Title, Company" },
-      { quote: "TestimonialsSection composes the Testimonial molecule.", name: "Sam Roe", role: "Title, Company" },
-    ]}
-    class="bg-muted"
-  />
-
-  <FAQ heading="FAQ organism" items={exampleFaqs} />
-
-  <CTASection heading="CTASection organism" text="tone defaults to primary." cta={{ label: "Example CTA", href: "#" }} />
 </Layout>

@@ -1,0 +1,22 @@
+---
+import { Image } from "astro:assets";
+import logo from "@/assets/brand/logo.png";
+import { site } from "@/data/site";
+
+interface Props {
+  /** "inverse" renders the logo white, for dark backgrounds (footer). */
+  tone?: "default" | "inverse";
+  alt?: string;
+  class?: string;
+}
+
+const { tone = "default", alt = `${site.name} — Porto Alegre RS`, class: className = "h-14 w-auto" } = Astro.props;
+---
+
+<Image
+  src={logo}
+  alt={alt}
+  height={112}
+  loading="eager"
+  class:list={["object-contain object-left", tone === "inverse" && "brightness-0 invert", className]}
+/>

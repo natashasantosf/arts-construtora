@@ -1,0 +1,107 @@
+---
+import { Image } from "astro:assets";
+import type { ImageMetadata } from "astro";
+import Badge from "@/components/atoms/Badge.astro";
+import Icon from "@/components/atoms/Icon.astro";
+
+// The original blog only lists posts (no article pages), so cards are not links.
+interface Props {
+  title: string;
+  category: string;
+  excerpt: string;
+  date: Date;
+  readingTime: string;
+  image: ImageMetadata;
+  imageAlt: string;
+  href?: string;
+  variant?: "featured" | "default";
+  class?: string;
+}
+
+const { title, category, excerpt, date, readingTime, image, imageAlt, href, variant = "default", class: className } =
+  Astro.props;
+
+const formattedDate = new Intl.DateTimeFormat("pt-BR", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" }).format(date);
+const Wrapper = href ? "a" : "article";
+---
+
+{
+  variant === "featured" ? (
+    <Wrapper
+      href={href}
+      class:list={[
+        "group grid cursor-pointer overflow-hidden border border-border bg-card transition-colors hover:border-primary md:grid-cols-2",
+        className,
+      ]}
+    >
+      {/* The original declared 800×500 on this <img>; that ratio (not the file's) set the card height. */}
+      <div class="h-64 overflow-hidden md:aspect-[8/5] md:h-auto">
+        <Image
+          src={image}
+          alt={imageAlt}
+          widths={[640, 960]}
+          sizes="(min-width: 768px) 50vw, 100vw"
+          class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+        />
+      </div>
+      <div class="flex flex-col justify-center p-8 lg:p-10">
+        <div class="mb-4 flex items-center gap-4">
+          <Badge>{category}</Badge>
+          <span class="flex items-center gap-1 text-xs text-muted-foreground/80">
+            <Icon name="calendar" class="size-3" />
+            {formattedDate}
+          </span>
+          <span class="flex items-center gap-1 text-xs text-muted-foreground/80">
+            <Icon name="clock" class="size-3" />
+            {readingTime}
+          </span>
+        </div>
+        <h2 class="mb-3 text-2xl leading-tight font-black text-foreground">{title}</h2>
+        <p class="mb-6 text-sm leading-relaxed text-muted-foreground">{excerpt}</p>
+        <span class="flex items-center gap-1 text-sm font-bold text-primary transition-all group-hover:gap-2">
+          Ler artigo completo
+          <Icon name="arrow-right" class="size-4" />
+        </span>
+      </div>
+    </Wrapper>
+  ) : (
+    <Wrapper
+      href={href}
+      class:list={["group cursor-pointer overflow-hidden bg-card transition-shadow hover:shadow-md", className]}
+    >
+      <div class="h-48 overflow-hidden">
+        <Image
+          src={image}
+          alt={imageAlt}
+          widths={[480, 800]}
+          sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+          class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+        />
+      </div>
+      <div class="p-6">
+        <div class="mb-3 flex items-center gap-3">
+          <span class="flex items-center gap-1 text-xs font-bold text-primary">
+            <Icon name="tag" class="size-3" />
+            {category}
+          </span>
+          <span class="flex items-center gap-1 text-xs text-muted-foreground/80">
+            <Icon name="clock" class="size-3" />
+            {readingTime}
+          </span>
+        </div>
+        <h2 class="mb-2 text-sm leading-tight font-bold text-foreground">{title}</h2>
+        <p class="mb-4 line-clamp-2 text-sm leading-relaxed text-muted-foreground/80">{excerpt}</p>
+        <div class="flex items-center justify-between">
+          <span class="flex items-center gap-1 text-xs text-muted-foreground/80">
+            <Icon name="calendar" class="size-3" />
+            {formattedDate}
+          </span>
+          <span class="flex items-center gap-1 text-xs font-bold text-primary">
+            Ler
+            <Icon name="arrow-right" class="size-3" />
+          </span>
+        </div>
+      </div>
+    </Wrapper>
+  )
+}

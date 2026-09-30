@@ -1,0 +1,22 @@
+---
+// Grid whose 1px gaps show the border color — the original site's signature
+// "hairline" card grid (cells must paint their own background).
+interface Props {
+  /** Column count per breakpoint: "3" = 1 → 2 (sm) → 3 (lg); "md3" = 1 → 3 (md); "md2" = 1 → 2 (md). */
+  cols?: "3" | "md3" | "md2";
+  tone?: "default" | "inverse";
+  class?: string;
+}
+
+const { cols = "3", tone = "default", class: className } = Astro.props;
+
+const layouts = {
+  "3": "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3",
+  md3: "grid-cols-1 md:grid-cols-3",
+  md2: "grid-cols-1 md:grid-cols-2",
+} as const;
+---
+
+<div class:list={["grid gap-px", tone === "inverse" ? "bg-inverse/5" : "bg-border", layouts[cols], className]}>
+  <slot />
+</div>

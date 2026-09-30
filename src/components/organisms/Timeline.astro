@@ -1,0 +1,50 @@
+---
+import Container from "@/components/atoms/Container.astro";
+import Section from "@/components/atoms/Section.astro";
+import Eyebrow from "@/components/atoms/Eyebrow.astro";
+import Heading from "@/components/atoms/Heading.astro";
+
+// Deep-toned story band with a giant watermark word and a two-column narrative.
+interface Props {
+  watermark: string;
+  eyebrow: string;
+  heading: string;
+  highlight?: string;
+  paragraphs: string[];
+  class?: string;
+}
+
+const { watermark, eyebrow, heading, highlight, paragraphs, class: className } = Astro.props;
+---
+
+<Section tone="deep" spacing="none" class:list={["relative overflow-hidden py-24", className]}>
+  <div class="pointer-events-none absolute inset-0 flex items-center justify-center overflow-hidden select-none" aria-hidden="true">
+    <span class="text-[18vw] leading-none font-black whitespace-nowrap text-inverse/[0.03] uppercase">{watermark}</span>
+  </div>
+  <div class="absolute top-0 right-0 left-0 h-1 bg-gradient-to-r from-transparent via-primary to-transparent"></div>
+
+  <Container size="md" class="relative">
+    <div class="mb-14">
+      <Eyebrow line class="mb-4">{eyebrow}</Eyebrow>
+      <Heading size="4xl" tone="inverse" class="leading-tight">
+        {heading}
+        {highlight && <><br /><span class="text-primary">{highlight}</span></>}
+      </Heading>
+    </div>
+    <div class="grid gap-x-12 gap-y-8 md:grid-cols-2">
+      {
+        paragraphs.map((p) => (
+          <div class="relative border-l border-primary/40 pl-5">
+            <p class="text-justify text-sm leading-relaxed text-inverse/65">{p}</p>
+          </div>
+        ))
+      }
+    </div>
+    <div class="mt-16 flex items-center gap-4" aria-hidden="true">
+      <div class="h-px flex-1 bg-gradient-to-r from-transparent to-primary/30"></div>
+      <div class="size-2 rotate-45 border border-primary/50"></div>
+      <div class="h-px flex-1 bg-gradient-to-l from-transparent to-primary/30"></div>
+    </div>
+  </Container>
+  <div class="absolute right-0 bottom-0 left-0 h-1 bg-gradient-to-r from-transparent via-primary to-transparent"></div>
+</Section>

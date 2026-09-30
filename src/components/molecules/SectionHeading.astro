@@ -1,0 +1,48 @@
+---
+import Eyebrow from "@/components/atoms/Eyebrow.astro";
+import Heading from "@/components/atoms/Heading.astro";
+import Text from "@/components/atoms/Text.astro";
+import type { ComponentProps } from "astro/types";
+
+// Eyebrow + h2 + lead, the header block that opens most sections of the site.
+interface Props {
+  eyebrow?: string;
+  heading: string;
+  text?: string;
+  size?: ComponentProps<typeof Heading>["size"];
+  align?: "center" | "left";
+  /** inverse: white heading and translucent copy for dark/primary bands */
+  tone?: "default" | "inverse";
+  textWidth?: "md" | "lg";
+  class?: string;
+}
+
+const {
+  eyebrow,
+  heading,
+  text,
+  size = "4xl",
+  align = "center",
+  tone = "default",
+  textWidth = "md",
+  class: className,
+} = Astro.props;
+---
+
+<div class:list={["motion-slide-up", align === "center" && "text-center", className]}>
+  {eyebrow && <Eyebrow class:list={["mb-3", align === "center" && "justify-center"]}>{eyebrow}</Eyebrow>}
+  <Heading size={size} tone={tone === "inverse" ? "inverse" : "default"} class={text ? "mb-4" : undefined}>
+    {heading}
+  </Heading>
+  {
+    text && (
+      <Text
+        tone={tone === "inverse" ? "inverse-muted" : "muted"}
+        leading="normal"
+        class:list={[align === "center" && "mx-auto", textWidth === "md" ? "max-w-xl" : "max-w-2xl"]}
+      >
+        {text}
+      </Text>
+    )
+  }
+</div>

@@ -1,41 +1,139 @@
 ---
+import { getCollection } from "astro:content";
 import Layout from "@/layouts/main.astro";
-import Header from "@/components/organisms/Header.astro";
 import Hero from "@/components/organisms/Hero.astro";
-import FeatureGrid from "@/components/organisms/FeatureGrid.astro";
-import Footer from "@/components/organisms/Footer.astro";
+import TrustBar from "@/components/organisms/TrustBar.astro";
+import Services from "@/components/organisms/Services.astro";
+import WhyUs from "@/components/organisms/WhyUs.astro";
+import StatsSection from "@/components/organisms/StatsSection.astro";
+import ProjectShowcase from "@/components/organisms/ProjectShowcase.astro";
+import CityGrid from "@/components/organisms/CityGrid.astro";
+import TestimonialsSection from "@/components/organisms/TestimonialsSection.astro";
+import FAQ from "@/components/organisms/FAQ.astro";
+import CTASection from "@/components/organisms/CTASection.astro";
+import heroImage from "@/assets/heroes/hero-home.png";
+import { site, whatsappUrl } from "@/data/site";
+
+const byOrder = <T extends { data: { order: number } }>(a: T, b: T) => a.data.order - b.data.order;
+const services = (await getCollection("services")).sort(byOrder);
+const featured = (await getCollection("featuredProjects")).sort(byOrder);
+const testimonials = (await getCollection("testimonials")).sort(byOrder);
+const faqs = (await getCollection("faqs")).sort(byOrder);
 
 const meta = {
-  title: "Home",
-  description: "A simple, semantic design system template for Astro + Tailwind.",
+  title: "Art's Construtora — Pintura Predial, Alpinismo e Manutenção em Porto Alegre",
+  fullTitle: true,
+  description:
+    "Especialistas em pintura predial, reforma de fachadas, alpinismo predial, impermeabilização e manutenção de condomínios em Porto Alegre, Canoas e Região Metropolitana RS.",
+  img: { src: heroImage, alt: "Art's Construtora" },
+  jsonLd: [
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: faqs.map((f) => ({
+        "@type": "Question",
+        name: f.data.question,
+        acceptedAnswer: { "@type": "Answer", text: f.data.answer },
+      })),
+    },
+  ],
 };
 
-const features = [
-  {
-    title: "Semantic tokens",
-    description: "Colors, surfaces and text roles are named by purpose, not by hue — reskin a project by editing a handful of values in global.css.",
-  },
-  {
-    title: "Atomic components",
-    description: "Atoms, molecules and organisms in src/components give every project the same building blocks and conventions to start from.",
-  },
-  {
-    title: "Dark mode built in",
-    description: "Every token has a light and dark value out of the box, wired to the existing data-theme toggle in the navbar — no extra setup required.",
-  },
+const whyUs = [
+  { title: "Engenharia Responsável", description: "Todos os projetos são executados com ART (Anotação de Responsabilidade Técnica) emitida por engenheiro civil registrado no CREA-RS." },
+  { title: "Alpinismo Industrial IRATA", description: "Equipe com certificação IRATA Levels 1, 2 e 3 — padrão internacional mais rigoroso para trabalho em altura. Segurança operacional em cada etapa." },
+  { title: "Seguro de Responsabilidade Civil", description: "Apólice de RC ativa em todas as obras, protegendo o patrimônio do condomínio e dos moradores contra imprevistos." },
+  { title: "Materiais de Linha Profissional", description: "Trabalhamos exclusivamente com Suvinil, Coral Predial, Sika, Vedacit e Mapei — marcas líderes com garantia estendida e acabamento premium." },
+  { title: "Planejamento e Cumprimento de Prazos", description: "Cronograma detalhado entregue antes do início, com gestão de obra eficiente e controle rigoroso de qualidade em todas as etapas." },
+  { title: "Transparência e Relatórios", description: "Relatório fotográfico semanal enviado ao síndico. Atendimento personalizado com comunicação direta com o responsável técnico da obra." },
+];
+
+const stats = [
+  { value: "100%", label: "Compromisso com a Qualidade" },
+  { value: "480+", label: "Projetos Entregues" },
+  { value: "12", label: "Cidades Atendidas" },
+  { value: "98%", label: "Clientes Satisfeitos" },
 ];
 ---
 
-<Layout {meta}>
-  <Header ctaLabel="Explore the design system" ctaHref="/design-system" />
-
+<Layout {meta} transparentHeader>
   <Hero
-    heading="A simple, semantic design system"
-    subheading="Design tokens, atomic components and dark mode — a clean foundation for your next project, not a finished design. This homepage is deliberately plain; the real reference lives on the design system page."
-    primaryCta={{ label: "Explore the design system", href: "/design-system" }}
+    badge={site.regionTagline}
+    heading="Engenharia de Alto Padrão para "
+    highlight="Fachadas e Manutenção Predial"
+    subheading="Especialistas em construção civil, reformas, manutenção predial, fachadas e acabamentos de alto padrão, com foco em qualidade, segurança e valorização patrimonial."
+    checks={["ART de Engenheiro", "Equipe Certificada IRATA", "Seguro de RC"]}
+    image={heroImage}
+    primaryCta={{ label: "Solicitar Orçamento", href: whatsappUrl(), external: true }}
+    secondaryCta={{ label: "Ver Nossos Serviços", href: "/servicos" }}
+    nextSectionId="credenciais"
   />
 
-  <FeatureGrid items={features} class="bg-muted" />
+  <TrustBar
+    id="credenciais"
+    items={[
+      { icon: "award", label: "Equipe Certificada IRATA" },
+      { icon: "shield", label: "Seguro RC em Todas as Obras" },
+      { icon: "award", label: "ART de Engenheiro CREA-RS" },
+      { icon: "clock", label: "Prazo Contratual Garantido" },
+    ]}
+  />
 
-  <Footer>A simple, semantic design system template for Astro + Tailwind.</Footer>
+  <Services
+    eyebrow="O que fazemos"
+    heading="Serviços Especializados"
+    text="Da manutenção preventiva à reforma completa de fachadas — executamos obras técnicas que exigem certificação, engenharia e equipamento especializado."
+    items={services.map((s) => ({
+      title: s.data.title,
+      description: s.data.summary,
+      icon: s.data.icon,
+      href: `/servicos/${s.id}`,
+    }))}
+    cta={{ label: "Ver Todos os Serviços", href: "/servicos" }}
+  />
+
+  <WhyUs
+    eyebrow="Por que nos escolher"
+    heading="A diferença entre uma empresa séria e uma promessa vazia"
+    text="Condomínios e gestores de grandes edifícios escolhem a Art's Construtora porque, em serviços de alto risco a 30 andares, não existe segunda chance para errar. Somos a escolha de quem não quer surpresas."
+    cta={{ label: "Falar com um Engenheiro", href: whatsappUrl() }}
+    items={whyUs}
+  />
+
+  <StatsSection items={stats} />
+
+  <ProjectShowcase
+    eyebrow="Portfólio"
+    heading="Projetos em Destaque"
+    text="Projetos executados com excelência, qualidade construtiva e rigor técnico em condomínios, empresas, indústrias e empreendimentos de alto padrão no Rio Grande do Sul e Santa Catarina."
+    items={featured.map((p) => ({ title: p.data.title, category: p.data.category, image: p.data.image, imageAlt: p.data.imageAlt }))}
+    cta={{ label: "Ver Todos os Projetos", href: "/projetos" }}
+  />
+
+  <CityGrid
+    eyebrow="Cobertura"
+    heading="Áreas Atendidas"
+    text="Grande Porto Alegre, Serra Gaúcha (Gramado e Canela), Litoral Norte RS (Xangri-Lá, Capão da Canoa e Torres) e Santa Catarina (Balneário Camboriú, Florianópolis, Itapema, Porto Belo e Bombinhas)."
+    cities={[...site.featuredCities.rs, ...site.featuredCities.sc]}
+    link={{ label: "Ver cobertura completa", href: "/areas-atendidas" }}
+  />
+
+  <TestimonialsSection
+    eyebrow="Depoimentos"
+    heading="O que dizem nossos clientes"
+    items={testimonials.map((t) => t.data)}
+  />
+
+  <FAQ eyebrow="FAQ" heading="Perguntas Frequentes" items={faqs.map((f) => f.data)} />
+
+  <CTASection
+    size="lg"
+    icon="users"
+    heading="Solicite um Orçamento"
+    text={site.quoteText}
+    ctas={[
+      { label: "Chamar no WhatsApp", href: whatsappUrl(), icon: "whatsapp", external: true },
+      { label: site.phone.display, href: site.phone.href, icon: "phone" },
+    ]}
+  />
 </Layout>

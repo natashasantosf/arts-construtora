@@ -1,0 +1,26 @@
+[
+  {
+    "id": "depoimento-1",
+    "order": 1,
+    "rating": 5,
+    "quote": "A Art's reformou toda a fachada do nosso edifício de 18 andares. Profissionalismo impecável, equipe certificada e entregaram antes do prazo. É o tipo de empresa que você recomenda sem hesitar para qualquer síndico.",
+    "name": "Carlos A.",
+    "role": "Síndico — Condomínio Residencial"
+  },
+  {
+    "id": "depoimento-2",
+    "order": 2,
+    "rating": 5,
+    "quote": "Contratamos a impermeabilização da cobertura com todos os requisitos técnicos exigidos. Laudo de engenharia, ART, garantia de 5 anos e zero transtornos. Parceiros de longo prazo.",
+    "name": "Daniela F.",
+    "role": "Gestora de Facilities — Empresa"
+  },
+  {
+    "id": "depoimento-3",
+    "order": 3,
+    "rating": 5,
+    "quote": "Reforma e restauração das fachadas externas sem interrupção das atividades. A equipe de alpinismo é profissional de verdade. Resultado visual impecável. Recomendo.",
+    "name": "Rodrigo M.",
+    "role": "Administrador de Imóvel Comercial"
+  }
+]

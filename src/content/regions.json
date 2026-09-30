@@ -1,0 +1,54 @@
+[
+  {
+    "id": "grande-porto-alegre",
+    "order": 1,
+    "name": "Grande Porto Alegre",
+    "status": "Atendido",
+    "description": "Nossa base principal de operações. Atendemos toda a Grande Porto Alegre com equipes locais, frota própria e prioridade de resposta em até 2 horas.",
+    "cities": [
+      "Porto Alegre",
+      "Canoas",
+      "Gravataí",
+      "Novo Hamburgo"
+    ]
+  },
+  {
+    "id": "serra-gaucha",
+    "order": 2,
+    "name": "Serra Gaúcha",
+    "status": "Atendido",
+    "description": "Atendemos a Serra Gaúcha com especialidade em manutenção de edifícios e condomínios de alto padrão nas cidades turísticas da região.",
+    "cities": [
+      "Gramado",
+      "Canela",
+      "Nova Petrópolis"
+    ]
+  },
+  {
+    "id": "litoral-norte-gaucho",
+    "order": 3,
+    "name": "Litoral Norte Gaúcho",
+    "status": "Atendido",
+    "description": "Cobertura completa no litoral norte do RS, com foco em manutenção e pintura de edifícios residenciais de temporada e condomínios à beira-mar.",
+    "cities": [
+      "Xangri-Lá",
+      "Capão da Canoa",
+      "Torres"
+    ]
+  },
+  {
+    "id": "santa-catarina",
+    "order": 4,
+    "name": "Santa Catarina",
+    "status": "Atendido",
+    "description": "Atendemos todo o estado de Santa Catarina com deslocamento programado de equipes para obras de médio e grande porte.",
+    "cities": [
+      "Balneário Camboriú",
+      "Florianópolis",
+      "Itapema",
+      "Porto Belo",
+      "Bombinhas",
+      "Passo de Torres"
+    ]
+  }
+]

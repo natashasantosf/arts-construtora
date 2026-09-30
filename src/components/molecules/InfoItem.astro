@@ -1,0 +1,23 @@
+---
+import type { IconName } from "@/components/atoms/icons";
+import Icon from "@/components/atoms/Icon.astro";
+
+// Icon + label + value row (contact details).
+interface Props {
+  icon: IconName;
+  label: string;
+  class?: string;
+}
+
+const { icon, label, class: className } = Astro.props;
+---
+
+<div class:list={["flex items-start gap-4", className]}>
+  <div class="flex size-8 shrink-0 items-center justify-center bg-primary/10">
+    <Icon name={icon} class="size-4 text-primary" />
+  </div>
+  <div>
+    <div class="mb-0.5 text-sm font-semibold text-foreground">{label}</div>
+    <slot />
+  </div>
+</div>

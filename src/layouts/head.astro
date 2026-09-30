@@ -1,22 +1,44 @@
 ---
 import '@/styles/global.css'
+import { Font, getImage } from "astro:assets";
+import type { ImageMetadata } from "astro";
 import Posthog from "./scripts/posthog.astro";
 import DarkMode from './scripts/darkMode.astro';
 import ForwardQueryString from './scripts/forwardQueryString.astro';
+import JsonLd from "@/components/atoms/JsonLd.astro";
+import { site } from "@/data/site";
+import { publicPath } from "@/utils/paths";
+import defaultSocialImage from "@/assets/heroes/hero-home.png";
+import favicon from "@/assets/brand/logo.png";
 
-const siteName = import.meta.env.SITE_NAME || "Astro Design System";
+interface Props {
+    title?: string;
+    /** Use `title` verbatim instead of appending " | {siteName}". */
+    fullTitle?: boolean;
+    description?: string;
+    noindex?: boolean;
+    nofollow?: boolean;
+    canonical?: string;
+    img?: { src: ImageMetadata; alt: string };
+    ogType?: string;
+    jsonLd?: Record<string, unknown>[];
+}
 
-const { 
+const siteName = import.meta.env.SITE_NAME || site.name;
+
+const {
     title = siteName,
-    description = "Metadescription",
+    fullTitle = false,
+    description = "",
     noindex = false,
     nofollow = false,
-    canonical = String(new URL( Astro.url.pathname, Astro.site)),
-    img = {src:"/social.webp", alt: title},
-    ogType = "website"
-} = Astro.props 
+    canonical = String(new URL(publicPath(Astro.url.pathname), Astro.site)),
+    img = { src: defaultSocialImage, alt: title },
+    ogType = "website",
+    jsonLd = [],
+} = Astro.props
 
-const pageTitle = title === siteName ? title : `${title} | ${siteName}`
+const pageTitle = fullTitle || title === siteName ? title : `${title} | ${siteName}`
 
 let robots =  'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'
 if (noindex){
@@ -25,6 +47,10 @@ if (noindex){
   robots = "index, nofollow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
 }
 
+// Social cards need an absolute URL to a 1200×630 image.
+const social = await getImage({ src: img.src, width: 1200, height: 630, fit: "cover", format: "jpg" });
+const socialImage = String(new URL(social.src, Astro.site));
+const faviconPng = await getImage({ src: favicon, width: 64, format: "png" });
 ---
 
 <meta charset="UTF-8" />
@@ -35,34 +61,34 @@ if (noindex){
 <meta name="robots" content={robots} />
 <link rel="canonical" href={canonical} />
 
+<Font cssVariable="--font-montserrat" preload />
+
 <!-- Open Graph -->
 <meta property="og:site_name" content={siteName} />
+<meta property="og:locale" content={site.ogLocale} />
 <meta property="og:type" content={ogType} />
-<meta property="og:title" content={title} />
+<meta property="og:title" content={pageTitle} />
 <meta property="og:description" content={description} />
 <meta property="og:url" content={canonical} />
-<meta property="og:image" content={img.src} />
+<meta property="og:image" content={socialImage} />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
 <meta property="og:image:alt" content={img.alt} />
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image" />
-<!-- <meta name="twitter:image" content={img.src} />
-<meta name="twitter:image:alt" content={img.alt} /> -->
-<!-- The og:image should work -->
+<meta name="twitter:title" content={pageTitle} />
+<meta name="twitter:description" content={description} />
+<!-- twitter:image falls back to og:image -->
 <!-- Rererence: https://developer.x.com/en/docs/x-for-websites/cards/guides/getting-started -->
 
 <!-- Favicons -->
-<!-- <link rel="icon" sizes="32x32" href="/favicon.ico"> -->
-<link rel="icon" type="image/svg+xml" href="/favicon.svg">
-<!-- <link rel="manifest" href="/favicons/site.webmanifest" crossorigin="use-credentials" />
-<link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
-<link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#0079c1" /> -->
-<!-- <meta name="msapplication-TileColor" content="#ffffff" />
-<meta name="theme-color" content="#ffffff" /> -->
+<link rel="icon" type="image/png" href={faviconPng.src} />
 <!-- Learn more at https://evilmartians.com/chronicles/how-to-favicon-in-2021-six-files-that-fit-most-needs and https://dev.to/masakudamatsu/favicon-nightmare-how-to-maintain-sanity-3al7 -->
 
 <meta name="generator" content={Astro.generator} />
-<!-- <link rel="sitemap" href="/sitemap-index.xml"> -->
+
+{jsonLd.map((data) => <JsonLd data={data} />)}
 
 <ForwardQueryString />
 <Posthog />

@@ -1,0 +1,75 @@
+---
+import Container from "@/components/atoms/Container.astro";
+import Section from "@/components/atoms/Section.astro";
+import Heading from "@/components/atoms/Heading.astro";
+import Icon from "@/components/atoms/Icon.astro";
+import CheckItem from "@/components/molecules/CheckItem.astro";
+import ProcessStep from "@/components/molecules/ProcessStep.astro";
+import QuoteCard from "@/components/molecules/QuoteCard.astro";
+
+// Body of a service page: description (slot), inclusions, process steps and a sticky quote sidebar.
+interface Props {
+  included: string[];
+  steps: { title: string; description: string }[];
+  quote: { heading: string; text: string; whatsappHref: string; phone: { label: string; href: string } };
+  otherServices: { label: string; href: string }[];
+  class?: string;
+}
+
+const { included, steps, quote, otherServices, class: className } = Astro.props;
+---
+
+<Section spacing="lg" class={className}>
+  <Container>
+    <div class="grid gap-12 lg:grid-cols-3">
+      <div class="space-y-12 lg:col-span-2">
+        <div class="motion-slide-up">
+          <Heading size="xl" class="mb-4">Sobre o Serviço</Heading>
+          <div class="space-y-4 text-base leading-relaxed text-muted-foreground">
+            <slot />
+          </div>
+        </div>
+
+        <div>
+          <Heading size="lg" class="mb-6">O que está incluído</Heading>
+          <div class="grid gap-3 sm:grid-cols-2">
+            {included.map((item) => <CheckItem>{item}</CheckItem>)}
+          </div>
+        </div>
+
+        <div>
+          <Heading size="lg" class="mb-6">Como trabalhamos</Heading>
+          <div class="space-y-3">
+            {steps.map((step, i) => <ProcessStep index={i + 1} title={step.title}>{step.description}</ProcessStep>)}
+          </div>
+        </div>
+      </div>
+
+      <aside class="space-y-6">
+        <QuoteCard
+          sticky
+          heading={quote.heading}
+          text={quote.text}
+          whatsapp={{ label: "WhatsApp", href: quote.whatsappHref }}
+          phone={quote.phone}
+        />
+        <div class="border border-border p-6">
+          <h3 class="mb-4 text-sm font-bold tracking-widest text-foreground uppercase">Outros Serviços</h3>
+          <div class="space-y-1">
+            {
+              otherServices.map((link) => (
+                <a
+                  href={link.href}
+                  class="flex items-center gap-2 border-b border-border py-2 text-sm text-muted-foreground transition-colors last:border-0 hover:text-primary"
+                >
+                  <Icon name="arrow-right" class="size-3 text-primary" />
+                  {link.label}
+                </a>
+              ))
+            }
+          </div>
+        </div>
+      </aside>
+    </div>
+  </Container>
+</Section>

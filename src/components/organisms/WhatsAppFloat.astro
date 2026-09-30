@@ -1,0 +1,29 @@
+---
+import Icon from "@/components/atoms/Icon.astro";
+
+interface Props {
+  href: string;
+  tooltip?: string;
+}
+
+const { href, tooltip = "Solicitar orçamento" } = Astro.props;
+---
+
+<a
+  href={href}
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Falar no WhatsApp"
+  class="group fixed right-6 bottom-6 z-[60] flex size-14 items-center justify-center rounded-full focus:ring-4 focus:ring-whatsapp/40 focus:outline-none"
+>
+  <span class="absolute inset-0 animate-ping rounded-full bg-whatsapp opacity-30" aria-hidden="true"></span>
+  <span class="relative flex size-14 items-center justify-center rounded-full bg-whatsapp text-whatsapp-foreground shadow-[0_4px_20px_0_color-mix(in_oklab,var(--color-whatsapp)_45%,transparent),0_2px_8px_0_rgb(0_0_0/0.25)]">
+    <Icon name="whatsapp-bubble" class="size-7" />
+  </span>
+  <span
+    class="pointer-events-none absolute right-full mr-4 hidden items-center gap-2 rounded-sm bg-accent-deep px-4 py-2 text-sm font-semibold whitespace-nowrap text-inverse opacity-0 shadow-xl transition-opacity duration-200 group-hover:opacity-100 md:flex"
+  >
+    <Icon name="whatsapp" class="size-4" />
+    {tooltip}
+  </span>
+</a>

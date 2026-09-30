@@ -1,0 +1,88 @@
+---
+import Layout from "@/layouts/main.astro";
+import PageHero from "@/components/organisms/PageHero.astro";
+import AboutStory from "@/components/organisms/AboutStory.astro";
+import MissionVision from "@/components/organisms/MissionVision.astro";
+import Services from "@/components/organisms/Services.astro";
+import Timeline from "@/components/organisms/Timeline.astro";
+import CTASection from "@/components/organisms/CTASection.astro";
+import heroImage from "@/assets/heroes/page-empresa.jpg";
+import storyImage from "@/assets/pages/empresa-institucional.png";
+import { whatsappUrl } from "@/data/site";
+
+const meta = {
+  title: "Empresa — Quem Somos",
+  description:
+    "Conheça a Art's Construtora: experiência em manutenção predial, alpinismo, pintura e impermeabilização em Porto Alegre e Região Metropolitana RS.",
+  img: { src: storyImage, alt: "Art's Construtora — Sede e Operações" },
+};
+
+const story = [
+  "A Art's Construtora é especializada em reformas prediais, pintura predial, manutenção de fachadas e acabamentos de alto padrão, oferecendo soluções completas para condomínios, empresas, indústrias e clientes residenciais.",
+  "Nossa atuação é baseada em planejamento, qualidade e compromisso em cada etapa da obra. Desenvolvemos projetos com foco na durabilidade das soluções, na valorização do patrimônio e na excelência da execução, sempre respeitando os mais elevados padrões técnicos e de segurança.",
+  "Contamos com uma equipe qualificada e preparada para conduzir cada projeto com eficiência, desde a avaliação técnica e o planejamento até a entrega final, garantindo organização, transparência e cumprimento dos prazos estabelecidos.",
+  "Também somos especialistas em acabamentos de alto padrão, executando serviços em porcelanatos, granitos e pedras naturais, agregando sofisticação, resistência e valorização aos ambientes.",
+  "Na Art's Construtora, acreditamos que cada obra representa um compromisso com a confiança dos nossos clientes. Por isso, conduzimos cada projeto com responsabilidade, precisão técnica e atenção aos detalhes, entregando soluções que unem estética, desempenho e resultados duradouros.",
+];
+
+const values = [
+  { icon: "users", title: "Foco no Cliente", description: "O cliente é a razão da nossa existência e a base de todas as nossas decisões. Atendimento personalizado e comunicação direta em cada etapa." },
+  { icon: "shield", title: "Compromisso e Ética", description: "Atuamos com transparência, responsabilidade e respeito em todas as etapas do projeto — do orçamento à entrega com documentação completa." },
+  { icon: "award", title: "Valorização das Pessoas", description: "Acreditamos que equipes qualificadas são o principal ativo para alcançar resultados extraordinários. Investimos continuamente em capacitação e segurança." },
+  { icon: "circle-check", title: "Confiabilidade", description: "Mantemos o mesmo padrão de excelência, mesmo diante de desafios e situações imprevistas. Cumprimento de prazos e garantia contratual em cada serviço." },
+  { icon: "building", title: "Responsabilidade Social", description: "Contribuímos para uma construção civil mais sustentável e para uma sociedade melhor, respeitando normas ambientais e de segurança do trabalho." },
+  { icon: "wrench", title: "Pós-Obra Garantida", description: "Garantia contratual de até 5 anos em impermeabilização e 3 anos em pintura de fachadas com retorno e laudo técnico." },
+] as const;
+---
+
+<Layout {meta}>
+  <PageHero image={heroImage} imageAlt="Empresa Art's Construtora" eyebrow="A Empresa" height="lg" headingSize="6xl" brightness={25}>
+    Construindo confiança.<br /><span class="text-primary">Valorizando patrimônios.</span>
+  </PageHero>
+
+  <AboutStory eyebrow="Nossa História" paragraphs={story} image={storyImage} imageAlt="Art's Construtora — Sede e Operações" />
+
+  <MissionVision
+    items={[
+      {
+        title: "Nossa Missão",
+        text: "Produzir soluções em construção, reformas e manutenção, promovendo qualidade, conforto, segurança e funcionalidade em todos os empreendimentos executados. Ser o parceiro técnico de longo prazo que síndicos, gestores e empresas confiam para preservar e valorizar seu patrimônio.",
+      },
+      {
+        title: "Nossa Visão",
+        text: "Ser reconhecida como referência em obras, reformas e manutenção predial, destacando-se pela excelência técnica, inovação e compromisso com resultados. Transformar projetos em resultados, unindo técnica, experiência e compromisso com a excelência.",
+      },
+    ]}
+  />
+
+  <Services
+    tone="default"
+    spacing="lg"
+    eyebrow="Nossos Valores"
+    heading="O que nos diferencia"
+    headingSize="3xl"
+    items={values.map((v) => ({ ...v }))}
+    cardSize="sm"
+    justify
+  />
+
+  <Timeline
+    watermark="Trajetória"
+    eyebrow="Nossa Trajetória"
+    heading="Construída com propósito."
+    highlight="Entregando excelência."
+    paragraphs={[
+      "A história da Art's Construtora começou em Canoas, com o propósito de oferecer soluções em construção civil, reformas e manutenção predial pautadas pela qualidade, responsabilidade e compromisso com cada cliente.",
+      "Com o reconhecimento conquistado ao longo dos projetos executados, ampliamos nossa atuação para Porto Alegre e toda a Região Metropolitana, levando nossa experiência a condomínios, empresas e empreendimentos que buscam excelência na execução e valorização patrimonial.",
+      "Nossa atuação continuou crescendo, alcançando a Serra Gaúcha, o Litoral Norte do Rio Grande do Sul e, posteriormente, Santa Catarina, onde hoje atendemos importantes cidades do litoral com o mesmo padrão de qualidade, segurança e acabamento que fazem parte da essência da Art's Construtora.",
+      "Seguimos evoluindo continuamente, investindo em pessoas, tecnologia e processos para entregar obras que unem planejamento, precisão técnica e resultados duradouros.",
+    ]}
+  />
+
+  <CTASection
+    heading="Vamos conversar sobre seu projeto?"
+    text="Agende uma visita. Nossa equipe avalia as condições do local e desenvolve uma proposta personalizada de acordo com as necessidades do seu projeto."
+    justifyText
+    ctas={[{ label: "Agendar Visita Técnica", href: whatsappUrl(), icon: "whatsapp", external: true }]}
+  />
+</Layout>

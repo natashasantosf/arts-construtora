@@ -1,0 +1,23 @@
+---
+import type { ImageMetadata } from "astro";
+import Container from "@/components/atoms/Container.astro";
+import Section from "@/components/atoms/Section.astro";
+import DividedGrid from "@/components/atoms/DividedGrid.astro";
+import ProjectCard from "@/components/molecules/ProjectCard.astro";
+
+// Portfolio grid: photo cards linking to the related service.
+interface Props {
+  items: { title: string; category: string; summary: string; image: ImageMetadata; imageAlt: string; href?: string }[];
+  class?: string;
+}
+
+const { items, class: className } = Astro.props;
+---
+
+<Section tone="muted" spacing="md" class={className}>
+  <Container>
+    <DividedGrid>
+      {items.map((item) => <ProjectCard variant="card" {...item} />)}
+    </DividedGrid>
+  </Container>
+</Section>
