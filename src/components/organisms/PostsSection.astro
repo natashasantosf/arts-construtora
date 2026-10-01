@@ -1,0 +1,46 @@
+---
+import type { ImageMetadata } from "astro";
+import Container from "@/components/atoms/Container.astro";
+import Section from "@/components/atoms/Section.astro";
+import DividedGrid from "@/components/atoms/DividedGrid.astro";
+import PostCard from "@/components/molecules/PostCard.astro";
+
+interface Post {
+  title: string;
+  category: string;
+  excerpt: string;
+  date: Date;
+  readingTime: string;
+  image: ImageMetadata;
+  imageAlt: string;
+  href?: string;
+}
+
+// Blog listing: one featured post on top, the rest in a hairline grid.
+interface Props {
+  featured?: Post;
+  posts: Post[];
+  class?: string;
+}
+
+const { featured, posts, class: className } = Astro.props;
+---
+
+<div class={className}>
+  {
+    featured && (
+      <Section tone="muted" spacing="sm">
+        <Container>
+          <PostCard variant="featured" {...featured} />
+        </Container>
+      </Section>
+    )
+  }
+  <Section tone="muted" spacing="none" class="pb-16">
+    <Container>
+      <DividedGrid>
+        {posts.map((post) => <PostCard {...post} />)}
+      </DividedGrid>
+    </Container>
+  </Section>
+</div>

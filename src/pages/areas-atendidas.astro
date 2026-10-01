@@ -1,0 +1,70 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "@/layouts/main.astro";
+import PageHero from "@/components/organisms/PageHero.astro";
+import LeadSection from "@/components/organisms/LeadSection.astro";
+import RegionsGrid from "@/components/organisms/RegionsGrid.astro";
+import CityColumns from "@/components/organisms/CityColumns.astro";
+import MapEmbed from "@/components/organisms/MapEmbed.astro";
+import CTASection from "@/components/organisms/CTASection.astro";
+import heroImage from "@/assets/heroes/page-areas-atendidas.jpg";
+import { site, whatsappUrl } from "@/data/site";
+
+const regions = (await getCollection("regions")).sort((a, b) => a.data.order - b.data.order);
+const citiesOf = (...ids: string[]) => regions.filter((r) => ids.includes(r.id)).flatMap((r) => r.data.cities);
+
+const meta = {
+  title: "Áreas Atendidas — Porto Alegre, Serra Gaúcha, Litoral e SC",
+  description:
+    "A Art's Construtora atende Grande Porto Alegre, Gramado, Canela, Litoral Norte RS (Xangri-Lá, Capão da Canoa, Torres) e Santa Catarina (Balneário Camboriú, Florianópolis, Itapema, Porto Belo e Bombinhas).",
+  img: { src: heroImage, alt: "Áreas Atendidas Art's Construtora" },
+};
+---
+
+<Layout {meta}>
+  <PageHero
+    image={heroImage}
+    imageAlt="Áreas Atendidas Art's Construtora"
+    eyebrow="Cobertura Geográfica"
+    subtitle="Grande Porto Alegre · Serra Gaúcha · Litoral Norte RS · Santa Catarina"
+  >
+    Áreas Atendidas
+  </PageHero>
+
+  <LeadSection width="narrow">
+    <p>
+      A Art's Construtora atende a <strong>Grande Porto Alegre</strong>, a <strong>Serra Gaúcha</strong> (Gramado e
+      Canela), o <strong>Litoral Norte Gaúcho</strong> (Xangri-Lá, Capão da Canoa e Torres) e todo o
+      <strong>estado de Santa Catarina</strong>, incluindo Balneário Camboriú, Grande Florianópolis, Itapema, Porto
+      Belo e Bombinhas.
+    </p>
+  </LeadSection>
+
+  <RegionsGrid regions={regions.map((r) => r.data)} />
+
+  <CityColumns
+    eyebrow="Principais Cidades"
+    heading="Onde atuamos"
+    groups={[
+      { title: "RS — Grande Porto Alegre", cities: citiesOf("grande-porto-alegre") },
+      { title: "RS — Serra e Litoral Norte", cities: citiesOf("serra-gaucha", "litoral-norte-gaucho") },
+      { title: "SC — Santa Catarina", cities: citiesOf("santa-catarina") },
+    ]}
+  />
+
+  <MapEmbed
+    heading="Nossa Localização"
+    text="Canoas, RS — Base principal de operações"
+    title="Art's Construtora — Canoas, RS"
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27722.89!2d-51.1834!3d-29.9178!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951978d5b0ef1d5f%3A0xd3c1831a8d08a19c!2sCanoas%2C%20RS!5e0!3m2!1spt-BR!2sbr!4v1699000000000!5m2!1spt-BR!2sbr"
+  />
+
+  <CTASection
+    heading="Sua cidade está na nossa área?"
+    text="Entre em contato para confirmar cobertura ou agendar uma visita técnica em qualquer cidade atendida."
+    ctas={[
+      { label: "Verificar pelo WhatsApp", href: whatsappUrl(), icon: "whatsapp", external: true },
+      { label: site.phone.display, href: site.phone.href, icon: "phone" },
+    ]}
+  />
+</Layout>

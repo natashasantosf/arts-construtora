@@ -1,0 +1,30 @@
+---
+import type { IconName } from "@/components/atoms/icons";
+import Icon from "./Icon.astro";
+
+interface Props {
+  /** tag: uppercase filter-like label · city: bold card-like chip · small: compact city tag */
+  variant?: "tag" | "city" | "small";
+  icon?: IconName;
+  class?: string;
+}
+
+const { variant = "tag", icon, class: className } = Astro.props;
+
+const variants = {
+  tag: "border border-border px-4 py-1.5 text-xs font-semibold tracking-widest text-muted-foreground uppercase",
+  city: "gap-2 border border-border bg-card px-4 py-3 text-sm font-semibold text-foreground",
+  small: "border border-border px-3 py-1.5 text-xs text-muted-foreground",
+} as const;
+---
+
+<span
+  class:list={[
+    "inline-flex items-center transition-colors hover:border-primary hover:text-primary",
+    variants[variant],
+    className,
+  ]}
+>
+  {icon && <Icon name={icon} class="size-4 text-primary" />}
+  <slot />
+</span>

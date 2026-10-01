@@ -1,0 +1,5436 @@
+{
+  "generatedAt": "2026-09-30T00:05:01.930Z",
+  "input": "C:\\Meus Documentos - Natasha\\Desktop\\pc\\Documents\\Construção sites\\arts-construtora\\dist",
+  "site": {
+    "pageCount": 17,
+    "routes": [
+      "/areas-atendidas",
+      "/blog",
+      "/contato",
+      "/design-system",
+      "/empresa",
+      "/",
+      "/projetos",
+      "/servicos",
+      "/servicos/alpinismo-industrial",
+      "/servicos/construcao-civil-reformas",
+      "/servicos/impermeabilizacao",
+      "/servicos/manutencao-condominios",
+      "/servicos/pintura-predial",
+      "/servicos/porcelanatos-granitos-acabamentos",
+      "/servicos/reformas-construcoes-industriais",
+      "/servicos/reformas-corporativas",
+      "/servicos/reformas-prediais-fachadas"
+    ],
+    "langs": [
+      "pt-BR"
+    ],
+    "fonts": [],
+    "cssFiles": [
+      "_astro/CTASection.DVSKLIXe.css",
+      "_astro/Section.B9jY3o3i.css",
+      "_astro/Section.CiV3jHRN.css",
+      "_astro/Section.DAkkpMB6.css",
+      "_astro/Section.Dd3saIcN.css",
+      "_astro/Section.DmR9C_Bq.css",
+      "_astro/Section.LfC2cg-z.css"
+    ],
+    "rootCssVariables": {},
+    "arbitraryColors": [],
+    "topClasses": [
+      {
+        "cls": "transition-colors",
+        "count": 1446
+      },
+      {
+        "cls": "text-sm",
+        "count": 1436
+      },
+      {
+        "cls": "flex",
+        "count": 1211
+      },
+      {
+        "cls": "shrink-0",
+        "count": 1139
+      },
+      {
+        "cls": "items-center",
+        "count": 1131
+      },
+      {
+        "cls": "hover:text-primary",
+        "count": 961
+      },
+      {
+        "cls": "text-primary",
+        "count": 822
+      },
+      {
+        "cls": "border-b",
+        "count": 556
+      },
+      {
+        "cls": "text-inverse/60",
+        "count": 552
+      },
+      {
+        "cls": "text-foreground",
+        "count": 505
+      },
+      {
+        "cls": "size-3",
+        "count": 500
+      },
+      {
+        "cls": "font-bold",
+        "count": 487
+      },
+      {
+        "cls": "block",
+        "count": 477
+      },
+      {
+        "cls": "border-border",
+        "count": 475
+      },
+      {
+        "cls": "gap-2",
+        "count": 388
+      },
+      {
+        "cls": "py-2",
+        "count": 367
+      },
+      {
+        "cls": "py-3",
+        "count": 351
+      },
+      {
+        "cls": "text-muted-foreground",
+        "count": 351
+      },
+      {
+        "cls": "size-4",
+        "count": 336
+      },
+      {
+        "cls": "border",
+        "count": 287
+      },
+      {
+        "cls": "justify-center",
+        "count": 287
+      },
+      {
+        "cls": "px-2",
+        "count": 277
+      },
+      {
+        "cls": "leading-relaxed",
+        "count": 277
+      },
+      {
+        "cls": "rounded-sm",
+        "count": 246
+      },
+      {
+        "cls": "gap-3",
+        "count": 245
+      },
+      {
+        "cls": "text-inverse",
+        "count": 243
+      },
+      {
+        "cls": "group",
+        "count": 240
+      },
+      {
+        "cls": "gap-1.5",
+        "count": 238
+      },
+      {
+        "cls": "w-full",
+        "count": 227
+      },
+      {
+        "cls": "border-inverse/10",
+        "count": 219
+      },
+      {
+        "cls": "relative",
+        "count": 214
+      },
+      {
+        "cls": "last:border-0",
+        "count": 207
+      },
+      {
+        "cls": "items-start",
+        "count": 200
+      },
+      {
+        "cls": "opacity-0",
+        "count": 187
+      },
+      {
+        "cls": "group-hover:opacity-100",
+        "count": 187
+      },
+      {
+        "cls": "font-semibold",
+        "count": 185
+      },
+      {
+        "cls": "text-xs",
+        "count": 184
+      },
+      {
+        "cls": "hover:bg-primary",
+        "count": 184
+      },
+      {
+        "cls": "uppercase",
+        "count": 183
+      },
+      {
+        "cls": "tracking-widest",
+        "count": 179
+      },
+      {
+        "cls": "inline-flex",
+        "count": 179
+      },
+      {
+        "cls": "px-3",
+        "count": 174
+      },
+      {
+        "cls": "px-5",
+        "count": 173
+      },
+      {
+        "cls": "hover:border-primary",
+        "count": 172
+      },
+      {
+        "cls": "text-inverse/70",
+        "count": 171
+      },
+      {
+        "cls": "transition-opacity",
+        "count": 170
+      },
+      {
+        "cls": "gap-1",
+        "count": 167
+      },
+      {
+        "cls": "px-4",
+        "count": 165
+      },
+      {
+        "cls": "bg-primary",
+        "count": 159
+      },
+      {
+        "cls": "hover:text-primary-foreground",
+        "count": 158
+      },
+      {
+        "cls": "border-inverse/5",
+        "count": 154
+      },
+      {
+        "cls": "mt-0.5",
+        "count": 152
+      },
+      {
+        "cls": "font-black",
+        "count": 150
+      },
+      {
+        "cls": "text-lg",
+        "count": 145
+      },
+      {
+        "cls": "mx-auto",
+        "count": 140
+      },
+      {
+        "cls": "duration-200",
+        "count": 127
+      },
+      {
+        "cls": "size-5",
+        "count": 125
+      },
+      {
+        "cls": "text-primary-foreground",
+        "count": 121
+      },
+      {
+        "cls": "flex-col",
+        "count": 118
+      },
+      {
+        "cls": "lg:px-8",
+        "count": 118
+      },
+      {
+        "cls": "text-base",
+        "count": 116
+      },
+      {
+        "cls": "max-w-7xl",
+        "count": 115
+      },
+      {
+        "cls": "absolute",
+        "count": 108
+      },
+      {
+        "cls": "focus-visible:outline-none",
+        "count": 99
+      },
+      {
+        "cls": "font-sans",
+        "count": 96
+      },
+      {
+        "cls": "transition-all",
+        "count": 95
+      },
+      {
+        "cls": "gap-4",
+        "count": 95
+      },
+      {
+        "cls": "duration-300",
+        "count": 94
+      },
+      {
+        "cls": "focus-visible:ring-2",
+        "count": 93
+      },
+      {
+        "cls": "focus-visible:ring-ring",
+        "count": 93
+      },
+      {
+        "cls": "focus-visible:ring-offset-2",
+        "count": 93
+      },
+      {
+        "cls": "disabled:pointer-events-none",
+        "count": 93
+      },
+      {
+        "cls": "disabled:opacity-60",
+        "count": 93
+      },
+      {
+        "cls": "tracking-tight",
+        "count": 88
+      },
+      {
+        "cls": "mb-6",
+        "count": 88
+      },
+      {
+        "cls": "hidden",
+        "count": 86
+      },
+      {
+        "cls": "bg-card",
+        "count": 82
+      },
+      {
+        "cls": "grid",
+        "count": 82
+      },
+      {
+        "cls": "mb-4",
+        "count": 79
+      },
+      {
+        "cls": "mb-3",
+        "count": 75
+      }
+    ],
+    "imageFiles": [
+      {
+        "path": "favicon.ico",
+        "bytes": 655
+      },
+      {
+        "path": "favicon.svg",
+        "bytes": 758
+      },
+      {
+        "path": "_astro/construcao-civil-reformas.l_4RsrHQ_Z2tJNuM.webp",
+        "bytes": 16518
+      },
+      {
+        "path": "_astro/empresa-institucional.CnFESIf1_1cvewA.webp",
+        "bytes": 234548
+      },
+      {
+        "path": "_astro/empresa-institucional.CnFESIf1_26askO.jpg",
+        "bytes": 149016
+      },
+      {
+        "path": "_astro/empresa-institucional.CnFESIf1_aH4V8.webp",
+        "bytes": 56796
+      },
+      {
+        "path": "_astro/empresa-institucional.CnFESIf1_tODnV.webp",
+        "bytes": 118854
+      },
+      {
+        "path": "_astro/hero-home.CV73TGKj_2kDjTn.webp",
+        "bytes": 83442
+      },
+      {
+        "path": "_astro/hero-home.CV73TGKj_Z1aIEI3.webp",
+        "bytes": 121520
+      },
+      {
+        "path": "_astro/hero-home.CV73TGKj_Z1CjIfJ.jpg",
+        "bytes": 140307
+      },
+      {
+        "path": "_astro/logo.BHDoi8PM_1IzCO0.webp",
+        "bytes": 10008
+      },
+      {
+        "path": "_astro/logo.BHDoi8PM_3wK4V.png",
+        "bytes": 2644
+      },
+      {
+        "path": "_astro/page-areas-atendidas.CqezT7r4_18jA0m.webp",
+        "bytes": 249386
+      },
+      {
+        "path": "_astro/page-areas-atendidas.CqezT7r4_Z25KdN0.webp",
+        "bytes": 96036
+      },
+      {
+        "path": "_astro/page-areas-atendidas.CqezT7r4_Z2d6gCk.webp",
+        "bytes": 373398
+      },
+      {
+        "path": "_astro/page-areas-atendidas.CqezT7r4_Zf2mOC.jpg",
+        "bytes": 219960
+      },
+      {
+        "path": "_astro/page-blog.vysBof2u_1xHkxT.webp",
+        "bytes": 59206
+      },
+      {
+        "path": "_astro/page-blog.vysBof2u_y8IQr.webp",
+        "bytes": 44072
+      },
+      {
+        "path": "_astro/page-blog.vysBof2u_Z1qpnPl.jpg",
+        "bytes": 70661
+      },
+      {
+        "path": "_astro/page-blog.vysBof2u_ZRB9Ca.webp",
+        "bytes": 22968
+      },
+      {
+        "path": "_astro/page-contato.1VpAO2UJ_25BjBo.jpg",
+        "bytes": 59654
+      },
+      {
+        "path": "_astro/page-contato.1VpAO2UJ_ON5Tw.webp",
+        "bytes": 19966
+      },
+      {
+        "path": "_astro/page-contato.1VpAO2UJ_Z18qnla.webp",
+        "bytes": 50466
+      },
+      {
+        "path": "_astro/page-contato.1VpAO2UJ_Z1DbAb1.webp",
+        "bytes": 37666
+      },
+      {
+        "path": "_astro/page-projetos.DdOM7q14_2i4SBE.webp",
+        "bytes": 138148
+      },
+      {
+        "path": "_astro/page-projetos.DdOM7q14_xcuLm.webp",
+        "bytes": 199732
+      },
+      {
+        "path": "_astro/page-projetos.DdOM7q14_Z110bE5.webp",
+        "bytes": 63594
+      },
+      {
+        "path": "_astro/page-projetos.DdOM7q14_ZEPmzb.jpg",
+        "bytes": 152021
+      },
+      {
+        "path": "_astro/page-servicos.CiZPJ4FN_13Si7q.webp",
+        "bytes": 262840
+      },
+      {
+        "path": "_astro/page-servicos.CiZPJ4FN_uUBdw.webp",
+        "bytes": 192960
+      },
+      {
+        "path": "_astro/page-servicos.CiZPJ4FN_Z1lQ6H3.webp",
+        "bytes": 94944
+      },
+      {
+        "path": "_astro/page-servicos.CiZPJ4FN_ZlT7S2.jpg",
+        "bytes": 185966
+      },
+      {
+        "path": "_astro/photo-1486325212027-8081e485255e.iSTW0xyj_8iphA.webp",
+        "bytes": 149440
+      },
+      {
+        "path": "_astro/photo-1486325212027-8081e485255e.iSTW0xyj_Z1gjCFf.jpg",
+        "bytes": 146805
+      },
+      {
+        "path": "_astro/photo-1486325212027-8081e485255e.iSTW0xyj_Z2gK8Lc.webp",
+        "bytes": 63278
+      },
+      {
+        "path": "_astro/photo-1486325212027-8081e485255e.iSTW0xyj_ZTICeG.webp",
+        "bytes": 132096
+      },
+      {
+        "path": "_astro/photo-1497366216548-37526070297c.C_uEoNDe_1Cs1Ag.webp",
+        "bytes": 52868
+      },
+      {
+        "path": "_astro/photo-1497366216548-37526070297c.C_uEoNDe_2cHetc.jpg",
+        "bytes": 70262
+      },
+      {
+        "path": "_astro/photo-1497366216548-37526070297c.C_uEoNDe_ZHNjvg.webp",
+        "bytes": 24690
+      },
+      {
+        "path": "_astro/photo-1497366216548-37526070297c.C_uEoNDe_zpY3Y.webp",
+        "bytes": 46146
+      },
+      {
+        "path": "_astro/photo-1504307651254-35680f356dfd.CSclpFkv_1rql1k.webp",
+        "bytes": 202996
+      },
+      {
+        "path": "_astro/photo-1504307651254-35680f356dfd.CSclpFkv_W6All.webp",
+        "bytes": 93588
+      },
+      {
+        "path": "_astro/photo-1504307651254-35680f356dfd.CSclpFkv_Z1gXYiJ.jpg",
+        "bytes": 181096
+      },
+      {
+        "path": "_astro/photo-1504307651254-35680f356dfd.CSclpFkv_ZA2jUP.webp",
+        "bytes": 182392
+      },
+      {
+        "path": "_astro/photo-1504917595217-d4dc5ebe6122.DOY8qgN8_1Phll6.webp",
+        "bytes": 84826
+      },
+      {
+        "path": "_astro/photo-1504917595217-d4dc5ebe6122.DOY8qgN8_1tGkTx.jpg",
+        "bytes": 108893
+      },
+      {
+        "path": "_astro/photo-1504917595217-d4dc5ebe6122.DOY8qgN8_Z1QjJCS.webp",
+        "bytes": 46746
+      },
+      {
+        "path": "_astro/photo-1504917595217-d4dc5ebe6122.DOY8qgN8_Z2bRJVy.webp",
+        "bytes": 95488
+      },
+      {
+        "path": "_astro/photo-1560518883-ce09059eeffa.BV_Je5DK_2rlu3s.webp",
+        "bytes": 36804
+      },
+      {
+        "path": "_astro/photo-1560518883-ce09059eeffa.BV_Je5DK_2v5OIw.webp",
+        "bytes": 20144
+      },
+      {
+        "path": "_astro/photo-1560518883-ce09059eeffa.BV_Je5DK_Z21jN7y.webp",
+        "bytes": 43414
+      },
+      {
+        "path": "_astro/photo-1560518883-ce09059eeffa.BV_Je5DK_ZFQtRp.jpg",
+        "bytes": 59271
+      },
+      {
+        "path": "_astro/photo-1562259949-e8e7689d7828.BEG3WrSW_EafCa.webp",
+        "bytes": 112334
+      },
+      {
+        "path": "_astro/photo-1562259949-e8e7689d7828.BEG3WrSW_Z1mihIO.webp",
+        "bytes": 132968
+      },
+      {
+        "path": "_astro/photo-1562259949-e8e7689d7828.BEG3WrSW_Z24WPnt.webp",
+        "bytes": 45576
+      },
+      {
+        "path": "_astro/photo-1562259949-e8e7689d7828.BEG3WrSW_Z27oylh.jpg",
+        "bytes": 102191
+      },
+      {
+        "path": "_astro/photo-1590523741831-ab7e8b8f9c7f.DymYg0Ws_1P73wE.webp",
+        "bytes": 360844
+      },
+      {
+        "path": "_astro/photo-1590523741831-ab7e8b8f9c7f.DymYg0Ws_1x9eH6.webp",
+        "bytes": 116372
+      },
+      {
+        "path": "_astro/photo-1590523741831-ab7e8b8f9c7f.DymYg0Ws_Z1pXHJA.webp",
+        "bytes": 295584
+      },
+      {
+        "path": "_astro/photo-1590523741831-ab7e8b8f9c7f.DymYg0Ws_Z2wOR0O.jpg",
+        "bytes": 208955
+      },
+      {
+        "path": "_astro/photo-1615873968403-89e068629265.CnWWsKLU_1X7jyk.jpg",
+        "bytes": 105493
+      },
+      {
+        "path": "_astro/photo-1615873968403-89e068629265.CnWWsKLU_208lT6.webp",
+        "bytes": 78696
+      },
+      {
+        "path": "_astro/photo-1615873968403-89e068629265.CnWWsKLU_Z1tOlvW.webp",
+        "bytes": 37378
+      },
+      {
+        "path": "_astro/photo-1615873968403-89e068629265.CnWWsKLU_Zdwsmt.webp",
+        "bytes": 90112
+      },
+      {
+        "path": "_astro/proj-alpinismo-industrial.DfcMno4-_283yME.webp",
+        "bytes": 15300
+      },
+      {
+        "path": "_astro/proj-construcao-civil.BHWmw3oy_2v2vuC.webp",
+        "bytes": 19282
+      },
+      {
+        "path": "_astro/proj-construcoes-industriais.CNv3yOZN_Z5nyNk.webp",
+        "bytes": 20658
+      },
+      {
+        "path": "_astro/proj-impermeabilizacao-fachadas.a7V4QhnJ_FUEP.webp",
+        "bytes": 15994
+      },
+      {
+        "path": "_astro/proj-inspecao-predial.ti-WgRj9_Z1SQksS.webp",
+        "bytes": 39418
+      },
+      {
+        "path": "_astro/proj-inspecao-predial.ti-WgRj9_ZOWJ2z.webp",
+        "bytes": 18086
+      },
+      {
+        "path": "_astro/proj-inspecao-predial.ti-WgRj9_ZqTUSx.webp",
+        "bytes": 152110
+      },
+      {
+        "path": "_astro/proj-lavagem-fachadas.DNFcSX9E_NcQhu.webp",
+        "bytes": 216876
+      },
+      {
+        "path": "_astro/proj-lavagem-fachadas.DNFcSX9E_Z24QLb3.webp",
+        "bytes": 43238
+      },
+      {
+        "path": "_astro/proj-lavagem-fachadas.DNFcSX9E_ZkGDa3.webp",
+        "bytes": 16854
+      },
+      {
+        "path": "_astro/proj-pintura-predial.Dj1jWLRQ_1oVw81.webp",
+        "bytes": 15250
+      },
+      {
+        "path": "_astro/proj-porcelanatos-granitos.COzJJXQZ_Z2mNclN.webp",
+        "bytes": 8858
+      },
+      {
+        "path": "_astro/proj-reformas-corporativas.Bh_1DGtc_15ccDl.webp",
+        "bytes": 14310
+      },
+      {
+        "path": "_astro/proj-reformas-prediais-v2.CGBKhdov_ABm7B.webp",
+        "bytes": 32680
+      },
+      {
+        "path": "_astro/proj-revitalizacao-condominiais.CXzYHDZT_kOatA.webp",
+        "bytes": 17420
+      },
+      {
+        "path": "_astro/revestimentos-alto-padrao.DmIz3kmz_f5fMS.webp",
+        "bytes": 14830
+      },
+      {
+        "path": "_astro/revitalizacao-predial-reforma-industrial.DhnoMTwQ_ZlGbSo.webp",
+        "bytes": 17792
+      }
+    ],
+    "brokenInternalLinks": [],
+    "pagesWithDuplicateHeadTags": [],
+    "repeatedText": [
+      {
+        "text": "QUALIDADE · SEGURANÇA · COMPROMISSO · EXCELÊNCIA Canoas, RS — Brasil Solicitar orçamento",
+        "pagesCount": 17
+      },
+      {
+        "text": "Nossa equipe realiza uma avaliação técnica do local e desenvolve uma proposta personalizada de acordo com as necessidades do seu projeto.",
+        "pagesCount": 10
+      },
+      {
+        "text": "Solicitar Orçamento Nossa equipe realiza uma avaliação técnica do local e desenvolve uma proposta personalizada de acordo com as necessidades do seu projeto.",
+        "pagesCount": 9
+      },
+      {
+        "text": "Atendemos o Rio Grande do Sul e Santa Catarina.",
+        "pagesCount": 9
+      },
+      {
+        "text": "Solicite Seu Orçamento Construção · Reformas · Pintura Predial Porcelanatos · Granitos · Manutenção de Condomínios (51) 98403-3255 WhatsApp comercial@artsconstr",
+        "pagesCount": 9
+      }
+    ]
+  },
+  "pages": [
+    {
+      "route": "/areas-atendidas",
+      "lang": "pt-BR",
+      "title": "Áreas Atendidas — Porto Alegre, Serra Gaúcha, Litoral e SC | Art's Construtora",
+      "description": "A Art's Construtora atende Grande Porto Alegre, Gramado, Canela, Litoral Norte RS (Xangri-Lá, Capão da Canoa, Torres) e Santa Catarina (Balneário Camboriú, Florianópolis, Itapema, Porto Belo e Bombinhas).",
+      "canonical": "https://artsconstrutora.com.br/areas-atendidas",
+      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      "og": {
+        "og:site_name": "Art's Construtora",
+        "og:locale": "pt_BR",
+        "og:type": "website",
+        "og:title": "Áreas Atendidas — Porto Alegre, Serra Gaúcha, Litoral e SC | Art's Construtora",
+        "og:description": "A Art's Construtora atende Grande Porto Alegre, Gramado, Canela, Litoral Norte RS (Xangri-Lá, Capão da Canoa, Torres) e Santa Catarina (Balneário Camboriú, Florianópolis, Itapema, Porto Belo e Bombinhas).",
+        "og:url": "https://artsconstrutora.com.br/areas-atendidas",
+        "og:image": "https://artsconstrutora.com.br/_astro/page-areas-atendidas.CqezT7r4_Zf2mOC.jpg",
+        "og:image:width": "1200",
+        "og:image:height": "630",
+        "og:image:alt": "Áreas Atendidas Art's Construtora",
+        "twitter:card": "summary_large_image",
+        "twitter:title": "Áreas Atendidas — Porto Alegre, Serra Gaúcha, Litoral e SC | Art's Construtora",
+        "twitter:description": "A Art's Construtora atende Grande Porto Alegre, Gramado, Canela, Litoral Norte RS (Xangri-Lá, Capão da Canoa, Torres) e Santa Catarina (Balneário Camboriú, Florianópolis, Itapema, Porto Belo e Bombinhas)."
+      },
+      "duplicateHeadTags": [],
+      "icons": [
+        "/_astro/logo.BHDoi8PM_3wK4V.png"
+      ],
+      "headings": {
+        "h1": [
+          "Áreas Atendidas"
+        ],
+        "h2": [
+          "Grande Porto Alegre",
+          "Serra Gaúcha",
+          "Litoral Norte Gaúcho",
+          "Santa Catarina",
+          "Onde atuamos",
+          "Nossa Localização",
+          "Sua cidade está na nossa área?"
+        ],
+        "h3": [
+          "RS — Grande Porto Alegre",
+          "RS — Serra e Litoral Norte",
+          "SC — Santa Catarina",
+          "Nossos Serviços",
+          "Áreas Atendidas",
+          "Nossas Garantias"
+        ]
+      },
+      "wordCount": 483,
+      "images": [
+        {
+          "src": "/_astro/logo.BHDoi8PM_1IzCO0.webp",
+          "alt": "Art's Construtora — Porto Alegre RS"
+        },
+        {
+          "src": "/_astro/page-areas-atendidas.CqezT7r4_Z2d6gCk.webp",
+          "alt": "Áreas Atendidas Art's Construtora"
+        },
+        {
+          "src": "/_astro/logo.BHDoi8PM_1IzCO0.webp",
+          "alt": "Art's Construtora"
+        }
+      ],
+      "backgroundImages": [],
+      "internalLinks": [
+        "/",
+        "/empresa",
+        "/servicos",
+        "/servicos/construcao-civil-reformas",
+        "/servicos/reformas-prediais-fachadas",
+        "/servicos/pintura-predial",
+        "/servicos/impermeabilizacao",
+        "/servicos/reformas-corporativas",
+        "/servicos/reformas-construcoes-industriais",
+        "/servicos/alpinismo-industrial",
+        "/servicos/manutencao-condominios",
+        "/servicos/porcelanatos-granitos-acabamentos",
+        "/projetos",
+        "/areas-atendidas",
+        "/blog",
+        "/contato"
+      ],
+      "externalLinks": [
+        "tel:(51) 98403-3255",
+        "https://wa.me/5551984033255?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20meu%20projeto.",
+        "mailto:comercial@artsconstrutora.com.br",
+        "https://www.instagram.com/artsconstrutora_",
+        "https://www.facebook.com/ArtsConstrutora"
+      ],
+      "forms": [],
+      "jsonLd": [
+        {
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          "name": "Art's Construtora",
+          "description": "Empresa especializada em pintura predial, alpinismo predial, impermeabilização, reforma de fachadas e manutenção de condomínios em Porto Alegre e Região Metropolitana RS.",
+          "url": "https://artsconstrutora.com.br",
+          "telephone": "+55-51-99958-3045",
+          "email": "contato@artsconstrutora.com.br",
+          "foundingDate": "2002",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Porto Alegre",
+            "addressRegion": "RS",
+            "addressCountry": "BR"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": -30.0346,
+            "longitude": -51.2177
+          },
+          "areaServed": [
+            "Porto Alegre",
+            "Canoas",
+            "Novo Hamburgo",
+            "São Leopoldo",
+            "Gravataí",
+            "Cachoeirinha",
+            "Região Metropolitana RS",
+            "Santa Catarina"
+          ],
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Serviços de Manutenção Predial",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Pintura Predial"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Alpinismo Predial"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Impermeabilização"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Reforma de Fachadas"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Manutenção de Condomínios"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Lavagem de Fachadas"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Instalação de Porcelanatos e Granitos"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Reformas Comerciais e Industriais"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "outline": [
+        {
+          "tag": "header",
+          "id": null,
+          "class": "sticky top-0 z-50 w-full transition-all duration-300 border-b border-border bg-background py-3 shadow-lg",
+          "firstHeading": "h1: Áreas Atendidas"
+        },
+        {
+          "tag": "nav",
+          "id": null,
+          "class": "hidden items-center gap-1 lg:flex",
+          "firstHeading": "h1: Áreas Atendidas"
+        },
+        {
+          "tag": "nav",
+          "id": null,
+          "class": "mt-4 flex flex-col gap-1",
+          "firstHeading": "h1: Áreas Atendidas"
+        },
+        {
+          "tag": "main",
+          "id": null,
+          "class": "flex-1",
+          "firstHeading": "h1: Áreas Atendidas"
+        },
+        {
+          "tag": "section",
+          "id": null,
+          "class": "relative overflow-hidden",
+          "firstHeading": "h1: Áreas Atendidas"
+        },
+        {
+          "tag": "section",
+          "id": null,
+          "class": "bg-background text-foreground py-12 border-b border-border",
+          "firstHeading": "h2: Grande Porto Alegre"
+        },
+        {
+          "tag": "section",
+          "id": null,
+          "class": "bg-muted text-foreground py-16",
+          "firstHeading": "h2: Grande Porto Alegre"
+        },
+        {
+          "tag": "section",
+          "id": null,
+          "class": "bg-background text-foreground py-16 border-y border-border",
+          "firstHeading": "h2: Onde atuamos"
+        },
+        {
+          "tag": "section",
+          "id": null,
+          "class": "border-b border-border bg-background",
+          "firstHeading": "h2: Nossa Localização"
+        },
+        {
+          "tag": "section",
+          "id": null,
+          "class": "bg-primary text-primary-foreground py-20 text-center",
+          "firstHeading": "h2: Sua cidade está na nossa área?"
+        },
+        {
+          "tag": "footer",
+          "id": null,
+          "class": "bg-accent-deep text-accent-deep-foreground",
+          "firstHeading": "h3: Nossos Serviços"
+        }
+      ],
+      "stylesheets": [
+        "/_astro/Section.LfC2cg-z.css",
+        "/_astro/Section.LfC2cg-z.css"
+      ],
+      "scripts": [
+        "application/ld+json",
+        "inline",
+        "inline",
+        "module",
+        "/_astro/main.astro_astro_type_script_index_0_lang.4IgxO6jx.js"
+      ],
+      "allHeadValues": {}
+    },
+    {
+      "route": "/blog",
+      "lang": "pt-BR",
+      "title": "Blog — Dicas Técnicas em Manutenção Predial | Art's Construtora",
+      "description": "Artigos técnicos sobre pintura predial, alpinismo, impermeabilização e manutenção de condomínios em Porto Alegre e RS — produzidos por engenheiros para síndicos e gestores.",
+      "canonical": "https://artsconstrutora.com.br/blog",
+      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      "og": {
+        "og:site_name": "Art's Construtora",
+        "og:locale": "pt_BR",
+        "og:type": "website",
+        "og:title": "Blog — Dicas Técnicas em Manutenção Predial | Art's Construtora",
+        "og:description": "Artigos técnicos sobre pintura predial, alpinismo, impermeabilização e manutenção de condomínios em Porto Alegre e RS — produzidos por engenheiros para síndicos e gestores.",
+        "og:url": "https://artsconstrutora.com.br/blog",
+        "og:image": "https://artsconstrutora.com.br/_astro/page-blog.vysBof2u_Z1qpnPl.jpg",
+        "og:image:width": "1200",
+        "og:image:height": "630",
+        "og:image:alt": "Blog Art's Construtora",
+        "twitter:card": "summary_large_image",
+        "twitter:title": "Blog — Dicas Técnicas em Manutenção Predial | Art's Construtora",
+        "twitter:description": "Artigos técnicos sobre pintura predial, alpinismo, impermeabilização e manutenção de condomínios em Porto Alegre e RS — produzidos por engenheiros para síndicos e gestores."
+      },
+      "duplicateHeadTags": [],
+      "icons": [
+        "/_astro/logo.BHDoi8PM_3wK4V.png"
+      ],
+      "headings": {
+        "h1": [
+          "Conhecimento de Engenharia para Síndicos e Gestores"
+        ],
+        "h2": [
+          "Pintura Predial: Tudo que Você Precisa Saber Antes de Contratar",
+          "Alpinismo Predial: Por que a Certificação IRATA é Indispensável",
+          "Impermeabilização de Prédios: Como Garantir 5 Anos sem Infiltração",
+          "Reforma de Fachada no RS: O que Define o Custo e Como Planejar",
+          "NBR 5674: O que a Lei Exige do Condomínio em Manutenção Predial",
+          "Lavagem de Fachadas: Frequência Ideal por Tipo de Edifício"
+        ],
+        "h3": [
+          "Nossos Serviços",
+          "Áreas Atendidas",
+          "Nossas Garantias"
+        ]
+      },
+      "wordCount": 514,
+      "images": [
+        {
+          "src": "/_astro/logo.BHDoi8PM_1IzCO0.webp",
+          "alt": "Art's Construtora — Porto Alegre RS"
+        },
+        {
+          "src": "/_astro/page-blog.vysBof2u_1xHkxT.webp",
+          "alt": "Blog Art's Construtora"
+        },
+        {
+          "src": "/_astro/proj-pintura-predial.Dj1jWLRQ_1oVw81.webp",
+          "alt": "Pintura Predial: Tudo que Você Precisa Saber Antes de Contratar"
+        },
+        {
+          "src": "/_astro/proj-alpinismo-industrial.DfcMno4-_283yME.webp",
+          "alt": "Alpinismo Predial: Por que a Certificação IRATA é Indispensável"
+        },
+        {
+          "src": "/_astro/proj-impermeabilizacao-fachadas.a7V4QhnJ_FUEP.webp",
+          "alt": "Impermeabilização de Prédios: Como Garantir 5 Anos sem Infiltração"
+        },
+        {
+          "src": "/_astro/proj-reformas-prediais-v2.CGBKhdov_ABm7B.webp",
+          "alt": "Reforma de Fachada no RS: O que Define o Custo e Como Planejar"
+        },
+        {
+          "src": "/_astro/proj-inspecao-predial.ti-WgRj9_ZqTUSx.webp",
+          "alt": "NBR 5674: O que a Lei Exige do Condomínio em Manutenção Predial"
+        },
+        {
+          "src": "/_astro/proj-lavagem-fachadas.DNFcSX9E_NcQhu.webp",
+          "alt": "Lavagem de Fachadas: Frequência Ideal por Tipo de Edifício"
+        },
+        {
+          "src": "/_astro/logo.BHDoi8PM_1IzCO0.webp",
+          "alt": "Art's Construtora"
+        }
+      ],
+      "backgroundImages": [],
+      "internalLinks": [
+        "/",
+        "/empresa",
+        "/servicos",
+        "/servicos/construcao-civil-reformas",
+        "/servicos/reformas-prediais-fachadas",
+        "/servicos/pintura-predial",
+        "/servicos/impermeabilizacao",
+        "/servicos/reformas-corporativas",
+        "/servicos/reformas-construcoes-industriais",
+        "/servicos/alpinismo-industrial",
+        "/servicos/manutencao-condominios",
+        "/servicos/porcelanatos-granitos-acabamentos",
+        "/projetos",
+        "/areas-atendidas",
+        "/blog",
+        "/contato"
+      ],
+      "externalLinks": [
+        "tel:(51) 98403-3255",
+        "https://wa.me/5551984033255?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20meu%20projeto.",
+        "mailto:comercial@artsconstrutora.com.br",
+        "https://www.instagram.com/artsconstrutora_",
+        "https://www.facebook.com/ArtsConstrutora"
+      ],
+      "forms": [],
+      "jsonLd": [
+        {
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          "name": "Art's Construtora",
+          "description": "Empresa especializada em pintura predial, alpinismo predial, impermeabilização, reforma de fachadas e manutenção de condomínios em Porto Alegre e Região Metropolitana RS.",
+          "url": "https://artsconstrutora.com.br",
+          "telephone": "+55-51-99958-3045",
+          "email": "contato@artsconstrutora.com.br",
+          "foundingDate": "2002",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Porto Alegre",
+            "addressRegion": "RS",
+            "addressCountry": "BR"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": -30.0346,
+            "longitude": -51.2177
+          },
+          "areaServed": [
+            "Porto Alegre",
+            "Canoas",
+            "Novo Hamburgo",
+            "São Leopoldo",
+            "Gravataí",
+            "Cachoeirinha",
+            "Região Metropolitana RS",
+            "Santa Catarina"
+          ],
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Serviços de Manutenção Predial",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Pintura Predial"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Alpinismo Predial"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Impermeabilização"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Reforma de Fachadas"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Manutenção de Condomínios"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Lavagem de Fachadas"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Instalação de Porcelanatos e Granitos"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Reformas Comerciais e Industriais"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "outline": [
+        {
+          "tag": "header",
+          "id": null,
+          "class": "sticky top-0 z-50 w-full transition-all duration-300 border-b border-border bg-background py-3 shadow-lg",
+          "firstHeading": "h1: Conhecimento de Engenharia para Síndicos e Gestores"
+        },
+        {
+          "tag": "nav",
+          "id": null,
+          "class": "hidden items-center gap-1 lg:flex",
+          "firstHeading": "h1: Conhecimento de Engenharia para Síndicos e Gestores"
+        },
+        {
+          "tag": "nav",
+          "id": null,
+          "class": "mt-4 flex flex-col gap-1",
+          "firstHeading": "h1: Conhecimento de Engenharia para Síndicos e Gestores"
+        },
+        {
+          "tag": "main",
+          "id": null,
+          "class": "flex-1",
+          "firstHeading": "h1: Conhecimento de Engenharia para Síndicos e Gestores"
+        },
+        {
+          "tag": "section",
+          "id": null,
+          "class": "relative overflow-hidden",
+          "firstHeading": "h1: Conhecimento de Engenharia para Síndicos e Gestores"
+        },
+        {
+          "tag": "section",
+          "id": null,
+          "class": "bg-background text-foreground py-5 border-b border-border",
+          "firstHeading": "h2: Pintura Predial: Tudo que Você Precisa Saber Antes de Contratar"
+        },
+        {
+          "tag": "section",
+          "id": null,
+          "class": "bg-muted text-foreground py-12",
+          "firstHeading": "h2: Pintura Predial: Tudo que Você Precisa Saber Antes de Contratar"
+        },
+        {
+          "tag": "section",
+          "id": null,
+          "class": "bg-muted text-foreground pb-16",
+          "firstHeading": "h2: Alpinismo Predial: Por que a Certificação IRATA é Indispensável"
+        },
+        {
+          "tag": "footer",
+          "id": null,
+          "class": "bg-accent-deep text-accent-deep-foreground",
+          "firstHeading": "h3: Nossos Serviços"
+        }
+      ],
+      "stylesheets": [
+        "/_astro/Section.LfC2cg-z.css",
+        "/_astro/Section.LfC2cg-z.css"
+      ],
+      "scripts": [
+        "application/ld+json",
+        "inline",
+        "inline",
+        "module",
+        "/_astro/main.astro_astro_type_script_index_0_lang.4IgxO6jx.js"
+      ],
+      "allHeadValues": {}
+    },
+    {
+      "route": "/contato",
+      "lang": "pt-BR",
+      "title": "Contato — Fale com Nossa Equipe | Art's Construtora",
+      "description": "Entre em contato com a Art's Construtora para orçamento de pintura predial, alpinismo, impermeabilização e manutenção em Porto Alegre, Canoas e RS.",
+      "canonical": "https://artsconstrutora.com.br/contato",
+      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      "og": {
+        "og:site_name": "Art's Construtora",
+        "og:locale": "pt_BR",
+        "og:type": "website",
+        "og:title": "Contato — Fale com Nossa Equipe | Art's Construtora",
+        "og:description": "Entre em contato com a Art's Construtora para orçamento de pintura predial, alpinismo, impermeabilização e manutenção em Porto Alegre, Canoas e RS.",
+        "og:url": "https://artsconstrutora.com.br/contato",
+        "og:image": "https://artsconstrutora.com.br/_astro/page-contato.1VpAO2UJ_25BjBo.jpg",
+        "og:image:width": "1200",
+        "og:image:height": "630",
+        "og:image:alt": "Contato Art's Construtora",
+        "twitter:card": "summary_large_image",
+        "twitter:title": "Contato — Fale com Nossa Equipe | Art's Construtora",
+        "twitter:description": "Entre em contato com a Art's Construtora para orçamento de pintura predial, alpinismo, impermeabilização e manutenção em Porto Alegre, Canoas e RS."
+      },
+      "duplicateHeadTags": [],
+      "icons": [
+        "/_astro/logo.BHDoi8PM_3wK4V.png"
+      ],
+      "headings": {
+        "h1": [
+          "Solicite um Orçamento"
+        ],
+        "h2": [
+          "Formulário de Contato"
+        ],
+        "h3": [
+          "Resposta Rápida",
+          "Informações",
+          "Nossos Serviços",
+          "Áreas Atendidas",
+          "Nossas Garantias"
+        ]
+      },
+      "wordCount": 380,
+      "images": [
+        {
+          "src": "/_astro/logo.BHDoi8PM_1IzCO0.webp",
+          "alt": "Art's Construtora — Porto Alegre RS"
+        },
+        {
+          "src": "/_astro/page-contato.1VpAO2UJ_Z18qnla.webp",
+          "alt": "Contato Art's Construtora"
+        },
+        {
+          "src": "/_astro/logo.BHDoi8PM_1IzCO0.webp",
+          "alt": "Art's Construtora"
+        }
+      ],
+      "backgroundImages": [],
+      "internalLinks": [
+        "/",
+        "/empresa",
+        "/servicos",
+        "/servicos/construcao-civil-reformas",
+        "/servicos/reformas-prediais-fachadas",
+        "/servicos/pintura-predial",
+        "/servicos/impermeabilizacao",
+        "/servicos/reformas-corporativas",
+        "/servicos/reformas-construcoes-industriais",
+        "/servicos/alpinismo-industrial",
+        "/servicos/manutencao-condominios",
+        "/servicos/porcelanatos-granitos-acabamentos",
+        "/projetos",
+        "/areas-atendidas",
+        "/blog",
+        "/contato"
+      ],
+      "externalLinks": [
+        "tel:(51) 98403-3255",
+        "https://wa.me/5551984033255?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20meu%20projeto.",
+        "mailto:comercial@artsconstrutora.com.br",
+        "https://www.instagram.com/artsconstrutora_",
+        "https://www.facebook.com/ArtsConstrutora"
+      ],
+      "forms": [
+        {
+          "action": null,
+          "method": null,
+          "fields": [
+            {
+              "tag": "input",
+              "name": "nome",
+              "placeholder": "João da Silva"
+            },
+            {
+              "tag": "input",
+              "type": "tel",
+              "name": "telefone",
+              "placeholder": "(51) 99999-9999"
+            },
+            {
+              "tag": "input",
+              "type": "email",
+              "name": "email",
+              "placeholder": "joao@empresa.com.br"
+            },
+            {
+              "tag": "input",
+              "name": "cidade",
+              "placeholder": "Porto Alegre"
+            },
+            {
+              "tag": "select",
+              "name": "servico"
+            },
+            {
+              "tag": "textarea",
+              "name": "mensagem",
+              "placeholder": "Ex: Prédio de 12 andares em Porto Alegre, fachada com pastilhas descascando e fissuras. Preciso de vistoria técnica e orçamento para reforma completa da fachada."
+            }
+          ]
+        }
+      ],
+      "jsonLd": [
+        {
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          "name": "Art's Construtora",
+          "description": "Empresa especializada em pintura predial, alpinismo predial, impermeabilização, reforma de fachadas e manutenção de condomínios em Porto Alegre e Região Metropolitana RS.",
+          "url": "https://artsconstrutora.com.br",
+          "telephone": "+55-51-99958-3045",
+          "email": "contato@artsconstrutora.com.br",
+          "foundingDate": "2002",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Porto Alegre",
+            "addressRegion": "RS",
+            "addressCountry": "BR"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": -30.0346,
+            "longitude": -51.2177
+          },
+          "areaServed": [
+            "Porto Alegre",
+            "Canoas",
+            "Novo Hamburgo",
+            "São Leopoldo",
+            "Gravataí",
+            "Cachoeirinha",
+            "Região Metropolitana RS",
+            "Santa Catarina"
+          ],
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Serviços de Manutenção Predial",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Pintura Predial"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Alpinismo Predial"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Impermeabilização"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Reforma de Fachadas"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Manutenção de Condomínios"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Lavagem de Fachadas"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Instalação de Porcelanatos e Granitos"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Reformas Comerciais e Industriais"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "outline": [
+        {
+          "tag": "header",
+          "id": null,
+          "class": "sticky top-0 z-50 w-full transition-all duration-300 border-b border-border bg-background py-3 shadow-lg",
+          "firstHeading": "h1: Solicite um Orçamento"
+        },
+        {
+          "tag": "nav",
+          "id": null,
+          "class": "hidden items-center gap-1 lg:flex",
+          "firstHeading": "h1: Solicite um Orçamento"
+        },
+        {
+          "tag": "nav",
+          "id": null,
+          "class": "mt-4 flex flex-col gap-1",
+          "firstHeading": "h1: Solicite um Orçamento"
+        },
+        {
+          "tag": "main",
+          "id": null,
+          "class": "flex-1",
+          "firstHeading": "h1: Solicite um Orçamento"
+        },
+        {
+          "tag": "section",
+          "id": null,
+          "class": "relative overflow-hidden",
+          "firstHeading": "h1: Solicite um Orçamento"
+        },
+        {
+          "tag": "section",
+          "id": null,
+          "class": "bg-primary py-5",
+          "firstHeading": "h2: Formulário de Contato"
+        },
+        {
+          "tag": "section",
+          "id": null,
+          "class": "bg-background text-foreground py-20",
+          "firstHeading": "h2: Formulário de Contato"
+        },
+        {
+          "tag": "aside",
+          "id": null,
+          "class": "space-y-6",
+          "firstHeading": "h3: Resposta Rápida"
+        },
+        {
+          "tag": "section",
+          "id": null,
+          "class": "border-t border-border",
+          "firstHeading": "h3: Nossos Serviços"
+        },
+        {
+          "tag": "footer",
+          "id": null,
+          "class": "bg-accent-deep text-accent-deep-foreground",
+          "firstHeading": "h3: Nossos Serviços"
+        }
+      ],
+      "stylesheets": [
+        "/_astro/Section.LfC2cg-z.css",
+        "/_astro/Section.LfC2cg-z.css"
+      ],
+      "scripts": [
+        "application/ld+json",
+        "inline",
+        "inline",
+        "module",
+        "module",
+        "/_astro/main.astro_astro_type_script_index_0_lang.4IgxO6jx.js"
+      ],
+      "allHeadValues": {}
+    },
+    {
+      "route": "/design-system",
+      "lang": "pt-BR",
+      "title": "Design System | Art's Construtora",
+      "description": "Tokens e componentes do site da Art's Construtora",
+      "canonical": "https://artsconstrutora.com.br/design-system",
+      "robots": "noindex",
+      "og": {
+        "og:site_name": "Art's Construtora",
+        "og:locale": "pt_BR",
+        "og:type": "website",
+        "og:title": "Design System | Art's Construtora",
+        "og:description": "Tokens e componentes do site da Art's Construtora",
+        "og:url": "https://artsconstrutora.com.br/design-system",
+        "og:image": "https://artsconstrutora.com.br/_astro/hero-home.CV73TGKj_Z1CjIfJ.jpg",
+        "og:image:width": "1200",
+        "og:image:height": "630",
+        "og:image:alt": "Design System",
+        "twitter:card": "summary_large_image",
+        "twitter:title": "Design System | Art's Construtora",
+        "twitter:description": "Tokens e componentes do site da Art's Construtora"
+      },
+      "duplicateHeadTags": [],
+      "icons": [
+        "/_astro/logo.BHDoi8PM_3wK4V.png"
+      ],
+      "headings": {
+        "h1": [
+          "Design system"
+        ],
+        "h2": [
+          "Cores",
+          "Marca",
+          "Tipografia — Montserrat",
+          "Botões",
+          "Badges, chips e ícones",
+          "Moléculas",
+          "Título de seção",
+          "Grande Porto Alegre",
+          "CTASection"
+        ],
+        "h3": [
+          "ServiceCard com link",
+          "ServiceCard sem link",
+          "Construção Civil e Reformas",
+          "FeatureItem",
+          "QuoteCard",
+          "Nossos Serviços",
+          "Áreas Atendidas",
+          "Nossas Garantias"
+        ]
+      },
+      "wordCount": 582,
+      "images": [
+        {
+          "src": "/_astro/logo.BHDoi8PM_1IzCO0.webp",
+          "alt": "Art's Construtora — Porto Alegre RS"
+        },
+        {
+          "src": "/_astro/logo.BHDoi8PM_1IzCO0.webp",
+          "alt": "Art's Construtora — Porto Alegre RS"
+        },
+        {
+          "src": "/_astro/logo.BHDoi8PM_1IzCO0.webp",
+          "alt": "Art's Construtora — Porto Alegre RS"
+        },
+        {
+          "src": "/_astro/construcao-civil-reformas.l_4RsrHQ_Z2tJNuM.webp",
+          "alt": "Construção Civil e Reformas — Art's Construtora"
+        },
+        {
+          "src": "/_astro/logo.BHDoi8PM_1IzCO0.webp",
+          "alt": "Art's Construtora"
+        }
+      ],
+      "backgroundImages": [],
+      "internalLinks": [
+        "/",
+        "/empresa",
+        "/servicos",
+        "/servicos/construcao-civil-reformas",
+        "/servicos/reformas-prediais-fachadas",
+        "/servicos/pintura-predial",
+        "/servicos/impermeabilizacao",
+        "/servicos/reformas-corporativas",
+        "/servicos/reformas-construcoes-industriais",
+        "/servicos/alpinismo-industrial",
+        "/servicos/manutencao-condominios",
+        "/servicos/porcelanatos-granitos-acabamentos",
+        "/projetos",
+        "/areas-atendidas",
+        "/blog",
+        "/contato"
+      ],
+      "externalLinks": [
+        "tel:(51) 98403-3255",
+        "https://wa.me/5551984033255?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20meu%20projeto.",
+        "mailto:comercial@artsconstrutora.com.br",
+        "https://www.instagram.com/artsconstrutora_",
+        "https://www.facebook.com/ArtsConstrutora"
+      ],
+      "forms": [],
+      "jsonLd": [
+        {
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          "name": "Art's Construtora",
+          "description": "Empresa especializada em pintura predial, alpinismo predial, impermeabilização, reforma de fachadas e manutenção de condomínios em Porto Alegre e Região Metropolitana RS.",
+          "url": "https://artsconstrutora.com.br",
+          "telephone": "+55-51-99958-3045",
+          "email": "contato@artsconstrutora.com.br",
+          "foundingDate": "2002",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Porto Alegre",
+            "addressRegion": "RS",
+            "addressCountry": "BR"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": -30.0346,
+            "longitude": -51.2177
+          },
+          "areaServed": [
+            "Porto Alegre",
+            "Canoas",
+            "Novo Hamburgo",
+            "São Leopoldo",
+            "Gravataí",
+            "Cachoeirinha",
+            "Região Metropolitana RS",
+            "Santa Catarina"
+          ],
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Serviços de Manutenção Predial",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Pintura Predial"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Alpinismo Predial"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Impermeabilização"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Reforma de Fachadas"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Manutenção de Condomínios"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Lavagem de Fachadas"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Instalação de Porcelanatos e Granitos"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Reformas Comerciais e Industriais"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "outline": [
+        {
+          "tag": "header",
+          "id": null,
+          "class": "sticky top-0 z-50 w-full transition-all duration-300 border-b border-border bg-background py-3 shadow-lg",
+          "firstHeading": "h1: Design system"
+        },
+        {
+          "tag": "nav",
+          "id": null,
+          "class": "hidden items-center gap-1 lg:flex",
+          "firstHeading": "h1: Design system"
+        },
+        {
+          "tag": "nav",
+          "id": null,
+          "class": "mt-4 flex flex-col gap-1",
+          "firstHeading": "h1: Design system"
+        },
+        {
+          "tag": "main",
+          "id": null,
+          "class": "flex-1",
+          "firstHeading": "h1: Design system"
+        },
+        {
+          "tag": "nav",
+          "id": null,
+          "class": "text-sm text-muted-foreground",
+          "firstHeading": "h1: Design system"
+        },
+        {
+          "tag": "section",
+          "id": null,
+          "class": "space-y-6",
+          "firstHeading": "h2: Cores"
+        },
+        {
+          "tag": "section",
+          "id": null,
+          "class": "space-y-6",
+          "firstHeading": "h2: Marca"
+        },
+        {
+          "tag": "section",
+          "id": null,
+          "class": "space-y-6",
+          "firstHeading": "h2: Tipografia — Montserrat"
+        },
+        {
+          "tag": "section",
+          "id": null,
+          "class": "space-y-6",
+          "firstHeading": "h2: Botões"
+        },
+        {
+          "tag": "section",
+          "id": null,
+          "class": "space-y-6",
+          "firstHeading": "h2: Badges, chips e ícones"
+        },
+        {
+          "tag": "section",
+          "id": null,
+          "class": "space-y-6",
+          "firstHeading": "h2: Moléculas"
+        },
+        {
+          "tag": "section",
+          "id": null,
+          "class": "bg-primary text-primary-foreground py-20 text-center",
+          "firstHeading": "h2: CTASection"
+        },
+        {
+          "tag": "footer",
+          "id": null,
+          "class": "bg-accent-deep text-accent-deep-foreground",
+          "firstHeading": "h3: Nossos Serviços"
+        }
+      ],
+      "stylesheets": [
+        "/_astro/Section.LfC2cg-z.css",
+        "/_astro/Section.LfC2cg-z.css"
+      ],
+      "scripts": [
+        "application/ld+json",
+        "inline",
+        "inline",
+        "module",
+        "/_astro/main.astro_astro_type_script_index_0_lang.4IgxO6jx.js"
+      ],
+      "allHeadValues": {}
+    },
+    {
+      "route": "/empresa",
+      "lang": "pt-BR",
+      "title": "Empresa — Quem Somos | Art's Construtora",
+      "description": "Conheça a Art's Construtora: experiência em manutenção predial, alpinismo, pintura e impermeabilização em Porto Alegre e Região Metropolitana RS.",
+      "canonical": "https://artsconstrutora.com.br/empresa",
+      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      "og": {
+        "og:site_name": "Art's Construtora",
+        "og:locale": "pt_BR",
+        "og:type": "website",
+        "og:title": "Empresa — Quem Somos | Art's Construtora",
+        "og:description": "Conheça a Art's Construtora: experiência em manutenção predial, alpinismo, pintura e impermeabilização em Porto Alegre e Região Metropolitana RS.",
+        "og:url": "https://artsconstrutora.com.br/empresa",
+        "og:image": "https://artsconstrutora.com.br/_astro/empresa-institucional.CnFESIf1_26askO.jpg",
+        "og:image:width": "1200",
+        "og:image:height": "630",
+        "og:image:alt": "Art's Construtora — Sede e Operações",
+        "twitter:card": "summary_large_image",
+        "twitter:title": "Empresa — Quem Somos | Art's Construtora",
+        "twitter:description": "Conheça a Art's Construtora: experiência em manutenção predial, alpinismo, pintura e impermeabilização em Porto Alegre e Região Metropolitana RS."
+      },
+      "duplicateHeadTags": [],
+      "icons": [
+        "/_astro/logo.BHDoi8PM_3wK4V.png"
+      ],
+      "headings": {
+        "h1": [
+          "Construindo confiança. Valorizando patrimônios."
+        ],
+        "h2": [
+          "Nossa Missão",
+          "Nossa Visão",
+          "O que nos diferencia",
+          "Construída com propósito. Entregando excelência.",
+          "Vamos conversar sobre seu projeto?"
+        ],
+        "h3": [
+          "Foco no Cliente",
+          "Compromisso e Ética",
+          "Valorização das Pessoas",
+          "Confiabilidade",
+          "Responsabilidade Social",
+          "Pós-Obra Garantida",
+          "Nossos Serviços",
+          "Áreas Atendidas",
+          "Nossas Garantias"
+        ]
+      },
+      "wordCount": 775,
+      "images": [
+        {
+          "src": "/_astro/logo.BHDoi8PM_1IzCO0.webp",
+          "alt": "Art's Construtora — Porto Alegre RS"
+        },
+        {
+          "src": "/_astro/page-blog.vysBof2u_1xHkxT.webp",
+          "alt": "Empresa Art's Construtora"
+        },
+        {
+          "src": "/_astro/empresa-institucional.CnFESIf1_1cvewA.webp",
+          "alt": "Art's Construtora — Sede e Operações"
+        },
+        {
+          "src": "/_astro/logo.BHDoi8PM_1IzCO0.webp",
+          "alt": "Art's Construtora"
+        }
+      ],
+      "backgroundImages": [],
+      "internalLinks": [
+        "/",
+        "/empresa",
+        "/servicos",
+        "/servicos/construcao-civil-reformas",
+        "/servicos/reformas-prediais-fachadas",
+        "/servicos/pintura-predial",
+        "/servicos/impermeabilizacao",
+        "/servicos/reformas-corporativas",
+        "/servicos/reformas-construcoes-industriais",
+        "/servicos/alpinismo-industrial",
+        "/servicos/manutencao-condominios",
+        "/servicos/porcelanatos-granitos-acabamentos",
+        "/projetos",
+        "/areas-atendidas",
+        "/blog",
+        "/contato"
+      ],
+      "externalLinks": [
+        "tel:(51) 98403-3255",
+        "https://wa.me/5551984033255?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20meu%20projeto.",
+        "mailto:comercial@artsconstrutora.com.br",
+        "https://www.instagram.com/artsconstrutora_",
+        "https://www.facebook.com/ArtsConstrutora"
+      ],
+      "forms": [],
+      "jsonLd": [
+        {
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          "name": "Art's Construtora",
+          "description": "Empresa especializada em pintura predial, alpinismo predial, impermeabilização, reforma de fachadas e manutenção de condomínios em Porto Alegre e Região Metropolitana RS.",
+          "url": "https://artsconstrutora.com.br",
+          "telephone": "+55-51-99958-3045",
+          "email": "contato@artsconstrutora.com.br",
+          "foundingDate": "2002",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Porto Alegre",
+            "addressRegion": "RS",
+            "addressCountry": "BR"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": -30.0346,
+            "longitude": -51.2177
+          },
+          "areaServed": [
+            "Porto Alegre",
+            "Canoas",
+            "Novo Hamburgo",
+            "São Leopoldo",
+            "Gravataí",
+            "Cachoeirinha",
+            "Região Metropolitana RS",
+            "Santa Catarina"
+          ],
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Serviços de Manutenção Predial",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Pintura Predial"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Alpinismo Predial"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Impermeabilização"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Reforma de Fachadas"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Manutenção de Condomínios"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Lavagem de Fachadas"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Instalação de Porcelanatos e Granitos"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Reformas Comerciais e Industriais"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "outline": [
+        {
+          "tag": "header",
+          "id": null,
+          "class": "sticky top-0 z-50 w-full transition-all duration-300 border-b border-border bg-background py-3 shadow-lg",
+          "firstHeading": "h1: Construindo confiança. Valorizando patrimônios."
+        },
+        {
+          "tag": "nav",
+          "id": null,
+          "class": "hidden items-center gap-1 lg:flex",
+          "firstHeading": "h1: Construindo confiança. Valorizando patrimônios."
+        },
+        {
+          "tag": "nav",
+          "id": null,
+          "class": "mt-4 flex flex-col gap-1",
+          "firstHeading": "h1: Construindo confiança. Valorizando patrimônios."
+        },
+        {
+          "tag": "main",
+          "id": null,
+          "class": "flex-1",
+          "firstHeading": "h1: Construindo confiança. Valorizando patrimônios."
+        },
+        {
+          "tag": "section",
+          "id": null,
+          "class": "relative overflow-hidden",
+          "firstHeading": "h1: Construindo confiança. Valorizando patrimônios."
+        },
+        {
+          "tag": "section",
+          "id": null,
+          "class": "bg-background text-foreground py-20 overflow-hidden",
+          "firstHeading": "h2: Nossa Missão"
+        },
+        {
+          "tag": "section",
+          "id": null,
+          "class": "bg-muted text-foreground py-20 border-y border-border",
+          "firstHeading": "h2: Nossa Missão"
+        },
+        {
+          "tag": "section",
+          "id": null,
+          "class": "bg-background text-foreground py-20",
+          "firstHeading": "h2: O que nos diferencia"
+        },
+        {
+          "tag": "section",
+          "id": null,
+          "class": "bg-accent-deep text-accent-deep-foreground relative overflow-hidden py-24",
+          "firstHeading": "h2: Construída com propósito. Entregando excelência."
+        },
+        {
+          "tag": "section",
+          "id": null,
+          "class": "bg-primary text-primary-foreground py-20 text-center",
+          "firstHeading": "h2: Vamos conversar sobre seu projeto?"
+        },
+        {
+          "tag": "footer",
+          "id": null,
+          "class": "bg-accent-deep text-accent-deep-foreground",
+          "firstHeading": "h3: Nossos Serviços"
+        }
+      ],
+      "stylesheets": [
+        "/_astro/Section.LfC2cg-z.css",
+        "/_astro/Section.LfC2cg-z.css"
+      ],
+      "scripts": [
+        "application/ld+json",
+        "inline",
+        "inline",
+        "module",
+        "/_astro/main.astro_astro_type_script_index_0_lang.4IgxO6jx.js"
+      ],
+      "allHeadValues": {}
+    },
+    {
+      "route": "/",
+      "lang": "pt-BR",
+      "title": "Art's Construtora — Pintura Predial, Alpinismo e Manutenção em Porto Alegre",
+      "description": "Especialistas em pintura predial, reforma de fachadas, alpinismo predial, impermeabilização e manutenção de condomínios em Porto Alegre, Canoas e Região Metropolitana RS.",
+      "canonical": "https://artsconstrutora.com.br/",
+      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      "og": {
+        "og:site_name": "Art's Construtora",
+        "og:locale": "pt_BR",
+        "og:type": "website",
+        "og:title": "Art's Construtora — Pintura Predial, Alpinismo e Manutenção em Porto Alegre",
+        "og:description": "Especialistas em pintura predial, reforma de fachadas, alpinismo predial, impermeabilização e manutenção de condomínios em Porto Alegre, Canoas e Região Metropolitana RS.",
+        "og:url": "https://artsconstrutora.com.br/",
+        "og:image": "https://artsconstrutora.com.br/_astro/hero-home.CV73TGKj_Z1CjIfJ.jpg",
+        "og:image:width": "1200",
+        "og:image:height": "630",
+        "og:image:alt": "Art's Construtora",
+        "twitter:card": "summary_large_image",
+        "twitter:title": "Art's Construtora — Pintura Predial, Alpinismo e Manutenção em Porto Alegre",
+        "twitter:description": "Especialistas em pintura predial, reforma de fachadas, alpinismo predial, impermeabilização e manutenção de condomínios em Porto Alegre, Canoas e Região Metropolitana RS."
+      },
+      "duplicateHeadTags": [],
+      "icons": [
+        "/_astro/logo.BHDoi8PM_3wK4V.png"
+      ],
+      "headings": {
+        "h1": [
+          "Engenharia de Alto Padrão para Fachadas e Manutenção Predial"
+        ],
+        "h2": [
+          "Serviços Especializados",
+          "A diferença entre uma empresa séria e uma promessa vazia",
+          "Projetos em Destaque",
+          "Áreas Atendidas",
+          "O que dizem nossos clientes",
+          "Perguntas Frequentes",
+          "Solicite um Orçamento"
+        ],
+        "h3": [
+          "Construção Civil e Reformas",
+          "Reformas Prediais e Fachadas",
+          "Pintura Predial",
+          "Impermeabilização",
+          "Reformas Corporativas",
+          "Reformas e Construções Industriais",
+          "Alpinismo Industrial",
+          "Manutenção de Condomínios",
+          "Porcelanatos, Granitos e Acabamentos Premium",
+          "Engenharia Responsável",
+          "Alpinismo Industrial IRATA",
+          "Seguro de Responsabilidade Civil",
+          "Materiais de Linha Profissional",
+          "Planejamento e Cumprimento de Prazos",
+          "Transparência e Relatórios",
+          "Construção Civil e Reformas",
+          "Revitalização Predial e Reforma Industrial",
+          "Revestimentos de Alto Padrão",
+          "Nossos Serviços",
+          "Áreas Atendidas",
+          "Nossas Garantias"
+        ]
+      },
+      "wordCount": 1204,
+      "images": [
+        {
+          "src": "/_astro/logo.BHDoi8PM_1IzCO0.webp",
+          "alt": "Art's Construtora — Porto Alegre RS"
+        },
+        {
+          "src": "/_astro/hero-home.CV73TGKj_Z1aIEI3.webp",
+          "alt": null
+        },
+        {
+          "src": "/_astro/construcao-civil-reformas.l_4RsrHQ_Z2tJNuM.webp",
+          "alt": "Construção Civil e Reformas — Art's Construtora"
+        },
+        {
+          "src": "/_astro/revitalizacao-predial-reforma-industrial.DhnoMTwQ_ZlGbSo.webp",
+          "alt": "Revitalização Predial e Reforma Industrial — Art's Construtora"
+        },
+        {
+          "src": "/_astro/revestimentos-alto-padrao.DmIz3kmz_f5fMS.webp",
+          "alt": "Revestimentos de Alto Padrão — Art's Construtora"
+        },
+        {
+          "src": "/_astro/logo.BHDoi8PM_1IzCO0.webp",
+          "alt": "Art's Construtora"
+        }
+      ],
+      "backgroundImages": [],
+      "internalLinks": [
+        "/",
+        "/empresa",
+        "/servicos",
+        "/servicos/construcao-civil-reformas",
+        "/servicos/reformas-prediais-fachadas",
+        "/servicos/pintura-predial",
+        "/servicos/impermeabilizacao",
+        "/servicos/reformas-corporativas",
+        "/servicos/reformas-construcoes-industriais",
+        "/servicos/alpinismo-industrial",
+        "/servicos/manutencao-condominios",
+        "/servicos/porcelanatos-granitos-acabamentos",
+        "/projetos",
+        "/areas-atendidas",
+        "/blog",
+        "/contato"
+      ],
+      "externalLinks": [
+        "tel:(51) 98403-3255",
+        "https://wa.me/5551984033255?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20meu%20projeto.",
+        "mailto:comercial@artsconstrutora.com.br",
+        "https://www.instagram.com/artsconstrutora_",
+        "https://www.facebook.com/ArtsConstrutora"
+      ],
+      "forms": [],
+      "jsonLd": [
+        {
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          "name": "Art's Construtora",
+          "description": "Empresa especializada em pintura predial, alpinismo predial, impermeabilização, reforma de fachadas e manutenção de condomínios em Porto Alegre e Região Metropolitana RS.",
+          "url": "https://artsconstrutora.com.br",
+          "telephone": "+55-51-99958-3045",
+          "email": "contato@artsconstrutora.com.br",
+          "foundingDate": "2002",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Porto Alegre",
+            "addressRegion": "RS",
+            "addressCountry": "BR"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": -30.0346,
+            "longitude": -51.2177
+          },
+          "areaServed": [
+            "Porto Alegre",
+            "Canoas",
+            "Novo Hamburgo",
+            "São Leopoldo",
+            "Gravataí",
+            "Cachoeirinha",
+            "Região Metropolitana RS",
+            "Santa Catarina"
+          ],
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Serviços de Manutenção Predial",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Pintura Predial"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Alpinismo Predial"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Impermeabilização"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Reforma de Fachadas"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Manutenção de Condomínios"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Lavagem de Fachadas"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Instalação de Porcelanatos e Granitos"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Reformas Comerciais e Industriais"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Vocês realizam pintura predial?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Sim. Somos especializados em pintura predial, atendendo edifícios residenciais, comerciais e hospitalares em toda a Região Metropolitana RS e Santa Catarina. Utilizamos tintas elastoméricas e acrílicas de alta performance com garantia estendida e ART de engenheiro."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Como funciona o alpinismo predial para reforma de fachadas?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Nossa equipe é certificada pela IRATA (Industrial Rope Access Trade Association). Acessamos locais de difícil acesso por cordas industriais — eliminando andaimes em até 80% dos casos, o que reduz custo e prazo de obra significativamente."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Qual é a área de atendimento de vocês?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Atendemos Canoas, Porto Alegre, Novo Hamburgo, Gravataí e toda a Região Metropolitana RS, além de Gramado, Canela, Litoral Norte Gaúcho e Santa Catarina (Balneário Camboriú, Florianópolis, Itapema, Porto Belo e Bombinhas). Entre em contato para agendar uma visita técnica."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Qual a garantia dos serviços de impermeabilização?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Oferecemos garantia contratual de até 5 anos nos serviços de impermeabilização, dependendo do sistema aplicado. Todos os serviços estruturais são executados com emissão de ART por engenheiro civil registrado no CREA-RS."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Como solicitar um orçamento de reforma de fachada?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Solicite pelo WhatsApp, telefone ou formulário de contato. Nossa equipe agenda uma visita técnica, avalia o local e apresenta laudo completo com proposta detalhada."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Vocês emitem ART para os serviços de manutenção predial?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Sim. Todos os serviços estruturais são acompanhados por engenheiro civil com emissão de ART junto ao CREA-RS, garantindo respaldo técnico e jurídico total ao condomínio ou proprietário."
+              }
+            }
+          ]
+        }
+      ],
+      "outline": [
+        {
+          "tag": "header",
+          "id": null,
+          "class": "sticky top-0 z-50 w-full transition-all duration-300 bg-transparent py-5",
+          "firstHeading": "h1: Engenharia de Alto Padrão para Fachadas e Manutenção Predial"
+        },
+        {
+          "tag": "nav",
+          "id": null,
+          "class": "hidden items-center gap-1 lg:flex",
+          "firstHeading": "h1: Engenharia de Alto Padrão para Fachadas e Manutenção Predial"
+        },
+        {
+          "tag": "nav",
+          "id": null,
+          "class": "mt-4 flex flex-col gap-1",
+          "firstHeading": "h1: Engenharia de Alto Padrão para Fachadas e Manutenção Predial"
+        },
+        {
+          "tag": "main",
+          "id": null,
+          "class": "flex-1",
+          "firstHeading": "h1: Engenharia de Alto Padrão para Fachadas e Manutenção Predial"
+        },
+        {
+          "tag": "section",
+          "id": null,
+          "class": "relative flex min-h-screen items-center justify-center overflow-hidden",
+          "firstHeading": "h1: Engenharia de Alto Padrão para Fachadas e Manutenção Predial"
+        },
+        {
+          "tag": "section",
+          "id": "credenciais",
+          "class": "border-b border-inverse/5 bg-accent py-5",
+          "firstHeading": "h2: Serviços Especializados"
+        },
+        {
+          "tag": "section",
+          "id": null,
+          "class": "bg-muted text-foreground py-20 lg:py-28",
+          "firstHeading": "h2: Serviços Especializados"
+        },
+        {
+          "tag": "section",
+          "id": null,
+          "class": "bg-accent text-accent-foreground py-20 lg:py-28",
+          "firstHeading": "h2: A diferença entre uma empresa séria e uma promessa vazia"
+        },
+        {
+          "tag": "section",
+          "id": null,
+          "class": "bg-primary text-primary-foreground py-16",
+          "firstHeading": "h2: Projetos em Destaque"
+        },
+        {
+          "tag": "section",
+          "id": null,
+          "class": "bg-background text-foreground py-20 lg:py-28",
+          "firstHeading": "h2: Projetos em Destaque"
+        },
+        {
+          "tag": "section",
+          "id": null,
+          "class": "bg-muted text-foreground py-20 lg:py-28",
+          "firstHeading": "h2: Áreas Atendidas"
+        },
+        {
+          "tag": "section",
+          "id": null,
+          "class": "bg-accent text-accent-foreground py-20 lg:py-28",
+          "firstHeading": "h2: O que dizem nossos clientes"
+        },
+        {
+          "tag": "section",
+          "id": null,
+          "class": "bg-background text-foreground py-20 lg:py-28",
+          "firstHeading": "h2: Perguntas Frequentes"
+        },
+        {
+          "tag": "section",
+          "id": null,
+          "class": "bg-primary text-primary-foreground py-24 text-center",
+          "firstHeading": "h2: Solicite um Orçamento"
+        },
+        {
+          "tag": "footer",
+          "id": null,
+          "class": "bg-accent-deep text-accent-deep-foreground",
+          "firstHeading": "h3: Nossos Serviços"
+        }
+      ],
+      "stylesheets": [
+        "/_astro/Section.LfC2cg-z.css",
+        "/_astro/Section.LfC2cg-z.css"
+      ],
+      "scripts": [
+        "application/ld+json",
+        "application/ld+json",
+        "inline",
+        "inline",
+        "module",
+        "/_astro/main.astro_astro_type_script_index_0_lang.4IgxO6jx.js"
+      ],
+      "allHeadValues": {}
+    },
+    {
+      "route": "/projetos",
+      "lang": "pt-BR",
+      "title": "Projetos — Portfólio de Obras | Art's Construtora",
+      "description": "Portfólio de obras da Art's Construtora no Rio Grande do Sul e Santa Catarina — construção civil, reformas prediais, pintura, impermeabilização, alpinismo industrial e acabamentos premium.",
+      "canonical": "https://artsconstrutora.com.br/projetos",
+      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      "og": {
+        "og:site_name": "Art's Construtora",
+        "og:locale": "pt_BR",
+        "og:type": "website",
+        "og:title": "Projetos — Portfólio de Obras | Art's Construtora",
+        "og:description": "Portfólio de obras da Art's Construtora no Rio Grande do Sul e Santa Catarina — construção civil, reformas prediais, pintura, impermeabilização, alpinismo industrial e acabamentos premium.",
+        "og:url": "https://artsconstrutora.com.br/projetos",
+        "og:image": "https://artsconstrutora.com.br/_astro/page-projetos.DdOM7q14_ZEPmzb.jpg",
+        "og:image:width": "1200",
+        "og:image:height": "630",
+        "og:image:alt": "Portfólio Art's Construtora",
+        "twitter:card": "summary_large_image",
+        "twitter:title": "Projetos — Portfólio de Obras | Art's Construtora",
+        "twitter:description": "Portfólio de obras da Art's Construtora no Rio Grande do Sul e Santa Catarina — construção civil, reformas prediais, pintura, impermeabilização, alpinismo industrial e acabamentos premium."
+      },
+      "duplicateHeadTags": [],
+      "icons": [
+        "/_astro/logo.BHDoi8PM_3wK4V.png"
+      ],
+      "headings": {
+        "h1": [
+          "Nossas Especialidades"
+        ],
+        "h2": [
+          "Construção, Ampliações e Reformas",
+          "Recuperação e Modernização de Fachadas",
+          "Pintura Predial Especializada",
+          "Proteção Contra Infiltrações",
+          "Adequação de Ambientes Corporativos",
+          "Adequações e Ampliações Industriais",
+          "Trabalhos em Altura com Acesso por Corda",
+          "Modernização de Espaços de Lazer",
+          "Porcelanatos, Granitos e Acabamentos Premium",
+          "Precisa de alguma dessas especialidades?"
+        ],
+        "h3": [
+          "Nossos Serviços",
+          "Áreas Atendidas",
+          "Nossas Garantias"
+        ]
+      },
+      "wordCount": 530,
+      "images": [
+        {
+          "src": "/_astro/logo.BHDoi8PM_1IzCO0.webp",
+          "alt": "Art's Construtora — Porto Alegre RS"
+        },
+        {
+          "src": "/_astro/page-projetos.DdOM7q14_xcuLm.webp",
+          "alt": "Portfólio Art's Construtora"
+        },
+        {
+          "src": "/_astro/proj-construcao-civil.BHWmw3oy_2v2vuC.webp",
+          "alt": "Construção, Ampliações e Reformas — Art's Construtora"
+        },
+        {
+          "src": "/_astro/proj-reformas-prediais-v2.CGBKhdov_ABm7B.webp",
+          "alt": "Recuperação e Modernização de Fachadas — Art's Construtora"
+        },
+        {
+          "src": "/_astro/proj-pintura-predial.Dj1jWLRQ_1oVw81.webp",
+          "alt": "Pintura Predial Especializada — Art's Construtora"
+        },
+        {
+          "src": "/_astro/proj-impermeabilizacao-fachadas.a7V4QhnJ_FUEP.webp",
+          "alt": "Proteção Contra Infiltrações — Art's Construtora"
+        },
+        {
+          "src": "/_astro/proj-reformas-corporativas.Bh_1DGtc_15ccDl.webp",
+          "alt": "Adequação de Ambientes Corporativos — Art's Construtora"
+        },
+        {
+          "src": "/_astro/proj-construcoes-industriais.CNv3yOZN_Z5nyNk.webp",
+          "alt": "Adequações e Ampliações Industriais — Art's Construtora"
+        },
+        {
+          "src": "/_astro/proj-alpinismo-industrial.DfcMno4-_283yME.webp",
+          "alt": "Trabalhos em Altura com Acesso por Corda — Art's Construtora"
+        },
+        {
+          "src": "/_astro/proj-revitalizacao-condominiais.CXzYHDZT_kOatA.webp",
+          "alt": "Modernização de Espaços de Lazer — Art's Construtora"
+        },
+        {
+          "src": "/_astro/proj-porcelanatos-granitos.COzJJXQZ_Z2mNclN.webp",
+          "alt": "Porcelanatos, Granitos e Acabamentos Premium — Art's Construtora"
+        },
+        {
+          "src": "/_astro/logo.BHDoi8PM_1IzCO0.webp",
+          "alt": "Art's Construtora"
+        }
+      ],
+      "backgroundImages": [],
+      "internalLinks": [
+        "/",
+        "/empresa",
+        "/servicos",
+        "/servicos/construcao-civil-reformas",
+        "/servicos/reformas-prediais-fachadas",
+        "/servicos/pintura-predial",
+        "/servicos/impermeabilizacao",
+        "/servicos/reformas-corporativas",
+        "/servicos/reformas-construcoes-industriais",
+        "/servicos/alpinismo-industrial",
+        "/servicos/manutencao-condominios",
+        "/servicos/porcelanatos-granitos-acabamentos",
+        "/projetos",
+        "/areas-atendidas",
+        "/blog",
+        "/contato"
+      ],
+      "externalLinks": [
+        "tel:(51) 98403-3255",
+        "https://wa.me/5551984033255?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20meu%20projeto.",
+        "mailto:comercial@artsconstrutora.com.br",
+        "https://www.instagram.com/artsconstrutora_",
+        "https://www.facebook.com/ArtsConstrutora"
+      ],
+      "forms": [],
+      "jsonLd": [
+        {
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          "name": "Art's Construtora",
+          "description": "Empresa especializada em pintura predial, alpinismo predial, impermeabilização, reforma de fachadas e manutenção de condomínios em Porto Alegre e Região Metropolitana RS.",
+          "url": "https://artsconstrutora.com.br",
+          "telephone": "+55-51-99958-3045",
+          "email": "contato@artsconstrutora.com.br",
+          "foundingDate": "2002",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Porto Alegre",
+            "addressRegion": "RS",
+            "addressCountry": "BR"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": -30.0346,
+            "longitude": -51.2177
+          },
+          "areaServed": [
+            "Porto Alegre",
+            "Canoas",
+            "Novo Hamburgo",
+            "São Leopoldo",
+            "Gravataí",
+            "Cachoeirinha",
+            "Região Metropolitana RS",
+            "Santa Catarina"
+          ],
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Serviços de Manutenção Predial",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Pintura Predial"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Alpinismo Predial"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Impermeabilização"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Reforma de Fachadas"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Manutenção de Condomínios"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Lavagem de Fachadas"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Instalação de Porcelanatos e Granitos"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Reformas Comerciais e Industriais"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "outline": [
+        {
+          "tag": "header",
+          "id": null,
+          "class": "sticky top-0 z-50 w-full transition-all duration-300 border-b border-border bg-background py-3 shadow-lg",
+          "firstHeading": "h1: Nossas Especialidades"
+        },
+        {
+          "tag": "nav",
+          "id": null,
+          "class": "hidden items-center gap-1 lg:flex",
+          "firstHeading": "h1: Nossas Especialidades"
+        },
+        {
+          "tag": "nav",
+          "id": null,
+          "class": "mt-4 flex flex-col gap-1",
+          "firstHeading": "h1: Nossas Especialidades"
+        },
+        {
+          "tag": "main",
+          "id": null,
+          "class": "flex-1",
+          "firstHeading": "h1: Nossas Especialidades"
+        },
+        {
+          "tag": "section",
+          "id": null,
+          "class": "relative overflow-hidden",
+          "firstHeading": "h1: Nossas Especialidades"
+        },
+        {
+          "tag": "section",
+          "id": null,
+          "class": "bg-background text-foreground py-5 border-b border-border",
+          "firstHeading": "h2: Construção, Ampliações e Reformas"
+        },
+        {
+          "tag": "section",
+          "id": null,
+          "class": "bg-muted text-foreground py-16",
+          "firstHeading": "h2: Construção, Ampliações e Reformas"
+        },
+        {
+          "tag": "section",
+          "id": null,
+          "class": "bg-primary text-primary-foreground py-20 text-center",
+          "firstHeading": "h2: Precisa de alguma dessas especialidades?"
+        },
+        {
+          "tag": "footer",
+          "id": null,
+          "class": "bg-accent-deep text-accent-deep-foreground",
+          "firstHeading": "h3: Nossos Serviços"
+        }
+      ],
+      "stylesheets": [
+        "/_astro/Section.LfC2cg-z.css",
+        "/_astro/Section.LfC2cg-z.css"
+      ],
+      "scripts": [
+        "application/ld+json",
+        "inline",
+        "inline",
+        "module",
+        "/_astro/main.astro_astro_type_script_index_0_lang.4IgxO6jx.js"
+      ],
+      "allHeadValues": {}
+    },
+    {
+      "route": "/servicos",
+      "lang": "pt-BR",
+      "title": "Serviços Especializados | Art's Construtora",
+      "description": "Pintura predial, alpinismo, impermeabilização, reforma de fachadas, lavagem e instalação de revestimentos em Porto Alegre, Canoas e Região Metropolitana RS.",
+      "canonical": "https://artsconstrutora.com.br/servicos",
+      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      "og": {
+        "og:site_name": "Art's Construtora",
+        "og:locale": "pt_BR",
+        "og:type": "website",
+        "og:title": "Serviços Especializados | Art's Construtora",
+        "og:description": "Pintura predial, alpinismo, impermeabilização, reforma de fachadas, lavagem e instalação de revestimentos em Porto Alegre, Canoas e Região Metropolitana RS.",
+        "og:url": "https://artsconstrutora.com.br/servicos",
+        "og:image": "https://artsconstrutora.com.br/_astro/page-servicos.CiZPJ4FN_ZlT7S2.jpg",
+        "og:image:width": "1200",
+        "og:image:height": "630",
+        "og:image:alt": "Serviços Art's Construtora",
+        "twitter:card": "summary_large_image",
+        "twitter:title": "Serviços Especializados | Art's Construtora",
+        "twitter:description": "Pintura predial, alpinismo, impermeabilização, reforma de fachadas, lavagem e instalação de revestimentos em Porto Alegre, Canoas e Região Metropolitana RS."
+      },
+      "duplicateHeadTags": [],
+      "icons": [
+        "/_astro/logo.BHDoi8PM_3wK4V.png"
+      ],
+      "headings": {
+        "h1": [
+          "Serviços Especializados"
+        ],
+        "h2": [
+          "Construção Civil e Reformas",
+          "Reformas Prediais e Fachadas",
+          "Pintura Predial",
+          "Impermeabilização",
+          "Reformas Corporativas",
+          "Reformas e Construções Industriais",
+          "Alpinismo Industrial",
+          "Manutenção de Condomínios",
+          "Porcelanatos, Granitos e Acabamentos Premium",
+          "Não encontrou o que precisa?"
+        ],
+        "h3": [
+          "Nossos Serviços",
+          "Áreas Atendidas",
+          "Nossas Garantias"
+        ]
+      },
+      "wordCount": 487,
+      "images": [
+        {
+          "src": "/_astro/logo.BHDoi8PM_1IzCO0.webp",
+          "alt": "Art's Construtora — Porto Alegre RS"
+        },
+        {
+          "src": "/_astro/page-servicos.CiZPJ4FN_13Si7q.webp",
+          "alt": "Serviços Art's Construtora"
+        },
+        {
+          "src": "/_astro/logo.BHDoi8PM_1IzCO0.webp",
+          "alt": "Art's Construtora"
+        }
+      ],
+      "backgroundImages": [],
+      "internalLinks": [
+        "/",
+        "/empresa",
+        "/servicos",
+        "/servicos/construcao-civil-reformas",
+        "/servicos/reformas-prediais-fachadas",
+        "/servicos/pintura-predial",
+        "/servicos/impermeabilizacao",
+        "/servicos/reformas-corporativas",
+        "/servicos/reformas-construcoes-industriais",
+        "/servicos/alpinismo-industrial",
+        "/servicos/manutencao-condominios",
+        "/servicos/porcelanatos-granitos-acabamentos",
+        "/projetos",
+        "/areas-atendidas",
+        "/blog",
+        "/contato"
+      ],
+      "externalLinks": [
+        "tel:(51) 98403-3255",
+        "https://wa.me/5551984033255?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20meu%20projeto.",
+        "mailto:comercial@artsconstrutora.com.br",
+        "https://www.instagram.com/artsconstrutora_",
+        "https://www.facebook.com/ArtsConstrutora"
+      ],
+      "forms": [],
+      "jsonLd": [
+        {
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          "name": "Art's Construtora",
+          "description": "Empresa especializada em pintura predial, alpinismo predial, impermeabilização, reforma de fachadas e manutenção de condomínios em Porto Alegre e Região Metropolitana RS.",
+          "url": "https://artsconstrutora.com.br",
+          "telephone": "+55-51-99958-3045",
+          "email": "contato@artsconstrutora.com.br",
+          "foundingDate": "2002",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Porto Alegre",
+            "addressRegion": "RS",
+            "addressCountry": "BR"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": -30.0346,
+            "longitude": -51.2177
+          },
+          "areaServed": [
+            "Porto Alegre",
+            "Canoas",
+            "Novo Hamburgo",
+            "São Leopoldo",
+            "Gravataí",
+            "Cachoeirinha",
+            "Região Metropolitana RS",
+            "Santa Catarina"
+          ],
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Serviços de Manutenção Predial",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Pintura Predial"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Alpinismo Predial"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Impermeabilização"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Reforma de Fachadas"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Manutenção de Condomínios"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Lavagem de Fachadas"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Instalação de Porcelanatos e Granitos"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Reformas Comerciais e Industriais"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "outline": [
+        {
+          "tag": "header",
+          "id": null,
+          "class": "sticky top-0 z-50 w-full transition-all duration-300 border-b border-border bg-background py-3 shadow-lg",
+          "firstHeading": "h1: Serviços Especializados"
+        },
+        {
+          "tag": "nav",
+          "id": null,
+          "class": "hidden items-center gap-1 lg:flex",
+          "firstHeading": "h1: Serviços Especializados"
+        },
+        {
+          "tag": "nav",
+          "id": null,
+          "class": "mt-4 flex flex-col gap-1",
+          "firstHeading": "h1: Serviços Especializados"
+        },
+        {
+          "tag": "main",
+          "id": null,
+          "class": "flex-1",
+          "firstHeading": "h1: Serviços Especializados"
+        },
+        {
+          "tag": "section",
+          "id": null,
+          "class": "relative overflow-hidden",
+          "firstHeading": "h1: Serviços Especializados"
+        },
+        {
+          "tag": "section",
+          "id": null,
+          "class": "bg-background text-foreground py-12 border-b border-border",
+          "firstHeading": "h2: Construção Civil e Reformas"
+        },
+        {
+          "tag": "section",
+          "id": null,
+          "class": "bg-muted text-foreground py-16",
+          "firstHeading": "h2: Construção Civil e Reformas"
+        },
+        {
+          "tag": "section",
+          "id": null,
+          "class": "bg-primary text-primary-foreground py-16 text-center",
+          "firstHeading": "h2: Não encontrou o que precisa?"
+        },
+        {
+          "tag": "footer",
+          "id": null,
+          "class": "bg-accent-deep text-accent-deep-foreground",
+          "firstHeading": "h3: Nossos Serviços"
+        }
+      ],
+      "stylesheets": [
+        "/_astro/Section.LfC2cg-z.css",
+        "/_astro/Section.LfC2cg-z.css"
+      ],
+      "scripts": [
+        "application/ld+json",
+        "inline",
+        "inline",
+        "module",
+        "/_astro/main.astro_astro_type_script_index_0_lang.4IgxO6jx.js"
+      ],
+      "allHeadValues": {}
+    },
+    {
+      "route": "/servicos/alpinismo-industrial",
+      "lang": "pt-BR",
+      "title": "Alpinismo Industrial | Art's Construtora",
+      "description": "Alpinismo industrial e predial certificado IRATA no Rio Grande do Sul e Santa Catarina — Art's Construtora. Acesso por cordas para fachadas e estruturas de difícil acesso.",
+      "canonical": "https://artsconstrutora.com.br/servicos/alpinismo-industrial",
+      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      "og": {
+        "og:site_name": "Art's Construtora",
+        "og:locale": "pt_BR",
+        "og:type": "website",
+        "og:title": "Alpinismo Industrial | Art's Construtora",
+        "og:description": "Alpinismo industrial e predial certificado IRATA no Rio Grande do Sul e Santa Catarina — Art's Construtora. Acesso por cordas para fachadas e estruturas de difícil acesso.",
+        "og:url": "https://artsconstrutora.com.br/servicos/alpinismo-industrial",
+        "og:image": "https://artsconstrutora.com.br/_astro/photo-1504307651254-35680f356dfd.CSclpFkv_Z1gXYiJ.jpg",
+        "og:image:width": "1200",
+        "og:image:height": "630",
+        "og:image:alt": "Alpinismo Industrial | Art's Construtora",
+        "twitter:card": "summary_large_image",
+        "twitter:title": "Alpinismo Industrial | Art's Construtora",
+        "twitter:description": "Alpinismo industrial e predial certificado IRATA no Rio Grande do Sul e Santa Catarina — Art's Construtora. Acesso por cordas para fachadas e estruturas de difícil acesso."
+      },
+      "duplicateHeadTags": [],
+      "icons": [
+        "/_astro/logo.BHDoi8PM_3wK4V.png"
+      ],
+      "headings": {
+        "h1": [
+          "Alpinismo Industrial"
+        ],
+        "h2": [
+          "Sobre o Serviço",
+          "O que está incluído",
+          "Como trabalhamos",
+          "Precisa de Alpinismo Industrial?"
+        ],
+        "h3": [
+          "Solicitar Orçamento",
+          "Outros Serviços",
+          "Nossos Serviços",
+          "Áreas Atendidas",
+          "Nossas Garantias"
+        ]
+      },
+      "wordCount": 507,
+      "images": [
+        {
+          "src": "/_astro/logo.BHDoi8PM_1IzCO0.webp",
+          "alt": "Art's Construtora — Porto Alegre RS"
+        },
+        {
+          "src": "/_astro/photo-1504307651254-35680f356dfd.CSclpFkv_1rql1k.webp",
+          "alt": "Alpinismo Industrial — Art's Construtora"
+        },
+        {
+          "src": "/_astro/logo.BHDoi8PM_1IzCO0.webp",
+          "alt": "Art's Construtora"
+        }
+      ],
+      "backgroundImages": [],
+      "internalLinks": [
+        "/",
+        "/empresa",
+        "/servicos",
+        "/servicos/construcao-civil-reformas",
+        "/servicos/reformas-prediais-fachadas",
+        "/servicos/pintura-predial",
+        "/servicos/impermeabilizacao",
+        "/servicos/reformas-corporativas",
+        "/servicos/reformas-construcoes-industriais",
+        "/servicos/alpinismo-industrial",
+        "/servicos/manutencao-condominios",
+        "/servicos/porcelanatos-granitos-acabamentos",
+        "/projetos",
+        "/areas-atendidas",
+        "/blog",
+        "/contato"
+      ],
+      "externalLinks": [
+        "tel:(51) 98403-3255",
+        "https://wa.me/5551984033255?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20meu%20projeto.",
+        "https://wa.me/5551984033255?text=Ol%C3%A1%2C%20preciso%20de%20or%C3%A7amento%20para%20Alpinismo%20Industrial",
+        "https://wa.me/5551984033255?text=Ol%C3%A1%2C%20preciso%20de%20Alpinismo%20Industrial",
+        "mailto:comercial@artsconstrutora.com.br",
+        "https://www.instagram.com/artsconstrutora_",
+        "https://www.facebook.com/ArtsConstrutora"
+      ],
+      "forms": [],
+      "jsonLd": [
+        {
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          "name": "Art's Construtora",
+          "description": "Empresa especializada em pintura predial, alpinismo predial, impermeabilização, reforma de fachadas e manutenção de condomínios em Porto Alegre e Região Metropolitana RS.",
+          "url": "https://artsconstrutora.com.br",
+          "telephone": "+55-51-99958-3045",
+          "email": "contato@artsconstrutora.com.br",
+          "foundingDate": "2002",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Porto Alegre",
+            "addressRegion": "RS",
+            "addressCountry": "BR"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": -30.0346,
+            "longitude": -51.2177
+          },
+          "areaServed": [
+            "Porto Alegre",
+            "Canoas",
+            "Novo Hamburgo",
+            "São Leopoldo",
+            "Gravataí",
+            "Cachoeirinha",
+            "Região Metropolitana RS",
+            "Santa Catarina"
+          ],
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Serviços de Manutenção Predial",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Pintura Predial"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Alpinismo Predial"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Impermeabilização"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Reforma de Fachadas"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Manutenção de Condomínios"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Lavagem de Fachadas"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Instalação de Porcelanatos e Granitos"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Reformas Comerciais e Industriais"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "name": "Alpinismo Industrial",
+          "description": "Alpinismo industrial e predial certificado IRATA no Rio Grande do Sul e Santa Catarina — Art's Construtora. Acesso por cordas para fachadas e estruturas de difícil acesso.",
+          "provider": {
+            "@type": "LocalBusiness",
+            "name": "Art's Construtora",
+            "url": "https://artsconstrutora.com.br"
+          },
+          "areaServed": [
+            "Rio Grande do Sul",
+            "Santa Catarina"
+          ]
+        }
+      ],
+      "outline": [
+        {
+          "tag": "header",
+          "id": null,
+          "class": "sticky top-0 z-50 w-full transition-all duration-300 border-b border-border bg-background py-3 shadow-lg",
+          "firstHeading": "h1: Alpinismo Industrial"
+        },
+        {
+          "tag": "nav",
+          "id": null,
+          "class": "hidden items-center gap-1 lg:flex",
+          "firstHeading": "h1: Alpinismo Industrial"
+        },
+        {
+          "tag": "nav",
+          "id": null,
+          "class": "mt-4 flex flex-col gap-1",
+          "firstHeading": "h1: Alpinismo Industrial"
+        },
+        {
+          "tag": "main",
+          "id": null,
+          "class": "flex-1",
+          "firstHeading": "h1: Alpinismo Industrial"
+        },
+        {
+          "tag": "section",
+          "id": null,
+          "class": "relative overflow-hidden",
+          "firstHeading": "h1: Alpinismo Industrial"
+        },
+        {
+          "tag": "section",
+          "id": null,
+          "class": "bg-background text-foreground py-20",
+          "firstHeading": "h2: Sobre o Serviço"
+        },
+        {
+          "tag": "aside",
+          "id": null,
+          "class": "space-y-6",
+          "firstHeading": "h3: Solicitar Orçamento"
+        },
+        {
+          "tag": "section",
+          "id": null,
+          "class": "bg-muted text-foreground py-16 text-center border-t border-border",
+          "firstHeading": "h2: Precisa de Alpinismo Industrial?"
+        },
+        {
+          "tag": "footer",
+          "id": null,
+          "class": "bg-accent-deep text-accent-deep-foreground",
+          "firstHeading": "h3: Nossos Serviços"
+        }
+      ],
+      "stylesheets": [
+        "/_astro/Section.LfC2cg-z.css",
+        "/_astro/Section.LfC2cg-z.css"
+      ],
+      "scripts": [
+        "application/ld+json",
+        "application/ld+json",
+        "inline",
+        "inline",
+        "module",
+        "/_astro/main.astro_astro_type_script_index_0_lang.4IgxO6jx.js"
+      ],
+      "allHeadValues": {}
+    },
+    {
+      "route": "/servicos/construcao-civil-reformas",
+      "lang": "pt-BR",
+      "title": "Construção Civil e Reformas | Art's Construtora",
+      "description": "Construção civil, ampliações e reformas prediais no Rio Grande do Sul e Santa Catarina — Art's Construtora. Obras estruturais com equipe própria e ART.",
+      "canonical": "https://artsconstrutora.com.br/servicos/construcao-civil-reformas",
+      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      "og": {
+        "og:site_name": "Art's Construtora",
+        "og:locale": "pt_BR",
+        "og:type": "website",
+        "og:title": "Construção Civil e Reformas | Art's Construtora",
+        "og:description": "Construção civil, ampliações e reformas prediais no Rio Grande do Sul e Santa Catarina — Art's Construtora. Obras estruturais com equipe própria e ART.",
+        "og:url": "https://artsconstrutora.com.br/servicos/construcao-civil-reformas",
+        "og:image": "https://artsconstrutora.com.br/_astro/photo-1504307651254-35680f356dfd.CSclpFkv_Z1gXYiJ.jpg",
+        "og:image:width": "1200",
+        "og:image:height": "630",
+        "og:image:alt": "Construção Civil e Reformas | Art's Construtora",
+        "twitter:card": "summary_large_image",
+        "twitter:title": "Construção Civil e Reformas | Art's Construtora",
+        "twitter:description": "Construção civil, ampliações e reformas prediais no Rio Grande do Sul e Santa Catarina — Art's Construtora. Obras estruturais com equipe própria e ART."
+      },
+      "duplicateHeadTags": [],
+      "icons": [
+        "/_astro/logo.BHDoi8PM_3wK4V.png"
+      ],
+      "headings": {
+        "h1": [
+          "Construção Civil e Reformas"
+        ],
+        "h2": [
+          "Sobre o Serviço",
+          "O que está incluído",
+          "Como trabalhamos",
+          "Precisa de Construção Civil e Reformas?"
+        ],
+        "h3": [
+          "Solicitar Orçamento",
+          "Outros Serviços",
+          "Nossos Serviços",
+          "Áreas Atendidas",
+          "Nossas Garantias"
+        ]
+      },
+      "wordCount": 541,
+      "images": [
+        {
+          "src": "/_astro/logo.BHDoi8PM_1IzCO0.webp",
+          "alt": "Art's Construtora — Porto Alegre RS"
+        },
+        {
+          "src": "/_astro/photo-1504307651254-35680f356dfd.CSclpFkv_1rql1k.webp",
+          "alt": "Construção Civil e Reformas — Art's Construtora"
+        },
+        {
+          "src": "/_astro/logo.BHDoi8PM_1IzCO0.webp",
+          "alt": "Art's Construtora"
+        }
+      ],
+      "backgroundImages": [],
+      "internalLinks": [
+        "/",
+        "/empresa",
+        "/servicos",
+        "/servicos/construcao-civil-reformas",
+        "/servicos/reformas-prediais-fachadas",
+        "/servicos/pintura-predial",
+        "/servicos/impermeabilizacao",
+        "/servicos/reformas-corporativas",
+        "/servicos/reformas-construcoes-industriais",
+        "/servicos/alpinismo-industrial",
+        "/servicos/manutencao-condominios",
+        "/servicos/porcelanatos-granitos-acabamentos",
+        "/projetos",
+        "/areas-atendidas",
+        "/blog",
+        "/contato"
+      ],
+      "externalLinks": [
+        "tel:(51) 98403-3255",
+        "https://wa.me/5551984033255?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20meu%20projeto.",
+        "https://wa.me/5551984033255?text=Ol%C3%A1%2C%20preciso%20de%20or%C3%A7amento%20para%20Constru%C3%A7%C3%A3o%20Civil%20e%20Reformas",
+        "https://wa.me/5551984033255?text=Ol%C3%A1%2C%20preciso%20de%20Constru%C3%A7%C3%A3o%20Civil%20e%20Reformas",
+        "mailto:comercial@artsconstrutora.com.br",
+        "https://www.instagram.com/artsconstrutora_",
+        "https://www.facebook.com/ArtsConstrutora"
+      ],
+      "forms": [],
+      "jsonLd": [
+        {
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          "name": "Art's Construtora",
+          "description": "Empresa especializada em pintura predial, alpinismo predial, impermeabilização, reforma de fachadas e manutenção de condomínios em Porto Alegre e Região Metropolitana RS.",
+          "url": "https://artsconstrutora.com.br",
+          "telephone": "+55-51-99958-3045",
+          "email": "contato@artsconstrutora.com.br",
+          "foundingDate": "2002",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Porto Alegre",
+            "addressRegion": "RS",
+            "addressCountry": "BR"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": -30.0346,
+            "longitude": -51.2177
+          },
+          "areaServed": [
+            "Porto Alegre",
+            "Canoas",
+            "Novo Hamburgo",
+            "São Leopoldo",
+            "Gravataí",
+            "Cachoeirinha",
+            "Região Metropolitana RS",
+            "Santa Catarina"
+          ],
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Serviços de Manutenção Predial",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Pintura Predial"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Alpinismo Predial"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Impermeabilização"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Reforma de Fachadas"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Manutenção de Condomínios"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Lavagem de Fachadas"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Instalação de Porcelanatos e Granitos"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Reformas Comerciais e Industriais"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "name": "Construção Civil e Reformas",
+          "description": "Construção civil, ampliações e reformas prediais no Rio Grande do Sul e Santa Catarina — Art's Construtora. Obras estruturais com equipe própria e ART.",
+          "provider": {
+            "@type": "LocalBusiness",
+            "name": "Art's Construtora",
+            "url": "https://artsconstrutora.com.br"
+          },
+          "areaServed": [
+            "Rio Grande do Sul",
+            "Santa Catarina"
+          ]
+        }
+      ],
+      "outline": [
+        {
+          "tag": "header",
+          "id": null,
+          "class": "sticky top-0 z-50 w-full transition-all duration-300 border-b border-border bg-background py-3 shadow-lg",
+          "firstHeading": "h1: Construção Civil e Reformas"
+        },
+        {
+          "tag": "nav",
+          "id": null,
+          "class": "hidden items-center gap-1 lg:flex",
+          "firstHeading": "h1: Construção Civil e Reformas"
+        },
+        {
+          "tag": "nav",
+          "id": null,
+          "class": "mt-4 flex flex-col gap-1",
+          "firstHeading": "h1: Construção Civil e Reformas"
+        },
+        {
+          "tag": "main",
+          "id": null,
+          "class": "flex-1",
+          "firstHeading": "h1: Construção Civil e Reformas"
+        },
+        {
+          "tag": "section",
+          "id": null,
+          "class": "relative overflow-hidden",
+          "firstHeading": "h1: Construção Civil e Reformas"
+        },
+        {
+          "tag": "section",
+          "id": null,
+          "class": "bg-background text-foreground py-20",
+          "firstHeading": "h2: Sobre o Serviço"
+        },
+        {
+          "tag": "aside",
+          "id": null,
+          "class": "space-y-6",
+          "firstHeading": "h3: Solicitar Orçamento"
+        },
+        {
+          "tag": "section",
+          "id": null,
+          "class": "bg-muted text-foreground py-16 text-center border-t border-border",
+          "firstHeading": "h2: Precisa de Construção Civil e Reformas?"
+        },
+        {
+          "tag": "footer",
+          "id": null,
+          "class": "bg-accent-deep text-accent-deep-foreground",
+          "firstHeading": "h3: Nossos Serviços"
+        }
+      ],
+      "stylesheets": [
+        "/_astro/Section.LfC2cg-z.css",
+        "/_astro/Section.LfC2cg-z.css"
+      ],
+      "scripts": [
+        "application/ld+json",
+        "application/ld+json",
+        "inline",
+        "inline",
+        "module",
+        "/_astro/main.astro_astro_type_script_index_0_lang.4IgxO6jx.js"
+      ],
+      "allHeadValues": {}
+    },
+    {
+      "route": "/servicos/impermeabilizacao",
+      "lang": "pt-BR",
+      "title": "Impermeabilização | Art's Construtora",
+      "description": "Impermeabilização técnica de estruturas no Rio Grande do Sul e Santa Catarina — Art's Construtora. Lajes, coberturas e fachadas com garantia de 5 anos e ART.",
+      "canonical": "https://artsconstrutora.com.br/servicos/impermeabilizacao",
+      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      "og": {
+        "og:site_name": "Art's Construtora",
+        "og:locale": "pt_BR",
+        "og:type": "website",
+        "og:title": "Impermeabilização | Art's Construtora",
+        "og:description": "Impermeabilização técnica de estruturas no Rio Grande do Sul e Santa Catarina — Art's Construtora. Lajes, coberturas e fachadas com garantia de 5 anos e ART.",
+        "og:url": "https://artsconstrutora.com.br/servicos/impermeabilizacao",
+        "og:image": "https://artsconstrutora.com.br/_astro/photo-1590523741831-ab7e8b8f9c7f.DymYg0Ws_Z2wOR0O.jpg",
+        "og:image:width": "1200",
+        "og:image:height": "630",
+        "og:image:alt": "Impermeabilização | Art's Construtora",
+        "twitter:card": "summary_large_image",
+        "twitter:title": "Impermeabilização | Art's Construtora",
+        "twitter:description": "Impermeabilização técnica de estruturas no Rio Grande do Sul e Santa Catarina — Art's Construtora. Lajes, coberturas e fachadas com garantia de 5 anos e ART."
+      },
+      "duplicateHeadTags": [],
+      "icons": [
+        "/_astro/logo.BHDoi8PM_3wK4V.png"
+      ],
+      "headings": {
+        "h1": [
+          "Impermeabilização"
+        ],
+        "h2": [
+          "Sobre o Serviço",
+          "O que está incluído",
+          "Como trabalhamos",
+          "Precisa de Impermeabilização?"
+        ],
+        "h3": [
+          "Solicitar Orçamento",
+          "Outros Serviços",
+          "Nossos Serviços",
+          "Áreas Atendidas",
+          "Nossas Garantias"
+        ]
+      },
+      "wordCount": 492,
+      "images": [
+        {
+          "src": "/_astro/logo.BHDoi8PM_1IzCO0.webp",
+          "alt": "Art's Construtora — Porto Alegre RS"
+        },
+        {
+          "src": "/_astro/photo-1590523741831-ab7e8b8f9c7f.DymYg0Ws_1P73wE.webp",
+          "alt": "Impermeabilização — Art's Construtora"
+        },
+        {
+          "src": "/_astro/logo.BHDoi8PM_1IzCO0.webp",
+          "alt": "Art's Construtora"
+        }
+      ],
+      "backgroundImages": [],
+      "internalLinks": [
+        "/",
+        "/empresa",
+        "/servicos",
+        "/servicos/construcao-civil-reformas",
+        "/servicos/reformas-prediais-fachadas",
+        "/servicos/pintura-predial",
+        "/servicos/impermeabilizacao",
+        "/servicos/reformas-corporativas",
+        "/servicos/reformas-construcoes-industriais",
+        "/servicos/alpinismo-industrial",
+        "/servicos/manutencao-condominios",
+        "/servicos/porcelanatos-granitos-acabamentos",
+        "/projetos",
+        "/areas-atendidas",
+        "/blog",
+        "/contato"
+      ],
+      "externalLinks": [
+        "tel:(51) 98403-3255",
+        "https://wa.me/5551984033255?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20meu%20projeto.",
+        "https://wa.me/5551984033255?text=Ol%C3%A1%2C%20preciso%20de%20or%C3%A7amento%20para%20Impermeabiliza%C3%A7%C3%A3o",
+        "https://wa.me/5551984033255?text=Ol%C3%A1%2C%20preciso%20de%20Impermeabiliza%C3%A7%C3%A3o",
+        "mailto:comercial@artsconstrutora.com.br",
+        "https://www.instagram.com/artsconstrutora_",
+        "https://www.facebook.com/ArtsConstrutora"
+      ],
+      "forms": [],
+      "jsonLd": [
+        {
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          "name": "Art's Construtora",
+          "description": "Empresa especializada em pintura predial, alpinismo predial, impermeabilização, reforma de fachadas e manutenção de condomínios em Porto Alegre e Região Metropolitana RS.",
+          "url": "https://artsconstrutora.com.br",
+          "telephone": "+55-51-99958-3045",
+          "email": "contato@artsconstrutora.com.br",
+          "foundingDate": "2002",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Porto Alegre",
+            "addressRegion": "RS",
+            "addressCountry": "BR"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": -30.0346,
+            "longitude": -51.2177
+          },
+          "areaServed": [
+            "Porto Alegre",
+            "Canoas",
+            "Novo Hamburgo",
+            "São Leopoldo",
+            "Gravataí",
+            "Cachoeirinha",
+            "Região Metropolitana RS",
+            "Santa Catarina"
+          ],
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Serviços de Manutenção Predial",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Pintura Predial"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Alpinismo Predial"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Impermeabilização"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Reforma de Fachadas"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Manutenção de Condomínios"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Lavagem de Fachadas"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Instalação de Porcelanatos e Granitos"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Reformas Comerciais e Industriais"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "name": "Impermeabilização",
+          "description": "Impermeabilização técnica de estruturas no Rio Grande do Sul e Santa Catarina — Art's Construtora. Lajes, coberturas e fachadas com garantia de 5 anos e ART.",
+          "provider": {
+            "@type": "LocalBusiness",
+            "name": "Art's Construtora",
+            "url": "https://artsconstrutora.com.br"
+          },
+          "areaServed": [
+            "Rio Grande do Sul",
+            "Santa Catarina"
+          ]
+        }
+      ],
+      "outline": [
+        {
+          "tag": "header",
+          "id": null,
+          "class": "sticky top-0 z-50 w-full transition-all duration-300 border-b border-border bg-background py-3 shadow-lg",
+          "firstHeading": "h1: Impermeabilização"
+        },
+        {
+          "tag": "nav",
+          "id": null,
+          "class": "hidden items-center gap-1 lg:flex",
+          "firstHeading": "h1: Impermeabilização"
+        },
+        {
+          "tag": "nav",
+          "id": null,
+          "class": "mt-4 flex flex-col gap-1",
+          "firstHeading": "h1: Impermeabilização"
+        },
+        {
+          "tag": "main",
+          "id": null,
+          "class": "flex-1",
+          "firstHeading": "h1: Impermeabilização"
+        },
+        {
+          "tag": "section",
+          "id": null,
+          "class": "relative overflow-hidden",
+          "firstHeading": "h1: Impermeabilização"
+        },
+        {
+          "tag": "section",
+          "id": null,
+          "class": "bg-background text-foreground py-20",
+          "firstHeading": "h2: Sobre o Serviço"
+        },
+        {
+          "tag": "aside",
+          "id": null,
+          "class": "space-y-6",
+          "firstHeading": "h3: Solicitar Orçamento"
+        },
+        {
+          "tag": "section",
+          "id": null,
+          "class": "bg-muted text-foreground py-16 text-center border-t border-border",
+          "firstHeading": "h2: Precisa de Impermeabilização?"
+        },
+        {
+          "tag": "footer",
+          "id": null,
+          "class": "bg-accent-deep text-accent-deep-foreground",
+          "firstHeading": "h3: Nossos Serviços"
+        }
+      ],
+      "stylesheets": [
+        "/_astro/Section.LfC2cg-z.css",
+        "/_astro/Section.LfC2cg-z.css"
+      ],
+      "scripts": [
+        "application/ld+json",
+        "application/ld+json",
+        "inline",
+        "inline",
+        "module",
+        "/_astro/main.astro_astro_type_script_index_0_lang.4IgxO6jx.js"
+      ],
+      "allHeadValues": {}
+    },
+    {
+      "route": "/servicos/manutencao-condominios",
+      "lang": "pt-BR",
+      "title": "Manutenção de Condomínios | Art's Construtora",
+      "description": "Manutenção de condomínios no Rio Grande do Sul e Santa Catarina — Art's Construtora. Contratos preventivos completos com equipe técnica dedicada e engenheiro responsável.",
+      "canonical": "https://artsconstrutora.com.br/servicos/manutencao-condominios",
+      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      "og": {
+        "og:site_name": "Art's Construtora",
+        "og:locale": "pt_BR",
+        "og:type": "website",
+        "og:title": "Manutenção de Condomínios | Art's Construtora",
+        "og:description": "Manutenção de condomínios no Rio Grande do Sul e Santa Catarina — Art's Construtora. Contratos preventivos completos com equipe técnica dedicada e engenheiro responsável.",
+        "og:url": "https://artsconstrutora.com.br/servicos/manutencao-condominios",
+        "og:image": "https://artsconstrutora.com.br/_astro/photo-1560518883-ce09059eeffa.BV_Je5DK_ZFQtRp.jpg",
+        "og:image:width": "1200",
+        "og:image:height": "630",
+        "og:image:alt": "Manutenção de Condomínios | Art's Construtora",
+        "twitter:card": "summary_large_image",
+        "twitter:title": "Manutenção de Condomínios | Art's Construtora",
+        "twitter:description": "Manutenção de condomínios no Rio Grande do Sul e Santa Catarina — Art's Construtora. Contratos preventivos completos com equipe técnica dedicada e engenheiro responsável."
+      },
+      "duplicateHeadTags": [],
+      "icons": [
+        "/_astro/logo.BHDoi8PM_3wK4V.png"
+      ],
+      "headings": {
+        "h1": [
+          "Manutenção de Condomínios"
+        ],
+        "h2": [
+          "Sobre o Serviço",
+          "O que está incluído",
+          "Como trabalhamos",
+          "Precisa de Manutenção de Condomínios?"
+        ],
+        "h3": [
+          "Solicitar Orçamento",
+          "Outros Serviços",
+          "Nossos Serviços",
+          "Áreas Atendidas",
+          "Nossas Garantias"
+        ]
+      },
+      "wordCount": 486,
+      "images": [
+        {
+          "src": "/_astro/logo.BHDoi8PM_1IzCO0.webp",
+          "alt": "Art's Construtora — Porto Alegre RS"
+        },
+        {
+          "src": "/_astro/photo-1560518883-ce09059eeffa.BV_Je5DK_Z21jN7y.webp",
+          "alt": "Manutenção de Condomínios — Art's Construtora"
+        },
+        {
+          "src": "/_astro/logo.BHDoi8PM_1IzCO0.webp",
+          "alt": "Art's Construtora"
+        }
+      ],
+      "backgroundImages": [],
+      "internalLinks": [
+        "/",
+        "/empresa",
+        "/servicos",
+        "/servicos/construcao-civil-reformas",
+        "/servicos/reformas-prediais-fachadas",
+        "/servicos/pintura-predial",
+        "/servicos/impermeabilizacao",
+        "/servicos/reformas-corporativas",
+        "/servicos/reformas-construcoes-industriais",
+        "/servicos/alpinismo-industrial",
+        "/servicos/manutencao-condominios",
+        "/servicos/porcelanatos-granitos-acabamentos",
+        "/projetos",
+        "/areas-atendidas",
+        "/blog",
+        "/contato"
+      ],
+      "externalLinks": [
+        "tel:(51) 98403-3255",
+        "https://wa.me/5551984033255?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20meu%20projeto.",
+        "https://wa.me/5551984033255?text=Ol%C3%A1%2C%20preciso%20de%20or%C3%A7amento%20para%20Manuten%C3%A7%C3%A3o%20de%20Condom%C3%ADnios",
+        "https://wa.me/5551984033255?text=Ol%C3%A1%2C%20preciso%20de%20Manuten%C3%A7%C3%A3o%20de%20Condom%C3%ADnios",
+        "mailto:comercial@artsconstrutora.com.br",
+        "https://www.instagram.com/artsconstrutora_",
+        "https://www.facebook.com/ArtsConstrutora"
+      ],
+      "forms": [],
+      "jsonLd": [
+        {
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          "name": "Art's Construtora",
+          "description": "Empresa especializada em pintura predial, alpinismo predial, impermeabilização, reforma de fachadas e manutenção de condomínios em Porto Alegre e Região Metropolitana RS.",
+          "url": "https://artsconstrutora.com.br",
+          "telephone": "+55-51-99958-3045",
+          "email": "contato@artsconstrutora.com.br",
+          "foundingDate": "2002",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Porto Alegre",
+            "addressRegion": "RS",
+            "addressCountry": "BR"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": -30.0346,
+            "longitude": -51.2177
+          },
+          "areaServed": [
+            "Porto Alegre",
+            "Canoas",
+            "Novo Hamburgo",
+            "São Leopoldo",
+            "Gravataí",
+            "Cachoeirinha",
+            "Região Metropolitana RS",
+            "Santa Catarina"
+          ],
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Serviços de Manutenção Predial",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Pintura Predial"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Alpinismo Predial"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Impermeabilização"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Reforma de Fachadas"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Manutenção de Condomínios"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Lavagem de Fachadas"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Instalação de Porcelanatos e Granitos"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Reformas Comerciais e Industriais"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "name": "Manutenção de Condomínios",
+          "description": "Manutenção de condomínios no Rio Grande do Sul e Santa Catarina — Art's Construtora. Contratos preventivos completos com equipe técnica dedicada e engenheiro responsável.",
+          "provider": {
+            "@type": "LocalBusiness",
+            "name": "Art's Construtora",
+            "url": "https://artsconstrutora.com.br"
+          },
+          "areaServed": [
+            "Rio Grande do Sul",
+            "Santa Catarina"
+          ]
+        }
+      ],
+      "outline": [
+        {
+          "tag": "header",
+          "id": null,
+          "class": "sticky top-0 z-50 w-full transition-all duration-300 border-b border-border bg-background py-3 shadow-lg",
+          "firstHeading": "h1: Manutenção de Condomínios"
+        },
+        {
+          "tag": "nav",
+          "id": null,
+          "class": "hidden items-center gap-1 lg:flex",
+          "firstHeading": "h1: Manutenção de Condomínios"
+        },
+        {
+          "tag": "nav",
+          "id": null,
+          "class": "mt-4 flex flex-col gap-1",
+          "firstHeading": "h1: Manutenção de Condomínios"
+        },
+        {
+          "tag": "main",
+          "id": null,
+          "class": "flex-1",
+          "firstHeading": "h1: Manutenção de Condomínios"
+        },
+        {
+          "tag": "section",
+          "id": null,
+          "class": "relative overflow-hidden",
+          "firstHeading": "h1: Manutenção de Condomínios"
+        },
+        {
+          "tag": "section",
+          "id": null,
+          "class": "bg-background text-foreground py-20",
+          "firstHeading": "h2: Sobre o Serviço"
+        },
+        {
+          "tag": "aside",
+          "id": null,
+          "class": "space-y-6",
+          "firstHeading": "h3: Solicitar Orçamento"
+        },
+        {
+          "tag": "section",
+          "id": null,
+          "class": "bg-muted text-foreground py-16 text-center border-t border-border",
+          "firstHeading": "h2: Precisa de Manutenção de Condomínios?"
+        },
+        {
+          "tag": "footer",
+          "id": null,
+          "class": "bg-accent-deep text-accent-deep-foreground",
+          "firstHeading": "h3: Nossos Serviços"
+        }
+      ],
+      "stylesheets": [
+        "/_astro/Section.LfC2cg-z.css",
+        "/_astro/Section.LfC2cg-z.css"
+      ],
+      "scripts": [
+        "application/ld+json",
+        "application/ld+json",
+        "inline",
+        "inline",
+        "module",
+        "/_astro/main.astro_astro_type_script_index_0_lang.4IgxO6jx.js"
+      ],
+      "allHeadValues": {}
+    },
+    {
+      "route": "/servicos/pintura-predial",
+      "lang": "pt-BR",
+      "title": "Pintura Predial | Art's Construtora",
+      "description": "Pintura predial de alto desempenho no Rio Grande do Sul e Santa Catarina — Art's Construtora. Sistema elastomérico, impermeabilização, equipe IRATA e ART.",
+      "canonical": "https://artsconstrutora.com.br/servicos/pintura-predial",
+      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      "og": {
+        "og:site_name": "Art's Construtora",
+        "og:locale": "pt_BR",
+        "og:type": "website",
+        "og:title": "Pintura Predial | Art's Construtora",
+        "og:description": "Pintura predial de alto desempenho no Rio Grande do Sul e Santa Catarina — Art's Construtora. Sistema elastomérico, impermeabilização, equipe IRATA e ART.",
+        "og:url": "https://artsconstrutora.com.br/servicos/pintura-predial",
+        "og:image": "https://artsconstrutora.com.br/_astro/photo-1562259949-e8e7689d7828.BEG3WrSW_Z27oylh.jpg",
+        "og:image:width": "1200",
+        "og:image:height": "630",
+        "og:image:alt": "Pintura Predial | Art's Construtora",
+        "twitter:card": "summary_large_image",
+        "twitter:title": "Pintura Predial | Art's Construtora",
+        "twitter:description": "Pintura predial de alto desempenho no Rio Grande do Sul e Santa Catarina — Art's Construtora. Sistema elastomérico, impermeabilização, equipe IRATA e ART."
+      },
+      "duplicateHeadTags": [],
+      "icons": [
+        "/_astro/logo.BHDoi8PM_3wK4V.png"
+      ],
+      "headings": {
+        "h1": [
+          "Pintura Predial"
+        ],
+        "h2": [
+          "Sobre o Serviço",
+          "O que está incluído",
+          "Como trabalhamos",
+          "Precisa de Pintura Predial?"
+        ],
+        "h3": [
+          "Solicitar Orçamento",
+          "Outros Serviços",
+          "Nossos Serviços",
+          "Áreas Atendidas",
+          "Nossas Garantias"
+        ]
+      },
+      "wordCount": 563,
+      "images": [
+        {
+          "src": "/_astro/logo.BHDoi8PM_1IzCO0.webp",
+          "alt": "Art's Construtora — Porto Alegre RS"
+        },
+        {
+          "src": "/_astro/photo-1562259949-e8e7689d7828.BEG3WrSW_Z1mihIO.webp",
+          "alt": "Pintura Predial — Art's Construtora"
+        },
+        {
+          "src": "/_astro/logo.BHDoi8PM_1IzCO0.webp",
+          "alt": "Art's Construtora"
+        }
+      ],
+      "backgroundImages": [],
+      "internalLinks": [
+        "/",
+        "/empresa",
+        "/servicos",
+        "/servicos/construcao-civil-reformas",
+        "/servicos/reformas-prediais-fachadas",
+        "/servicos/pintura-predial",
+        "/servicos/impermeabilizacao",
+        "/servicos/reformas-corporativas",
+        "/servicos/reformas-construcoes-industriais",
+        "/servicos/alpinismo-industrial",
+        "/servicos/manutencao-condominios",
+        "/servicos/porcelanatos-granitos-acabamentos",
+        "/projetos",
+        "/areas-atendidas",
+        "/blog",
+        "/contato"
+      ],
+      "externalLinks": [
+        "tel:(51) 98403-3255",
+        "https://wa.me/5551984033255?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20meu%20projeto.",
+        "https://wa.me/5551984033255?text=Ol%C3%A1%2C%20preciso%20de%20or%C3%A7amento%20para%20Pintura%20Predial",
+        "https://wa.me/5551984033255?text=Ol%C3%A1%2C%20preciso%20de%20Pintura%20Predial",
+        "mailto:comercial@artsconstrutora.com.br",
+        "https://www.instagram.com/artsconstrutora_",
+        "https://www.facebook.com/ArtsConstrutora"
+      ],
+      "forms": [],
+      "jsonLd": [
+        {
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          "name": "Art's Construtora",
+          "description": "Empresa especializada em pintura predial, alpinismo predial, impermeabilização, reforma de fachadas e manutenção de condomínios em Porto Alegre e Região Metropolitana RS.",
+          "url": "https://artsconstrutora.com.br",
+          "telephone": "+55-51-99958-3045",
+          "email": "contato@artsconstrutora.com.br",
+          "foundingDate": "2002",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Porto Alegre",
+            "addressRegion": "RS",
+            "addressCountry": "BR"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": -30.0346,
+            "longitude": -51.2177
+          },
+          "areaServed": [
+            "Porto Alegre",
+            "Canoas",
+            "Novo Hamburgo",
+            "São Leopoldo",
+            "Gravataí",
+            "Cachoeirinha",
+            "Região Metropolitana RS",
+            "Santa Catarina"
+          ],
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Serviços de Manutenção Predial",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Pintura Predial"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Alpinismo Predial"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Impermeabilização"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Reforma de Fachadas"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Manutenção de Condomínios"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Lavagem de Fachadas"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Instalação de Porcelanatos e Granitos"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Reformas Comerciais e Industriais"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "name": "Pintura Predial",
+          "description": "Pintura predial de alto desempenho no Rio Grande do Sul e Santa Catarina — Art's Construtora. Sistema elastomérico, impermeabilização, equipe IRATA e ART.",
+          "provider": {
+            "@type": "LocalBusiness",
+            "name": "Art's Construtora",
+            "url": "https://artsconstrutora.com.br"
+          },
+          "areaServed": [
+            "Rio Grande do Sul",
+            "Santa Catarina"
+          ]
+        }
+      ],
+      "outline": [
+        {
+          "tag": "header",
+          "id": null,
+          "class": "sticky top-0 z-50 w-full transition-all duration-300 border-b border-border bg-background py-3 shadow-lg",
+          "firstHeading": "h1: Pintura Predial"
+        },
+        {
+          "tag": "nav",
+          "id": null,
+          "class": "hidden items-center gap-1 lg:flex",
+          "firstHeading": "h1: Pintura Predial"
+        },
+        {
+          "tag": "nav",
+          "id": null,
+          "class": "mt-4 flex flex-col gap-1",
+          "firstHeading": "h1: Pintura Predial"
+        },
+        {
+          "tag": "main",
+          "id": null,
+          "class": "flex-1",
+          "firstHeading": "h1: Pintura Predial"
+        },
+        {
+          "tag": "section",
+          "id": null,
+          "class": "relative overflow-hidden",
+          "firstHeading": "h1: Pintura Predial"
+        },
+        {
+          "tag": "section",
+          "id": null,
+          "class": "bg-background text-foreground py-20",
+          "firstHeading": "h2: Sobre o Serviço"
+        },
+        {
+          "tag": "aside",
+          "id": null,
+          "class": "space-y-6",
+          "firstHeading": "h3: Solicitar Orçamento"
+        },
+        {
+          "tag": "section",
+          "id": null,
+          "class": "bg-muted text-foreground py-16 text-center border-t border-border",
+          "firstHeading": "h2: Precisa de Pintura Predial?"
+        },
+        {
+          "tag": "footer",
+          "id": null,
+          "class": "bg-accent-deep text-accent-deep-foreground",
+          "firstHeading": "h3: Nossos Serviços"
+        }
+      ],
+      "stylesheets": [
+        "/_astro/Section.LfC2cg-z.css",
+        "/_astro/Section.LfC2cg-z.css"
+      ],
+      "scripts": [
+        "application/ld+json",
+        "application/ld+json",
+        "inline",
+        "inline",
+        "module",
+        "/_astro/main.astro_astro_type_script_index_0_lang.4IgxO6jx.js"
+      ],
+      "allHeadValues": {}
+    },
+    {
+      "route": "/servicos/porcelanatos-granitos-acabamentos",
+      "lang": "pt-BR",
+      "title": "Porcelanatos, Granitos e Acabamentos Premium | Art's Construtora",
+      "description": "Porcelanatos, granitos e acabamentos premium no Rio Grande do Sul e Santa Catarina — Art's Construtora. Bancadas, lavabos, escadas e fachadas com qualidade superior.",
+      "canonical": "https://artsconstrutora.com.br/servicos/porcelanatos-granitos-acabamentos",
+      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      "og": {
+        "og:site_name": "Art's Construtora",
+        "og:locale": "pt_BR",
+        "og:type": "website",
+        "og:title": "Porcelanatos, Granitos e Acabamentos Premium | Art's Construtora",
+        "og:description": "Porcelanatos, granitos e acabamentos premium no Rio Grande do Sul e Santa Catarina — Art's Construtora. Bancadas, lavabos, escadas e fachadas com qualidade superior.",
+        "og:url": "https://artsconstrutora.com.br/servicos/porcelanatos-granitos-acabamentos",
+        "og:image": "https://artsconstrutora.com.br/_astro/photo-1615873968403-89e068629265.CnWWsKLU_1X7jyk.jpg",
+        "og:image:width": "1200",
+        "og:image:height": "630",
+        "og:image:alt": "Porcelanatos, Granitos e Acabamentos Premium | Art's Construtora",
+        "twitter:card": "summary_large_image",
+        "twitter:title": "Porcelanatos, Granitos e Acabamentos Premium | Art's Construtora",
+        "twitter:description": "Porcelanatos, granitos e acabamentos premium no Rio Grande do Sul e Santa Catarina — Art's Construtora. Bancadas, lavabos, escadas e fachadas com qualidade superior."
+      },
+      "duplicateHeadTags": [],
+      "icons": [
+        "/_astro/logo.BHDoi8PM_3wK4V.png"
+      ],
+      "headings": {
+        "h1": [
+          "Porcelanatos, Granitos e Acabamentos Premium"
+        ],
+        "h2": [
+          "Sobre o Serviço",
+          "O que está incluído",
+          "Como trabalhamos",
+          "Precisa de Porcelanatos, Granitos e Acabamentos Premium?"
+        ],
+        "h3": [
+          "Solicitar Orçamento",
+          "Outros Serviços",
+          "Nossos Serviços",
+          "Áreas Atendidas",
+          "Nossas Garantias"
+        ]
+      },
+      "wordCount": 550,
+      "images": [
+        {
+          "src": "/_astro/logo.BHDoi8PM_1IzCO0.webp",
+          "alt": "Art's Construtora — Porto Alegre RS"
+        },
+        {
+          "src": "/_astro/photo-1615873968403-89e068629265.CnWWsKLU_Zdwsmt.webp",
+          "alt": "Porcelanatos, Granitos e Acabamentos Premium — Art's Construtora"
+        },
+        {
+          "src": "/_astro/logo.BHDoi8PM_1IzCO0.webp",
+          "alt": "Art's Construtora"
+        }
+      ],
+      "backgroundImages": [],
+      "internalLinks": [
+        "/",
+        "/empresa",
+        "/servicos",
+        "/servicos/construcao-civil-reformas",
+        "/servicos/reformas-prediais-fachadas",
+        "/servicos/pintura-predial",
+        "/servicos/impermeabilizacao",
+        "/servicos/reformas-corporativas",
+        "/servicos/reformas-construcoes-industriais",
+        "/servicos/alpinismo-industrial",
+        "/servicos/manutencao-condominios",
+        "/servicos/porcelanatos-granitos-acabamentos",
+        "/projetos",
+        "/areas-atendidas",
+        "/blog",
+        "/contato"
+      ],
+      "externalLinks": [
+        "tel:(51) 98403-3255",
+        "https://wa.me/5551984033255?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20meu%20projeto.",
+        "https://wa.me/5551984033255?text=Ol%C3%A1%2C%20preciso%20de%20or%C3%A7amento%20para%20Porcelanatos%2C%20Granitos%20e%20Acabamentos%20Premium",
+        "https://wa.me/5551984033255?text=Ol%C3%A1%2C%20preciso%20de%20Porcelanatos%2C%20Granitos%20e%20Acabamentos%20Premium",
+        "mailto:comercial@artsconstrutora.com.br",
+        "https://www.instagram.com/artsconstrutora_",
+        "https://www.facebook.com/ArtsConstrutora"
+      ],
+      "forms": [],
+      "jsonLd": [
+        {
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          "name": "Art's Construtora",
+          "description": "Empresa especializada em pintura predial, alpinismo predial, impermeabilização, reforma de fachadas e manutenção de condomínios em Porto Alegre e Região Metropolitana RS.",
+          "url": "https://artsconstrutora.com.br",
+          "telephone": "+55-51-99958-3045",
+          "email": "contato@artsconstrutora.com.br",
+          "foundingDate": "2002",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Porto Alegre",
+            "addressRegion": "RS",
+            "addressCountry": "BR"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": -30.0346,
+            "longitude": -51.2177
+          },
+          "areaServed": [
+            "Porto Alegre",
+            "Canoas",
+            "Novo Hamburgo",
+            "São Leopoldo",
+            "Gravataí",
+            "Cachoeirinha",
+            "Região Metropolitana RS",
+            "Santa Catarina"
+          ],
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Serviços de Manutenção Predial",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Pintura Predial"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Alpinismo Predial"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Impermeabilização"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Reforma de Fachadas"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Manutenção de Condomínios"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Lavagem de Fachadas"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Instalação de Porcelanatos e Granitos"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Reformas Comerciais e Industriais"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "name": "Porcelanatos, Granitos e Acabamentos Premium",
+          "description": "Porcelanatos, granitos e acabamentos premium no Rio Grande do Sul e Santa Catarina — Art's Construtora. Bancadas, lavabos, escadas e fachadas com qualidade superior.",
+          "provider": {
+            "@type": "LocalBusiness",
+            "name": "Art's Construtora",
+            "url": "https://artsconstrutora.com.br"
+          },
+          "areaServed": [
+            "Rio Grande do Sul",
+            "Santa Catarina"
+          ]
+        }
+      ],
+      "outline": [
+        {
+          "tag": "header",
+          "id": null,
+          "class": "sticky top-0 z-50 w-full transition-all duration-300 border-b border-border bg-background py-3 shadow-lg",
+          "firstHeading": "h1: Porcelanatos, Granitos e Acabamentos Premium"
+        },
+        {
+          "tag": "nav",
+          "id": null,
+          "class": "hidden items-center gap-1 lg:flex",
+          "firstHeading": "h1: Porcelanatos, Granitos e Acabamentos Premium"
+        },
+        {
+          "tag": "nav",
+          "id": null,
+          "class": "mt-4 flex flex-col gap-1",
+          "firstHeading": "h1: Porcelanatos, Granitos e Acabamentos Premium"
+        },
+        {
+          "tag": "main",
+          "id": null,
+          "class": "flex-1",
+          "firstHeading": "h1: Porcelanatos, Granitos e Acabamentos Premium"
+        },
+        {
+          "tag": "section",
+          "id": null,
+          "class": "relative overflow-hidden",
+          "firstHeading": "h1: Porcelanatos, Granitos e Acabamentos Premium"
+        },
+        {
+          "tag": "section",
+          "id": null,
+          "class": "bg-background text-foreground py-20",
+          "firstHeading": "h2: Sobre o Serviço"
+        },
+        {
+          "tag": "aside",
+          "id": null,
+          "class": "space-y-6",
+          "firstHeading": "h3: Solicitar Orçamento"
+        },
+        {
+          "tag": "section",
+          "id": null,
+          "class": "bg-muted text-foreground py-16 text-center border-t border-border",
+          "firstHeading": "h2: Precisa de Porcelanatos, Granitos e Acabamentos Premium?"
+        },
+        {
+          "tag": "footer",
+          "id": null,
+          "class": "bg-accent-deep text-accent-deep-foreground",
+          "firstHeading": "h3: Nossos Serviços"
+        }
+      ],
+      "stylesheets": [
+        "/_astro/Section.LfC2cg-z.css",
+        "/_astro/Section.LfC2cg-z.css"
+      ],
+      "scripts": [
+        "application/ld+json",
+        "application/ld+json",
+        "inline",
+        "inline",
+        "module",
+        "/_astro/main.astro_astro_type_script_index_0_lang.4IgxO6jx.js"
+      ],
+      "allHeadValues": {}
+    },
+    {
+      "route": "/servicos/reformas-construcoes-industriais",
+      "lang": "pt-BR",
+      "title": "Reformas e Construções Industriais | Art's Construtora",
+      "description": "Reformas e construções industriais no Rio Grande do Sul e Santa Catarina — Art's Construtora. Galpões, retrofit e ampliações com gestão completa e ART.",
+      "canonical": "https://artsconstrutora.com.br/servicos/reformas-construcoes-industriais",
+      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      "og": {
+        "og:site_name": "Art's Construtora",
+        "og:locale": "pt_BR",
+        "og:type": "website",
+        "og:title": "Reformas e Construções Industriais | Art's Construtora",
+        "og:description": "Reformas e construções industriais no Rio Grande do Sul e Santa Catarina — Art's Construtora. Galpões, retrofit e ampliações com gestão completa e ART.",
+        "og:url": "https://artsconstrutora.com.br/servicos/reformas-construcoes-industriais",
+        "og:image": "https://artsconstrutora.com.br/_astro/photo-1504917595217-d4dc5ebe6122.DOY8qgN8_1tGkTx.jpg",
+        "og:image:width": "1200",
+        "og:image:height": "630",
+        "og:image:alt": "Reformas e Construções Industriais | Art's Construtora",
+        "twitter:card": "summary_large_image",
+        "twitter:title": "Reformas e Construções Industriais | Art's Construtora",
+        "twitter:description": "Reformas e construções industriais no Rio Grande do Sul e Santa Catarina — Art's Construtora. Galpões, retrofit e ampliações com gestão completa e ART."
+      },
+      "duplicateHeadTags": [],
+      "icons": [
+        "/_astro/logo.BHDoi8PM_3wK4V.png"
+      ],
+      "headings": {
+        "h1": [
+          "Reformas e Construções Industriais"
+        ],
+        "h2": [
+          "Sobre o Serviço",
+          "O que está incluído",
+          "Como trabalhamos",
+          "Precisa de Reformas e Construções Industriais?"
+        ],
+        "h3": [
+          "Solicitar Orçamento",
+          "Outros Serviços",
+          "Nossos Serviços",
+          "Áreas Atendidas",
+          "Nossas Garantias"
+        ]
+      },
+      "wordCount": 518,
+      "images": [
+        {
+          "src": "/_astro/logo.BHDoi8PM_1IzCO0.webp",
+          "alt": "Art's Construtora — Porto Alegre RS"
+        },
+        {
+          "src": "/_astro/photo-1504917595217-d4dc5ebe6122.DOY8qgN8_Z2bRJVy.webp",
+          "alt": "Reformas e Construções Industriais — Art's Construtora"
+        },
+        {
+          "src": "/_astro/logo.BHDoi8PM_1IzCO0.webp",
+          "alt": "Art's Construtora"
+        }
+      ],
+      "backgroundImages": [],
+      "internalLinks": [
+        "/",
+        "/empresa",
+        "/servicos",
+        "/servicos/construcao-civil-reformas",
+        "/servicos/reformas-prediais-fachadas",
+        "/servicos/pintura-predial",
+        "/servicos/impermeabilizacao",
+        "/servicos/reformas-corporativas",
+        "/servicos/reformas-construcoes-industriais",
+        "/servicos/alpinismo-industrial",
+        "/servicos/manutencao-condominios",
+        "/servicos/porcelanatos-granitos-acabamentos",
+        "/projetos",
+        "/areas-atendidas",
+        "/blog",
+        "/contato"
+      ],
+      "externalLinks": [
+        "tel:(51) 98403-3255",
+        "https://wa.me/5551984033255?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20meu%20projeto.",
+        "https://wa.me/5551984033255?text=Ol%C3%A1%2C%20preciso%20de%20or%C3%A7amento%20para%20Reformas%20e%20Constru%C3%A7%C3%B5es%20Industriais",
+        "https://wa.me/5551984033255?text=Ol%C3%A1%2C%20preciso%20de%20Reformas%20e%20Constru%C3%A7%C3%B5es%20Industriais",
+        "mailto:comercial@artsconstrutora.com.br",
+        "https://www.instagram.com/artsconstrutora_",
+        "https://www.facebook.com/ArtsConstrutora"
+      ],
+      "forms": [],
+      "jsonLd": [
+        {
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          "name": "Art's Construtora",
+          "description": "Empresa especializada em pintura predial, alpinismo predial, impermeabilização, reforma de fachadas e manutenção de condomínios em Porto Alegre e Região Metropolitana RS.",
+          "url": "https://artsconstrutora.com.br",
+          "telephone": "+55-51-99958-3045",
+          "email": "contato@artsconstrutora.com.br",
+          "foundingDate": "2002",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Porto Alegre",
+            "addressRegion": "RS",
+            "addressCountry": "BR"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": -30.0346,
+            "longitude": -51.2177
+          },
+          "areaServed": [
+            "Porto Alegre",
+            "Canoas",
+            "Novo Hamburgo",
+            "São Leopoldo",
+            "Gravataí",
+            "Cachoeirinha",
+            "Região Metropolitana RS",
+            "Santa Catarina"
+          ],
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Serviços de Manutenção Predial",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Pintura Predial"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Alpinismo Predial"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Impermeabilização"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Reforma de Fachadas"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Manutenção de Condomínios"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Lavagem de Fachadas"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Instalação de Porcelanatos e Granitos"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Reformas Comerciais e Industriais"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "name": "Reformas e Construções Industriais",
+          "description": "Reformas e construções industriais no Rio Grande do Sul e Santa Catarina — Art's Construtora. Galpões, retrofit e ampliações com gestão completa e ART.",
+          "provider": {
+            "@type": "LocalBusiness",
+            "name": "Art's Construtora",
+            "url": "https://artsconstrutora.com.br"
+          },
+          "areaServed": [
+            "Rio Grande do Sul",
+            "Santa Catarina"
+          ]
+        }
+      ],
+      "outline": [
+        {
+          "tag": "header",
+          "id": null,
+          "class": "sticky top-0 z-50 w-full transition-all duration-300 border-b border-border bg-background py-3 shadow-lg",
+          "firstHeading": "h1: Reformas e Construções Industriais"
+        },
+        {
+          "tag": "nav",
+          "id": null,
+          "class": "hidden items-center gap-1 lg:flex",
+          "firstHeading": "h1: Reformas e Construções Industriais"
+        },
+        {
+          "tag": "nav",
+          "id": null,
+          "class": "mt-4 flex flex-col gap-1",
+          "firstHeading": "h1: Reformas e Construções Industriais"
+        },
+        {
+          "tag": "main",
+          "id": null,
+          "class": "flex-1",
+          "firstHeading": "h1: Reformas e Construções Industriais"
+        },
+        {
+          "tag": "section",
+          "id": null,
+          "class": "relative overflow-hidden",
+          "firstHeading": "h1: Reformas e Construções Industriais"
+        },
+        {
+          "tag": "section",
+          "id": null,
+          "class": "bg-background text-foreground py-20",
+          "firstHeading": "h2: Sobre o Serviço"
+        },
+        {
+          "tag": "aside",
+          "id": null,
+          "class": "space-y-6",
+          "firstHeading": "h3: Solicitar Orçamento"
+        },
+        {
+          "tag": "section",
+          "id": null,
+          "class": "bg-muted text-foreground py-16 text-center border-t border-border",
+          "firstHeading": "h2: Precisa de Reformas e Construções Industriais?"
+        },
+        {
+          "tag": "footer",
+          "id": null,
+          "class": "bg-accent-deep text-accent-deep-foreground",
+          "firstHeading": "h3: Nossos Serviços"
+        }
+      ],
+      "stylesheets": [
+        "/_astro/Section.LfC2cg-z.css",
+        "/_astro/Section.LfC2cg-z.css"
+      ],
+      "scripts": [
+        "application/ld+json",
+        "application/ld+json",
+        "inline",
+        "inline",
+        "module",
+        "/_astro/main.astro_astro_type_script_index_0_lang.4IgxO6jx.js"
+      ],
+      "allHeadValues": {}
+    },
+    {
+      "route": "/servicos/reformas-corporativas",
+      "lang": "pt-BR",
+      "title": "Reformas Corporativas | Art's Construtora",
+      "description": "Reformas corporativas e adequações no Rio Grande do Sul e Santa Catarina — Art's Construtora. Ambientes corporativos, comerciais e institucionais com qualidade superior.",
+      "canonical": "https://artsconstrutora.com.br/servicos/reformas-corporativas",
+      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      "og": {
+        "og:site_name": "Art's Construtora",
+        "og:locale": "pt_BR",
+        "og:type": "website",
+        "og:title": "Reformas Corporativas | Art's Construtora",
+        "og:description": "Reformas corporativas e adequações no Rio Grande do Sul e Santa Catarina — Art's Construtora. Ambientes corporativos, comerciais e institucionais com qualidade superior.",
+        "og:url": "https://artsconstrutora.com.br/servicos/reformas-corporativas",
+        "og:image": "https://artsconstrutora.com.br/_astro/photo-1497366216548-37526070297c.C_uEoNDe_2cHetc.jpg",
+        "og:image:width": "1200",
+        "og:image:height": "630",
+        "og:image:alt": "Reformas Corporativas | Art's Construtora",
+        "twitter:card": "summary_large_image",
+        "twitter:title": "Reformas Corporativas | Art's Construtora",
+        "twitter:description": "Reformas corporativas e adequações no Rio Grande do Sul e Santa Catarina — Art's Construtora. Ambientes corporativos, comerciais e institucionais com qualidade superior."
+      },
+      "duplicateHeadTags": [],
+      "icons": [
+        "/_astro/logo.BHDoi8PM_3wK4V.png"
+      ],
+      "headings": {
+        "h1": [
+          "Reformas Corporativas"
+        ],
+        "h2": [
+          "Sobre o Serviço",
+          "O que está incluído",
+          "Como trabalhamos",
+          "Precisa de Reformas Corporativas?"
+        ],
+        "h3": [
+          "Solicitar Orçamento",
+          "Outros Serviços",
+          "Nossos Serviços",
+          "Áreas Atendidas",
+          "Nossas Garantias"
+        ]
+      },
+      "wordCount": 523,
+      "images": [
+        {
+          "src": "/_astro/logo.BHDoi8PM_1IzCO0.webp",
+          "alt": "Art's Construtora — Porto Alegre RS"
+        },
+        {
+          "src": "/_astro/photo-1497366216548-37526070297c.C_uEoNDe_1Cs1Ag.webp",
+          "alt": "Reformas Corporativas — Art's Construtora"
+        },
+        {
+          "src": "/_astro/logo.BHDoi8PM_1IzCO0.webp",
+          "alt": "Art's Construtora"
+        }
+      ],
+      "backgroundImages": [],
+      "internalLinks": [
+        "/",
+        "/empresa",
+        "/servicos",
+        "/servicos/construcao-civil-reformas",
+        "/servicos/reformas-prediais-fachadas",
+        "/servicos/pintura-predial",
+        "/servicos/impermeabilizacao",
+        "/servicos/reformas-corporativas",
+        "/servicos/reformas-construcoes-industriais",
+        "/servicos/alpinismo-industrial",
+        "/servicos/manutencao-condominios",
+        "/servicos/porcelanatos-granitos-acabamentos",
+        "/projetos",
+        "/areas-atendidas",
+        "/blog",
+        "/contato"
+      ],
+      "externalLinks": [
+        "tel:(51) 98403-3255",
+        "https://wa.me/5551984033255?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20meu%20projeto.",
+        "https://wa.me/5551984033255?text=Ol%C3%A1%2C%20preciso%20de%20or%C3%A7amento%20para%20Reformas%20Corporativas",
+        "https://wa.me/5551984033255?text=Ol%C3%A1%2C%20preciso%20de%20Reformas%20Corporativas",
+        "mailto:comercial@artsconstrutora.com.br",
+        "https://www.instagram.com/artsconstrutora_",
+        "https://www.facebook.com/ArtsConstrutora"
+      ],
+      "forms": [],
+      "jsonLd": [
+        {
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          "name": "Art's Construtora",
+          "description": "Empresa especializada em pintura predial, alpinismo predial, impermeabilização, reforma de fachadas e manutenção de condomínios em Porto Alegre e Região Metropolitana RS.",
+          "url": "https://artsconstrutora.com.br",
+          "telephone": "+55-51-99958-3045",
+          "email": "contato@artsconstrutora.com.br",
+          "foundingDate": "2002",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Porto Alegre",
+            "addressRegion": "RS",
+            "addressCountry": "BR"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": -30.0346,
+            "longitude": -51.2177
+          },
+          "areaServed": [
+            "Porto Alegre",
+            "Canoas",
+            "Novo Hamburgo",
+            "São Leopoldo",
+            "Gravataí",
+            "Cachoeirinha",
+            "Região Metropolitana RS",
+            "Santa Catarina"
+          ],
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Serviços de Manutenção Predial",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Pintura Predial"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Alpinismo Predial"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Impermeabilização"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Reforma de Fachadas"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Manutenção de Condomínios"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Lavagem de Fachadas"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Instalação de Porcelanatos e Granitos"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Reformas Comerciais e Industriais"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "name": "Reformas Corporativas",
+          "description": "Reformas corporativas e adequações no Rio Grande do Sul e Santa Catarina — Art's Construtora. Ambientes corporativos, comerciais e institucionais com qualidade superior.",
+          "provider": {
+            "@type": "LocalBusiness",
+            "name": "Art's Construtora",
+            "url": "https://artsconstrutora.com.br"
+          },
+          "areaServed": [
+            "Rio Grande do Sul",
+            "Santa Catarina"
+          ]
+        }
+      ],
+      "outline": [
+        {
+          "tag": "header",
+          "id": null,
+          "class": "sticky top-0 z-50 w-full transition-all duration-300 border-b border-border bg-background py-3 shadow-lg",
+          "firstHeading": "h1: Reformas Corporativas"
+        },
+        {
+          "tag": "nav",
+          "id": null,
+          "class": "hidden items-center gap-1 lg:flex",
+          "firstHeading": "h1: Reformas Corporativas"
+        },
+        {
+          "tag": "nav",
+          "id": null,
+          "class": "mt-4 flex flex-col gap-1",
+          "firstHeading": "h1: Reformas Corporativas"
+        },
+        {
+          "tag": "main",
+          "id": null,
+          "class": "flex-1",
+          "firstHeading": "h1: Reformas Corporativas"
+        },
+        {
+          "tag": "section",
+          "id": null,
+          "class": "relative overflow-hidden",
+          "firstHeading": "h1: Reformas Corporativas"
+        },
+        {
+          "tag": "section",
+          "id": null,
+          "class": "bg-background text-foreground py-20",
+          "firstHeading": "h2: Sobre o Serviço"
+        },
+        {
+          "tag": "aside",
+          "id": null,
+          "class": "space-y-6",
+          "firstHeading": "h3: Solicitar Orçamento"
+        },
+        {
+          "tag": "section",
+          "id": null,
+          "class": "bg-muted text-foreground py-16 text-center border-t border-border",
+          "firstHeading": "h2: Precisa de Reformas Corporativas?"
+        },
+        {
+          "tag": "footer",
+          "id": null,
+          "class": "bg-accent-deep text-accent-deep-foreground",
+          "firstHeading": "h3: Nossos Serviços"
+        }
+      ],
+      "stylesheets": [
+        "/_astro/Section.LfC2cg-z.css",
+        "/_astro/Section.LfC2cg-z.css"
+      ],
+      "scripts": [
+        "application/ld+json",
+        "application/ld+json",
+        "inline",
+        "inline",
+        "module",
+        "/_astro/main.astro_astro_type_script_index_0_lang.4IgxO6jx.js"
+      ],
+      "allHeadValues": {}
+    },
+    {
+      "route": "/servicos/reformas-prediais-fachadas",
+      "lang": "pt-BR",
+      "title": "Reformas Prediais e Fachadas | Art's Construtora",
+      "description": "Reformas prediais, recuperação e fachadas no Rio Grande do Sul e Santa Catarina — Art's Construtora. Tratamento de patologias, sistemas elastoméricos e alpinismo.",
+      "canonical": "https://artsconstrutora.com.br/servicos/reformas-prediais-fachadas",
+      "robots": "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
+      "og": {
+        "og:site_name": "Art's Construtora",
+        "og:locale": "pt_BR",
+        "og:type": "website",
+        "og:title": "Reformas Prediais e Fachadas | Art's Construtora",
+        "og:description": "Reformas prediais, recuperação e fachadas no Rio Grande do Sul e Santa Catarina — Art's Construtora. Tratamento de patologias, sistemas elastoméricos e alpinismo.",
+        "og:url": "https://artsconstrutora.com.br/servicos/reformas-prediais-fachadas",
+        "og:image": "https://artsconstrutora.com.br/_astro/photo-1486325212027-8081e485255e.iSTW0xyj_Z1gjCFf.jpg",
+        "og:image:width": "1200",
+        "og:image:height": "630",
+        "og:image:alt": "Reformas Prediais e Fachadas | Art's Construtora",
+        "twitter:card": "summary_large_image",
+        "twitter:title": "Reformas Prediais e Fachadas | Art's Construtora",
+        "twitter:description": "Reformas prediais, recuperação e fachadas no Rio Grande do Sul e Santa Catarina — Art's Construtora. Tratamento de patologias, sistemas elastoméricos e alpinismo."
+      },
+      "duplicateHeadTags": [],
+      "icons": [
+        "/_astro/logo.BHDoi8PM_3wK4V.png"
+      ],
+      "headings": {
+        "h1": [
+          "Reformas Prediais e Fachadas"
+        ],
+        "h2": [
+          "Sobre o Serviço",
+          "O que está incluído",
+          "Como trabalhamos",
+          "Precisa de Reformas Prediais e Fachadas?"
+        ],
+        "h3": [
+          "Solicitar Orçamento",
+          "Outros Serviços",
+          "Nossos Serviços",
+          "Áreas Atendidas",
+          "Nossas Garantias"
+        ]
+      },
+      "wordCount": 518,
+      "images": [
+        {
+          "src": "/_astro/logo.BHDoi8PM_1IzCO0.webp",
+          "alt": "Art's Construtora — Porto Alegre RS"
+        },
+        {
+          "src": "/_astro/photo-1486325212027-8081e485255e.iSTW0xyj_8iphA.webp",
+          "alt": "Reformas Prediais e Fachadas — Art's Construtora"
+        },
+        {
+          "src": "/_astro/logo.BHDoi8PM_1IzCO0.webp",
+          "alt": "Art's Construtora"
+        }
+      ],
+      "backgroundImages": [],
+      "internalLinks": [
+        "/",
+        "/empresa",
+        "/servicos",
+        "/servicos/construcao-civil-reformas",
+        "/servicos/reformas-prediais-fachadas",
+        "/servicos/pintura-predial",
+        "/servicos/impermeabilizacao",
+        "/servicos/reformas-corporativas",
+        "/servicos/reformas-construcoes-industriais",
+        "/servicos/alpinismo-industrial",
+        "/servicos/manutencao-condominios",
+        "/servicos/porcelanatos-granitos-acabamentos",
+        "/projetos",
+        "/areas-atendidas",
+        "/blog",
+        "/contato"
+      ],
+      "externalLinks": [
+        "tel:(51) 98403-3255",
+        "https://wa.me/5551984033255?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20meu%20projeto.",
+        "https://wa.me/5551984033255?text=Ol%C3%A1%2C%20preciso%20de%20or%C3%A7amento%20para%20Reformas%20Prediais%20e%20Fachadas",
+        "https://wa.me/5551984033255?text=Ol%C3%A1%2C%20preciso%20de%20Reformas%20Prediais%20e%20Fachadas",
+        "mailto:comercial@artsconstrutora.com.br",
+        "https://www.instagram.com/artsconstrutora_",
+        "https://www.facebook.com/ArtsConstrutora"
+      ],
+      "forms": [],
+      "jsonLd": [
+        {
+          "@context": "https://schema.org",
+          "@type": "LocalBusiness",
+          "name": "Art's Construtora",
+          "description": "Empresa especializada em pintura predial, alpinismo predial, impermeabilização, reforma de fachadas e manutenção de condomínios em Porto Alegre e Região Metropolitana RS.",
+          "url": "https://artsconstrutora.com.br",
+          "telephone": "+55-51-99958-3045",
+          "email": "contato@artsconstrutora.com.br",
+          "foundingDate": "2002",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Porto Alegre",
+            "addressRegion": "RS",
+            "addressCountry": "BR"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": -30.0346,
+            "longitude": -51.2177
+          },
+          "areaServed": [
+            "Porto Alegre",
+            "Canoas",
+            "Novo Hamburgo",
+            "São Leopoldo",
+            "Gravataí",
+            "Cachoeirinha",
+            "Região Metropolitana RS",
+            "Santa Catarina"
+          ],
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Serviços de Manutenção Predial",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Pintura Predial"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Alpinismo Predial"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Impermeabilização"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Reforma de Fachadas"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Manutenção de Condomínios"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Lavagem de Fachadas"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Instalação de Porcelanatos e Granitos"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Reformas Comerciais e Industriais"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "name": "Reformas Prediais e Fachadas",
+          "description": "Reformas prediais, recuperação e fachadas no Rio Grande do Sul e Santa Catarina — Art's Construtora. Tratamento de patologias, sistemas elastoméricos e alpinismo.",
+          "provider": {
+            "@type": "LocalBusiness",
+            "name": "Art's Construtora",
+            "url": "https://artsconstrutora.com.br"
+          },
+          "areaServed": [
+            "Rio Grande do Sul",
+            "Santa Catarina"
+          ]
+        }
+      ],
+      "outline": [
+        {
+          "tag": "header",
+          "id": null,
+          "class": "sticky top-0 z-50 w-full transition-all duration-300 border-b border-border bg-background py-3 shadow-lg",
+          "firstHeading": "h1: Reformas Prediais e Fachadas"
+        },
+        {
+          "tag": "nav",
+          "id": null,
+          "class": "hidden items-center gap-1 lg:flex",
+          "firstHeading": "h1: Reformas Prediais e Fachadas"
+        },
+        {
+          "tag": "nav",
+          "id": null,
+          "class": "mt-4 flex flex-col gap-1",
+          "firstHeading": "h1: Reformas Prediais e Fachadas"
+        },
+        {
+          "tag": "main",
+          "id": null,
+          "class": "flex-1",
+          "firstHeading": "h1: Reformas Prediais e Fachadas"
+        },
+        {
+          "tag": "section",
+          "id": null,
+          "class": "relative overflow-hidden",
+          "firstHeading": "h1: Reformas Prediais e Fachadas"
+        },
+        {
+          "tag": "section",
+          "id": null,
+          "class": "bg-background text-foreground py-20",
+          "firstHeading": "h2: Sobre o Serviço"
+        },
+        {
+          "tag": "aside",
+          "id": null,
+          "class": "space-y-6",
+          "firstHeading": "h3: Solicitar Orçamento"
+        },
+        {
+          "tag": "section",
+          "id": null,
+          "class": "bg-muted text-foreground py-16 text-center border-t border-border",
+          "firstHeading": "h2: Precisa de Reformas Prediais e Fachadas?"
+        },
+        {
+          "tag": "footer",
+          "id": null,
+          "class": "bg-accent-deep text-accent-deep-foreground",
+          "firstHeading": "h3: Nossos Serviços"
+        }
+      ],
+      "stylesheets": [
+        "/_astro/Section.LfC2cg-z.css",
+        "/_astro/Section.LfC2cg-z.css"
+      ],
+      "scripts": [
+        "application/ld+json",
+        "application/ld+json",
+        "inline",
+        "inline",
+        "module",
+        "/_astro/main.astro_astro_type_script_index_0_lang.4IgxO6jx.js"
+      ],
+      "allHeadValues": {}
+    }
+  ]
+}

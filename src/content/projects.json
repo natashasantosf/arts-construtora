@@ -1,0 +1,92 @@
+[
+  {
+    "id": "proj-construcao-civil",
+    "order": 1,
+    "service": "construcao-civil-reformas",
+    "category": "Construção Civil e Reformas",
+    "title": "Construção, Ampliações e Reformas",
+    "summary": "Execução de obras estruturais, ampliações e reformas prediais com planejamento, controle de qualidade e foco em durabilidade.",
+    "image": "../assets/projects/proj-construcao-civil.webp",
+    "imageAlt": "Construção, Ampliações e Reformas — Art's Construtora"
+  },
+  {
+    "id": "proj-reformas-prediais-v2",
+    "order": 2,
+    "service": "reformas-prediais-fachadas",
+    "category": "Revitalização Predial",
+    "title": "Recuperação e Modernização de Fachadas",
+    "summary": "Recuperação de fachadas com correção de fissuras, tratamento de patologias construtivas e revitalização estética para maior segurança, durabilidade e valorização patrimonial.",
+    "image": "../assets/projects/proj-reformas-prediais-v2.webp",
+    "imageAlt": "Recuperação e Modernização de Fachadas — Art's Construtora"
+  },
+  {
+    "id": "proj-pintura-predial",
+    "order": 3,
+    "service": "pintura-predial",
+    "category": "Pintura Predial",
+    "title": "Pintura Predial Especializada",
+    "summary": "Proteção, renovação estética e durabilidade para fachadas por meio de sistemas de pintura premium e preparação técnica adequada.",
+    "image": "../assets/projects/proj-pintura-predial.webp",
+    "imageAlt": "Pintura Predial Especializada — Art's Construtora"
+  },
+  {
+    "id": "proj-impermeabilizacao-fachadas",
+    "order": 4,
+    "service": "impermeabilizacao",
+    "category": "Impermeabilização de Fachadas",
+    "title": "Proteção Contra Infiltrações",
+    "summary": "Impermeabilização de fachadas com sistemas elastoméricos de alta performance, protegendo a edificação contra infiltrações, umidade e agentes climáticos.",
+    "image": "../assets/projects/proj-impermeabilizacao-fachadas.webp",
+    "imageAlt": "Proteção Contra Infiltrações — Art's Construtora"
+  },
+  {
+    "id": "proj-reformas-corporativas",
+    "order": 5,
+    "service": "reformas-corporativas",
+    "category": "Reformas Corporativas",
+    "title": "Adequação de Ambientes Corporativos",
+    "summary": "Modernização de ambientes corporativos, comerciais e institucionais com foco em funcionalidade, eficiência e qualidade.",
+    "image": "../assets/projects/proj-reformas-corporativas.webp",
+    "imageAlt": "Adequação de Ambientes Corporativos — Art's Construtora"
+  },
+  {
+    "id": "proj-construcoes-industriais",
+    "order": 6,
+    "service": "reformas-construcoes-industriais",
+    "category": "Reformas e Construções Industriais",
+    "title": "Adequações e Ampliações Industriais",
+    "summary": "Execução de adequações, ampliações e novas estruturas industriais com planejamento técnico e rigor operacional.",
+    "image": "../assets/projects/proj-construcoes-industriais.webp",
+    "imageAlt": "Adequações e Ampliações Industriais — Art's Construtora"
+  },
+  {
+    "id": "proj-alpinismo-industrial",
+    "order": 7,
+    "service": "alpinismo-industrial",
+    "category": "Alpinismo Industrial",
+    "title": "Trabalhos em Altura com Acesso por Corda",
+    "summary": "Serviços em altura executados por equipe especializada com certificação IRATA, proporcionando acesso seguro e eficiente a áreas complexas.",
+    "image": "../assets/projects/proj-alpinismo-industrial.webp",
+    "imageAlt": "Trabalhos em Altura com Acesso por Corda — Art's Construtora"
+  },
+  {
+    "id": "proj-revitalizacao-condominiais",
+    "order": 8,
+    "service": "manutencao-condominios",
+    "category": "Revitalização de Áreas Condominiais",
+    "title": "Modernização de Espaços de Lazer",
+    "summary": "Transformamos áreas comuns em espaços modernos, funcionais e sofisticados por meio de reformas, revitalização, revestimentos e acabamentos de alto padrão.",
+    "image": "../assets/projects/proj-revitalizacao-condominiais.webp",
+    "imageAlt": "Modernização de Espaços de Lazer — Art's Construtora"
+  },
+  {
+    "id": "proj-porcelanatos-granitos",
+    "order": 9,
+    "service": "porcelanatos-granitos-acabamentos",
+    "category": "Revestimentos de Alto Padrão",
+    "title": "Porcelanatos, Granitos e Acabamentos Premium",
+    "summary": "Instalação de revestimentos, bancadas, lavabos, escadas e acabamentos de alto padrão para ambientes residenciais e corporativos.",
+    "image": "../assets/projects/proj-porcelanatos-granitos.webp",
+    "imageAlt": "Porcelanatos, Granitos e Acabamentos Premium — Art's Construtora"
+  }
+]

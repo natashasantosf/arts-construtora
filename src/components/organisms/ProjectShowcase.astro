@@ -1,0 +1,41 @@
+---
+import type { ImageMetadata } from "astro";
+import Container from "@/components/atoms/Container.astro";
+import Section from "@/components/atoms/Section.astro";
+import DividedGrid from "@/components/atoms/DividedGrid.astro";
+import Button from "@/components/atoms/Button.astro";
+import Icon from "@/components/atoms/Icon.astro";
+import SectionHeading from "@/components/molecules/SectionHeading.astro";
+import ProjectCard from "@/components/molecules/ProjectCard.astro";
+
+// Highlighted projects with captions over the photos (home).
+interface Props {
+  eyebrow?: string;
+  heading: string;
+  text?: string;
+  items: { title: string; category: string; image: ImageMetadata; imageAlt: string }[];
+  cta?: { label: string; href: string };
+  class?: string;
+}
+
+const { eyebrow, heading, text, items, cta, class: className } = Astro.props;
+---
+
+<Section class={className}>
+  <Container>
+    <SectionHeading eyebrow={eyebrow} heading={heading} text={text} class="mb-16" />
+    <DividedGrid cols="md3">
+      {items.map((item) => <ProjectCard variant="overlay" {...item} />)}
+    </DividedGrid>
+    {
+      cta && (
+        <div class="mt-10 text-center">
+          <Button as="a" href={cta.href} variant="outline">
+            {cta.label}
+            <Icon name="arrow-right" class="size-4" />
+          </Button>
+        </div>
+      )
+    }
+  </Container>
+</Section>

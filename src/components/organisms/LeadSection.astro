@@ -1,0 +1,21 @@
+---
+import Container from "@/components/atoms/Container.astro";
+import Section from "@/components/atoms/Section.astro";
+
+// Short introductory paragraph right under a PageHero. Rich text goes in the slot.
+interface Props {
+  /** narrow: centered 3xl container (areas page) · wide: full container, text capped at 3xl */
+  width?: "narrow" | "wide";
+  class?: string;
+}
+
+const { width = "wide", class: className } = Astro.props;
+---
+
+<Section spacing="sm" class:list={["border-b border-border", className]}>
+  <Container size={width === "narrow" ? "sm" : "xl"}>
+    <div class="motion-slide-up max-w-3xl text-lg leading-relaxed text-muted-foreground [&_strong]:text-foreground">
+      <slot />
+    </div>
+  </Container>
+</Section>

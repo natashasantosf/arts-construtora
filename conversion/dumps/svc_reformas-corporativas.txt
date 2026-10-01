@@ -1,0 +1,409 @@
+<body>
+  <div id="root">
+    <div .flex flex-col min-h-screen bg-background>
+      <div .hidden lg:flex items-center justify-end gap-6 px-8 py-2 text-xs font-medium transition-all duration-300 bg-[#2D2D2D] text-white/80>
+        <a .flex items-center gap-1.5 hover:text-[#6FA43A] transition-colors href="tel:(51) 98403-3255">
+          <svg lucide-phone>
+          » (51) 98403-3255
+        <a .flex items-center gap-1.5 hover:text-[#6FA43A] transition-colors href="https://wa.me/5551984033255?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20meu%20projeto." target="_blank">
+          <svg >
+          » WhatsApp
+        <span .text-white/40>
+          » |
+        <span .uppercase tracking-widest>
+          » ATUAÇÃO REGIONAL • RIO GRANDE DO SUL • SANTA CATARINA
+      <header .sticky top-0 w-full z-50 transition-all duration-300 bg-white shadow-lg py-3 border-b border-gray-100>
+        <div .container mx-auto px-4 lg:px-8 flex items-center justify-between gap-4>
+          <a .flex items-center flex-shrink-0 href="../../index.html">
+            <img .transition-all duration-300 object-contain h-12 src="../../logo.png" alt="Art's Construtora — Porto Alegre RS">
+          <nav .hidden lg:flex items-center gap-1>
+            <a .px-3 py-2 text-sm font-semibold transition-colors rounded-sm relative text-[#3A3A3A] hover:text-[#6FA43A] href="../../index.html">
+              » Início
+            <a .px-3 py-2 text-sm font-semibold transition-colors rounded-sm relative text-[#3A3A3A] hover:text-[#6FA43A] href="../../empresa/index.html">
+              » Empresa
+            <div .relative group>
+              <a .flex items-center gap-1 px-3 py-2 text-sm font-600 transition-colors rounded-sm hover:text-[#6FA43A] text-[#6FA43A] href="../index.html">
+                » Serviços
+                <svg lucide-chevron-down>
+              <div .absolute top-full left-0 min-w-[240px] bg-white shadow-xl border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 translate-y-1 group-hover:translate-y-0 z-50>
+                <a .block px-5 py-3 text-sm text-[#3A3A3A] hover:bg-[#6FA43A] hover:text-white transition-colors border-b border-gray-50 last:border-0 href="../construcao-civil-reformas/index.html">
+                  » Construção Civil e Reformas
+                <a .block px-5 py-3 text-sm text-[#3A3A3A] hover:bg-[#6FA43A] hover:text-white transition-colors border-b border-gray-50 last:border-0 href="../reformas-prediais-fachadas/index.html">
+                  » Reformas Prediais e Fachadas
+                <a .block px-5 py-3 text-sm text-[#3A3A3A] hover:bg-[#6FA43A] hover:text-white transition-colors border-b border-gray-50 last:border-0 href="../pintura-predial/index.html">
+                  » Pintura Predial
+                <a .block px-5 py-3 text-sm text-[#3A3A3A] hover:bg-[#6FA43A] hover:text-white transition-colors border-b border-gray-50 last:border-0 href="../impermeabilizacao/index.html">
+                  » Impermeabilização
+                <a .block px-5 py-3 text-sm text-[#3A3A3A] hover:bg-[#6FA43A] hover:text-white transition-colors border-b border-gray-50 last:border-0 href="index.html">
+                  » Reformas Corporativas
+                <a .block px-5 py-3 text-sm text-[#3A3A3A] hover:bg-[#6FA43A] hover:text-white transition-colors border-b border-gray-50 last:border-0 href="../reformas-construcoes-industriais/index.html">
+                  » Reformas e Construções Industriais
+                <a .block px-5 py-3 text-sm text-[#3A3A3A] hover:bg-[#6FA43A] hover:text-white transition-colors border-b border-gray-50 last:border-0 href="../alpinismo-industrial/index.html">
+                  » Alpinismo Industrial
+                <a .block px-5 py-3 text-sm text-[#3A3A3A] hover:bg-[#6FA43A] hover:text-white transition-colors border-b border-gray-50 last:border-0 href="../manutencao-condominios/index.html">
+                  » Manutenção de Condomínios
+                <a .block px-5 py-3 text-sm text-[#3A3A3A] hover:bg-[#6FA43A] hover:text-white transition-colors border-b border-gray-50 last:border-0 href="../porcelanatos-granitos-acabamentos/index.html">
+                  » Porcelanatos, Granitos e Acabamentos Premium
+            <a .px-3 py-2 text-sm font-semibold transition-colors rounded-sm relative text-[#3A3A3A] hover:text-[#6FA43A] href="../../projetos/index.html">
+              » Projetos
+            <a .px-3 py-2 text-sm font-semibold transition-colors rounded-sm relative text-[#3A3A3A] hover:text-[#6FA43A] href="../../areas-atendidas/index.html">
+              » Áreas Atendidas
+            <a .px-3 py-2 text-sm font-semibold transition-colors rounded-sm relative text-[#3A3A3A] hover:text-[#6FA43A] href="../../blog/index.html">
+              » Blog
+            <a .px-3 py-2 text-sm font-semibold transition-colors rounded-sm relative text-[#3A3A3A] hover:text-[#6FA43A] href="../../contato/index.html">
+              » Contato
+          <a .hidden lg:flex items-center gap-2 bg-[#6FA43A] hover:bg-[#4E7D2B] text-white font-bold text-sm px-5 py-2.5 transition-colors duration-200 rounded-sm href="https://wa.me/5551984033255?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20meu%20projeto." target="_blank">
+            <svg >
+            » Solicitar Orçamento
+          <button .lg:hidden p-2 transition-colors text-[#3A3A3A] aria-label="Menu">
+            <svg lucide-menu>
+      <div .fixed inset-0 z-40 bg-[#2D2D2D] flex flex-col pt-20 px-6 pb-8 overflow-y-auto transition-transform duration-300 lg:hidden translate-x-full>
+        <nav .flex flex-col gap-1 mt-4>
+          <div>
+            <a .block py-3 px-2 text-lg font-bold border-b border-white/10 transition-colors text-white hover:text-[#6FA43A] href="../../index.html">
+              » Início
+          <div>
+            <a .block py-3 px-2 text-lg font-bold border-b border-white/10 transition-colors text-white hover:text-[#6FA43A] href="../../empresa/index.html">
+              » Empresa
+          <div>
+            <a .block py-3 px-2 text-lg font-bold border-b border-white/10 transition-colors text-[#6FA43A] href="../index.html">
+              » Serviços
+            <div .pl-4 bg-white/5>
+              <a .block py-2 px-2 text-sm text-white/70 hover:text-[#6FA43A] border-b border-white/5 transition-colors href="../construcao-civil-reformas/index.html">
+                » Construção Civil e Reformas
+              <a .block py-2 px-2 text-sm text-white/70 hover:text-[#6FA43A] border-b border-white/5 transition-colors href="../reformas-prediais-fachadas/index.html">
+                » Reformas Prediais e Fachadas
+              <a .block py-2 px-2 text-sm text-white/70 hover:text-[#6FA43A] border-b border-white/5 transition-colors href="../pintura-predial/index.html">
+                » Pintura Predial
+              <a .block py-2 px-2 text-sm text-white/70 hover:text-[#6FA43A] border-b border-white/5 transition-colors href="../impermeabilizacao/index.html">
+                » Impermeabilização
+              <a .block py-2 px-2 text-sm text-white/70 hover:text-[#6FA43A] border-b border-white/5 transition-colors href="index.html">
+                » Reformas Corporativas
+              <a .block py-2 px-2 text-sm text-white/70 hover:text-[#6FA43A] border-b border-white/5 transition-colors href="../reformas-construcoes-industriais/index.html">
+                » Reformas e Construções Industriais
+              <a .block py-2 px-2 text-sm text-white/70 hover:text-[#6FA43A] border-b border-white/5 transition-colors href="../alpinismo-industrial/index.html">
+                » Alpinismo Industrial
+              <a .block py-2 px-2 text-sm text-white/70 hover:text-[#6FA43A] border-b border-white/5 transition-colors href="../manutencao-condominios/index.html">
+                » Manutenção de Condomínios
+              <a .block py-2 px-2 text-sm text-white/70 hover:text-[#6FA43A] border-b border-white/5 transition-colors href="../porcelanatos-granitos-acabamentos/index.html">
+                » Porcelanatos, Granitos e Acabamentos Premium
+          <div>
+            <a .block py-3 px-2 text-lg font-bold border-b border-white/10 transition-colors text-white hover:text-[#6FA43A] href="../../projetos/index.html">
+              » Projetos
+          <div>
+            <a .block py-3 px-2 text-lg font-bold border-b border-white/10 transition-colors text-white hover:text-[#6FA43A] href="../../areas-atendidas/index.html">
+              » Áreas Atendidas
+          <div>
+            <a .block py-3 px-2 text-lg font-bold border-b border-white/10 transition-colors text-white hover:text-[#6FA43A] href="../../blog/index.html">
+              » Blog
+          <div>
+            <a .block py-3 px-2 text-lg font-bold border-b border-white/10 transition-colors text-white hover:text-[#6FA43A] href="../../contato/index.html">
+              » Contato
+        <a .mt-8 flex items-center justify-center gap-2 bg-[#6FA43A] hover:bg-[#4E7D2B] text-white font-bold py-4 rounded-sm transition-colors href="https://wa.me/5551984033255?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20meu%20projeto." target="_blank">
+          <svg >
+          » Solicitar Orçamento
+        <a .mt-3 flex items-center justify-center gap-2 border border-white/20 text-white/80 py-3 rounded-sm hover:border-[#6FA43A] transition-colors text-sm href="tel:(51) 98403-3255">
+          <svg lucide-phone>
+          » (51) 98403-3255
+      <main .flex-1>
+        <section .relative overflow-hidden>
+          <div .h-80 md:h-96 relative>
+            <img .w-full h-full object-cover src="../../_externo/images.unsplash.com/photo-1497366216548-37526070297c_b7d999e0.jpg" alt="Reformas Corporativas — Art's Construtora" style="filter: brightness(0.22);">
+            <div .absolute inset-0 bg-gradient-to-r from-[#1a1a1a]/95 to-transparent>
+            <div .absolute inset-0 flex items-end container mx-auto px-4 lg:px-8 pb-10>
+              <div>
+                <a .text-[#6FA43A] text-xs font-bold hover:underline flex items-center gap-1 mb-4 uppercase tracking-widest href="../index.html">
+                  » ← Todos os Serviços
+                <div .inline-block bg-[#6FA43A] text-white text-xs font-bold px-3 py-1.5 uppercase tracking-widest mb-4>
+                  » Serviço Especializado
+                <h1 .text-4xl md:text-6xl font-black font-montserrat text-white leading-tight>
+                  » Reformas Corporativas
+                <p .text-white/70 text-lg mt-3 max-w-2xl>
+                  » Modernização de ambientes corporativos, comerciais e institucionais com foco em funcionalidade, eficiência e qualidade.
+        <section .py-20 bg-white>
+          <div .container mx-auto px-4 lg:px-8>
+            <div .grid lg:grid-cols-3 gap-12>
+              <div .lg:col-span-2 space-y-12>
+                <div>
+                  <h2 .text-2xl md:text-3xl font-black font-montserrat text-[#3A3A3A] mb-4>
+                    » Sobre o Serviço
+                  <p .text-gray-500 leading-relaxed text-base>
+                    » A Art's Construtora executa reformas, adequações e melhorias em ambientes corporativos, comerciais e institucionais, com foco em qualidade, segurança e cumprimento de prazos. Realizamos intervenções técnicas completas — desde o planejamento até a entrega final — garantindo eficiência e mínimo impacto na rotina dos clientes. Nossas especialidades incluem reformas corporativas, adequação de ambientes, instalações hidráulicas, drywall e divisórias, pisos e revestimentos e manutenção predial integrada.
+                <div>
+                  <h2 .text-xl md:text-2xl font-black font-montserrat text-[#3A3A3A] mb-6>
+                    » O que está incluído
+                  <div .grid sm:grid-cols-2 gap-3>
+                    <div .flex items-start gap-3 border border-gray-200 p-4 hover:border-[#6FA43A] transition-colors>
+                      <svg lucide-circle-check>
+                      <span .text-gray-600 text-sm leading-relaxed>
+                        » Reformas corporativas e adequações de ambientes com gestão completa
+                    <div .flex items-start gap-3 border border-gray-200 p-4 hover:border-[#6FA43A] transition-colors>
+                      <svg lucide-circle-check>
+                      <span .text-gray-600 text-sm leading-relaxed>
+                        » Drywall e divisórias: soluções que otimizam espaços e melhoram ambientes
+                    <div .flex items-start gap-3 border border-gray-200 p-4 hover:border-[#6FA43A] transition-colors>
+                      <svg lucide-circle-check>
+                      <span .text-gray-600 text-sm leading-relaxed>
+                        » Instalações hidráulicas com execução técnica para máximo desempenho
+                    <div .flex items-start gap-3 border border-gray-200 p-4 hover:border-[#6FA43A] transition-colors>
+                      <svg lucide-circle-check>
+                      <span .text-gray-600 text-sm leading-relaxed>
+                        » Pisos e revestimentos com qualidade e durabilidade superiores
+                    <div .flex items-start gap-3 border border-gray-200 p-4 hover:border-[#6FA43A] transition-colors>
+                      <svg lucide-circle-check>
+                      <span .text-gray-600 text-sm leading-relaxed>
+                        » Adequações técnicas seguras e eficientes conforme normas
+                    <div .flex items-start gap-3 border border-gray-200 p-4 hover:border-[#6FA43A] transition-colors>
+                      <svg lucide-circle-check>
+                      <span .text-gray-600 text-sm leading-relaxed>
+                        » Reformas internas com foco em funcionalidade e estética
+                    <div .flex items-start gap-3 border border-gray-200 p-4 hover:border-[#6FA43A] transition-colors>
+                      <svg lucide-circle-check>
+                      <span .text-gray-600 text-sm leading-relaxed>
+                        » Cada detalhe executado com precisão e responsabilidade
+                    <div .flex items-start gap-3 border border-gray-200 p-4 hover:border-[#6FA43A] transition-colors>
+                      <svg lucide-circle-check>
+                      <span .text-gray-600 text-sm leading-relaxed>
+                        » Preservamos patrimônios e valorizamos investimentos
+                <div>
+                  <h2 .text-xl md:text-2xl font-black font-montserrat text-[#3A3A3A] mb-6>
+                    » Como trabalhamos
+                  <div .space-y-3>
+                    <div .flex gap-5 items-start border border-gray-200 p-6>
+                      <div .w-8 h-8 bg-[#6FA43A] text-white font-black text-sm flex items-center justify-center flex-shrink-0 font-montserrat>
+                        » 1
+                      <div>
+                        <div .font-bold text-[#3A3A3A] font-montserrat mb-1>
+                          » Avaliação e Projeto
+                        <p .text-gray-500 text-sm leading-relaxed>
+                          » Levantamento completo do ambiente, identificação das necessidades e elaboração do projeto executivo.
+                    <div .flex gap-5 items-start border border-gray-200 p-6>
+                      <div .w-8 h-8 bg-[#6FA43A] text-white font-black text-sm flex items-center justify-center flex-shrink-0 font-montserrat>
+                        » 2
+                      <div>
+                        <div .font-bold text-[#3A3A3A] font-montserrat mb-1>
+                          » Cronograma
+                        <p .text-gray-500 text-sm leading-relaxed>
+                          » Planejamento detalhado com fases, prazos e mobilização de equipe para mínimo impacto na operação.
+                    <div .flex gap-5 items-start border border-gray-200 p-6>
+                      <div .w-8 h-8 bg-[#6FA43A] text-white font-black text-sm flex items-center justify-center flex-shrink-0 font-montserrat>
+                        » 3
+                      <div>
+                        <div .font-bold text-[#3A3A3A] font-montserrat mb-1>
+                          » Execução Técnica
+                        <p .text-gray-500 text-sm leading-relaxed>
+                          » Realização das intervenções por equipe especializada com controle rigoroso de qualidade.
+                    <div .flex gap-5 items-start border border-gray-200 p-6>
+                      <div .w-8 h-8 bg-[#6FA43A] text-white font-black text-sm flex items-center justify-center flex-shrink-0 font-montserrat>
+                        » 4
+                      <div>
+                        <div .font-bold text-[#3A3A3A] font-montserrat mb-1>
+                          » Entrega e Garantia
+                        <p .text-gray-500 text-sm leading-relaxed>
+                          » Vistoria final, documentação fotográfica completa e garantia contratual de todos os serviços executados.
+              <aside .space-y-6>
+                <div .bg-[#6FA43A] p-8 sticky top-28>
+                  <h3 .font-black font-montserrat text-white text-xl mb-3>
+                    » Solicitar Orçamento
+                  <p .text-white/80 text-sm mb-6>
+                    » Nossa equipe realiza uma avaliação técnica do local e desenvolve uma proposta personalizada de acordo com as necessidades do seu projeto.
+                  <div .space-y-3>
+                    <a .flex items-center justify-center gap-2 bg-white text-[#6FA43A] font-bold w-full py-3 hover:bg-gray-100 transition-colors href="https://wa.me/5551984033255?text=Ol%C3%A1%2C%20preciso%20de%20or%C3%A7amento%20para%20Reformas%20Corporativas" target="_blank">
+                      <svg >
+                      » WhatsApp
+                    <a .flex items-center justify-center gap-2 border-2 border-white/40 text-white font-bold w-full py-3 hover:border-white hover:bg-white/10 transition-colors href="tel:(51) 98403-3255">
+                      <svg lucide-phone>
+                      » (51) 98403-3255
+                <div .border border-gray-200 p-6>
+                  <h3 .font-bold font-montserrat text-[#3A3A3A] mb-4 text-sm uppercase tracking-widest>
+                    » Outros Serviços
+                  <div .space-y-1>
+                    <a .flex items-center gap-2 text-sm text-gray-500 hover:text-[#6FA43A] transition-colors py-2 border-b border-gray-100 last:border-0 href="../construcao-civil-reformas/index.html">
+                      <svg lucide-arrow-right>
+                      » Construção Civil e Reformas
+                    <a .flex items-center gap-2 text-sm text-gray-500 hover:text-[#6FA43A] transition-colors py-2 border-b border-gray-100 last:border-0 href="../reformas-prediais-fachadas/index.html">
+                      <svg lucide-arrow-right>
+                      » Reformas Prediais e Fachadas
+                    <a .flex items-center gap-2 text-sm text-gray-500 hover:text-[#6FA43A] transition-colors py-2 border-b border-gray-100 last:border-0 href="../pintura-predial/index.html">
+                      <svg lucide-arrow-right>
+                      » Pintura Predial
+                    <a .flex items-center gap-2 text-sm text-gray-500 hover:text-[#6FA43A] transition-colors py-2 border-b border-gray-100 last:border-0 href="../impermeabilizacao/index.html">
+                      <svg lucide-arrow-right>
+                      » Impermeabilização
+                    <a .flex items-center gap-2 text-sm text-gray-500 hover:text-[#6FA43A] transition-colors py-2 border-b border-gray-100 last:border-0 href="../reformas-construcoes-industriais/index.html">
+                      <svg lucide-arrow-right>
+                      » Reformas e Construções Industriais
+                    <a .flex items-center gap-2 text-sm text-gray-500 hover:text-[#6FA43A] transition-colors py-2 border-b border-gray-100 last:border-0 href="../alpinismo-industrial/index.html">
+                      <svg lucide-arrow-right>
+                      » Alpinismo Industrial
+        <section .py-16 bg-gray-50 border-t border-gray-200 text-center>
+          <div .container mx-auto px-4 lg:px-8>
+            <div>
+              <h2 .text-2xl md:text-4xl font-black font-montserrat text-[#3A3A3A] mb-4>
+                » Precisa de Reformas Corporativas?
+              <p .text-gray-500 mb-8 max-w-xl mx-auto>
+                » Atendemos o Rio Grande do Sul e Santa Catarina. Nossa equipe realiza uma avaliação técnica do local e desenvolve uma proposta personalizada de acordo com as necessidades do seu projeto.
+              <a .inline-flex items-center gap-2 bg-[#6FA43A] hover:bg-[#4E7D2B] text-white font-bold px-8 py-4 transition-colors href="https://wa.me/5551984033255?text=Ol%C3%A1%2C%20preciso%20de%20Reformas%20Corporativas" target="_blank">
+                <svg >
+                » Solicite Seu Orçamento
+      <footer .bg-[#222222] text-white>
+        <div .container mx-auto px-4 lg:px-8 pt-6 pb-16>
+          <div .grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12>
+            <div .space-y-4>
+              <a .block href="../../index.html">
+                <img .h-14 object-contain object-left brightness-0 invert src="../../logo.png" alt="Art's Construtora">
+              <p .text-white/60 text-sm leading-relaxed>
+                » Construção · Reformas · Pintura Predial
+                <br>
+                » Porcelanatos · Granitos · Manutenção de Condomínios
+              <div .space-y-3>
+                <a .flex items-center gap-3 text-sm text-white/60 hover:text-[#6FA43A] transition-colors href="tel:(51) 98403-3255">
+                  <svg lucide-phone>
+                  » (51) 98403-3255
+                <a .flex items-center gap-3 text-sm text-white/60 hover:text-[#6FA43A] transition-colors href="https://wa.me/5551984033255?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20meu%20projeto." target="_blank">
+                  <svg >
+                  » WhatsApp
+                <a .flex items-center gap-3 text-sm text-white/60 hover:text-[#6FA43A] transition-colors href="mailto:comercial@artsconstrutora.com.br">
+                  <svg lucide-mail>
+                  » comercial@artsconstrutora.com.br
+                <div .flex items-start gap-3 text-sm text-white/60>
+                  <svg lucide-map-pin>
+                  » Canoas, RS — Brasil
+              <div .flex gap-4>
+                <a .w-9 h-9 border border-white/20 flex items-center justify-center text-white/60 hover:border-[#6FA43A] hover:text-[#6FA43A] transition-colors href="https://www.instagram.com/artsconstrutora_" aria-label="Instagram" target="_blank">
+                  <svg >
+                <a .w-9 h-9 border border-white/20 flex items-center justify-center text-white/60 hover:border-[#6FA43A] hover:text-[#6FA43A] transition-colors href="https://www.facebook.com/ArtsConstrutora" aria-label="Facebook" target="_blank">
+                  <svg >
+            <div>
+              <h3 .font-bold text-white text-sm uppercase tracking-widest mb-6 pb-3 border-b border-white/10>
+                » Nossos Serviços
+              <ul .space-y-2.5>
+                <li>
+                  <a .flex items-center gap-2 text-sm text-white/60 hover:text-[#6FA43A] transition-colors group href="../construcao-civil-reformas/index.html">
+                    <svg lucide-chevron-right>
+                    » Construção Civil e Reformas
+                <li>
+                  <a .flex items-center gap-2 text-sm text-white/60 hover:text-[#6FA43A] transition-colors group href="../reformas-prediais-fachadas/index.html">
+                    <svg lucide-chevron-right>
+                    » Reformas Prediais e Fachadas
+                <li>
+                  <a .flex items-center gap-2 text-sm text-white/60 hover:text-[#6FA43A] transition-colors group href="../pintura-predial/index.html">
+                    <svg lucide-chevron-right>
+                    » Pintura Predial
+                <li>
+                  <a .flex items-center gap-2 text-sm text-white/60 hover:text-[#6FA43A] transition-colors group href="../impermeabilizacao/index.html">
+                    <svg lucide-chevron-right>
+                    » Impermeabilização
+                <li>
+                  <a .flex items-center gap-2 text-sm text-white/60 hover:text-[#6FA43A] transition-colors group href="index.html">
+                    <svg lucide-chevron-right>
+                    » Reformas Corporativas
+                <li>
+                  <a .flex items-center gap-2 text-sm text-white/60 hover:text-[#6FA43A] transition-colors group href="../reformas-construcoes-industriais/index.html">
+                    <svg lucide-chevron-right>
+                    » Reformas e Construções Industriais
+                <li>
+                  <a .flex items-center gap-2 text-sm text-white/60 hover:text-[#6FA43A] transition-colors group href="../alpinismo-industrial/index.html">
+                    <svg lucide-chevron-right>
+                    » Alpinismo Industrial
+                <li>
+                  <a .flex items-center gap-2 text-sm text-white/60 hover:text-[#6FA43A] transition-colors group href="../manutencao-condominios/index.html">
+                    <svg lucide-chevron-right>
+                    » Manutenção de Condomínios
+                <li>
+                  <a .flex items-center gap-2 text-sm text-white/60 hover:text-[#6FA43A] transition-colors group href="../porcelanatos-granitos-acabamentos/index.html">
+                    <svg lucide-chevron-right>
+                    » Porcelanatos, Granitos e Acabamentos Premium
+            <div>
+              <h3 .font-bold text-white text-sm uppercase tracking-widest mb-6 pb-3 border-b border-white/10>
+                » Áreas Atendidas
+              <div .grid grid-cols-2 gap-x-4>
+                <ul .space-y-2.5>
+                  <li>
+                    <a .flex items-center gap-1.5 text-sm text-white/60 hover:text-[#6FA43A] transition-colors href="../../areas-atendidas/index.html">
+                      <svg lucide-chevron-right>
+                      » Porto Alegre
+                  <li>
+                    <a .flex items-center gap-1.5 text-sm text-white/60 hover:text-[#6FA43A] transition-colors href="../../areas-atendidas/index.html">
+                      <svg lucide-chevron-right>
+                      » Canoas
+                  <li>
+                    <a .flex items-center gap-1.5 text-sm text-white/60 hover:text-[#6FA43A] transition-colors href="../../areas-atendidas/index.html">
+                      <svg lucide-chevron-right>
+                      » Gramado
+                  <li>
+                    <a .flex items-center gap-1.5 text-sm text-white/60 hover:text-[#6FA43A] transition-colors href="../../areas-atendidas/index.html">
+                      <svg lucide-chevron-right>
+                      » Canela
+                  <li>
+                    <a .flex items-center gap-1.5 text-sm text-white/60 hover:text-[#6FA43A] transition-colors href="../../areas-atendidas/index.html">
+                      <svg lucide-chevron-right>
+                      » Xangri-Lá
+                  <li>
+                    <a .flex items-center gap-1.5 text-sm text-white/60 hover:text-[#6FA43A] transition-colors href="../../areas-atendidas/index.html">
+                      <svg lucide-chevron-right>
+                      » Capão da Canoa
+                  <li>
+                    <a .flex items-center gap-1.5 text-sm text-white/60 hover:text-[#6FA43A] transition-colors href="../../areas-atendidas/index.html">
+                      <svg lucide-chevron-right>
+                      » Torres
+                <ul .space-y-2.5 border-l border-white/10 pl-4>
+                  <li .text-[10px] font-bold text-[#6FA43A] uppercase tracking-widest pb-1>
+                    » Santa Catarina
+                  <li>
+                    <a .flex items-center gap-1.5 text-sm text-white/60 hover:text-[#6FA43A] transition-colors href="../../areas-atendidas/index.html">
+                      <svg lucide-chevron-right>
+                      » Balneário Camboriú
+                  <li>
+                    <a .flex items-center gap-1.5 text-sm text-white/60 hover:text-[#6FA43A] transition-colors href="../../areas-atendidas/index.html">
+                      <svg lucide-chevron-right>
+                      » Florianópolis
+                  <li>
+                    <a .flex items-center gap-1.5 text-sm text-white/60 hover:text-[#6FA43A] transition-colors href="../../areas-atendidas/index.html">
+                      <svg lucide-chevron-right>
+                      » Itapema
+                  <li>
+                    <a .flex items-center gap-1.5 text-sm text-white/60 hover:text-[#6FA43A] transition-colors href="../../areas-atendidas/index.html">
+                      <svg lucide-chevron-right>
+                      » Porto Belo
+                  <li>
+                    <a .flex items-center gap-1.5 text-sm text-white/60 hover:text-[#6FA43A] transition-colors href="../../areas-atendidas/index.html">
+                      <svg lucide-chevron-right>
+                      » Bombinhas
+            <div>
+              <h3 .font-bold text-white text-sm uppercase tracking-widest mb-6 pb-3 border-b border-white/10>
+                » Nossas Garantias
+              <div .space-y-4>
+                <div .flex items-start gap-3>
+                  <svg lucide-shield>
+                  <p .text-sm text-white/60 leading-relaxed>
+                    » Seguro de Responsabilidade Civil em todas as obras
+                <div .flex items-start gap-3>
+                  <svg lucide-award>
+                  <p .text-sm text-white/60 leading-relaxed>
+                    » ART emitida por Engenheiro Civil registrado no CREA-RS
+                <div .flex items-start gap-3>
+                  <svg lucide-award>
+                  <p .text-sm text-white/60 leading-relaxed>
+                    » Equipe de alpinismo certificada IRATA Level 1, 2 e 3
+                <div .flex items-start gap-3>
+                  <svg lucide-shield>
+                  <p .text-sm text-white/60 leading-relaxed>
+                    » Garantia contratual de até 5 anos em serviços de impermeabilização
+        <div .border-t border-white/10 py-6>
+          <div .container mx-auto px-4 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-white/40>
+            <p>
+              » © 2026 Art's Construtora. Todos os direitos reservados.
+            <p>
+              » QUALIDADE · SEGURANÇA · COMPROMISSO · EXCELÊNCIA
+            <p>
+              » Canoas, RS — Brasil
+      <a .fixed bottom-6 right-6 z-[60] flex items-center justify-center w-14 h-14 rounded-full focus:outline-none focus:ring-4 focus:ring-[#25D366]/40 group href="https://wa.me/5551984033255?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20meu%20projeto." aria-label="Falar no WhatsApp" style="bottom: 1.5rem; right: 1.5rem; opacity: 1; transform: none;" target="_blank">
+        <span .absolute inset-0 rounded-full bg-[#25D366] opacity-30 animate-ping style="animation-duration: 2.5s;">
+        <span .relative flex items-center justify-center w-14 h-14 rounded-full bg-[#25D366] style="box-shadow: rgba(37, 211, 102, 0.45) 0px 4px 20px, rgba(0, 0, 0, 0.25) 0px 2px 8px;">
+          <svg >
+        <span .pointer-events-none absolute right-full mr-4 hidden md:flex items-center bg-[#1a1a1a] text-white text-sm font-semibold py-2 px-4 rounded shadow-xl whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200 gap-2>
+          <svg >
+          » Solicitar orçamento
+    <div aria-label="Notifications (F8)" style="pointer-events: none;">
+      <ol .fixed top-0 z-[100] flex max-h-screen w-full flex-col-reverse p-4 sm:bottom-0 sm:right-0 sm:top-auto sm:flex-col md:max-w-[420px]>

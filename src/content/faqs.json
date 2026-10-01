@@ -1,0 +1,38 @@
+[
+  {
+    "id": "faq-1",
+    "order": 1,
+    "question": "Vocês realizam pintura predial?",
+    "answer": "Sim. Somos especializados em pintura predial, atendendo edifícios residenciais, comerciais e hospitalares em toda a Região Metropolitana RS e Santa Catarina. Utilizamos tintas elastoméricas e acrílicas de alta performance com garantia estendida e ART de engenheiro."
+  },
+  {
+    "id": "faq-2",
+    "order": 2,
+    "question": "Como funciona o alpinismo predial para reforma de fachadas?",
+    "answer": "Nossa equipe é certificada pela IRATA (Industrial Rope Access Trade Association). Acessamos locais de difícil acesso por cordas industriais — eliminando andaimes em até 80% dos casos, o que reduz custo e prazo de obra significativamente."
+  },
+  {
+    "id": "faq-3",
+    "order": 3,
+    "question": "Qual é a área de atendimento de vocês?",
+    "answer": "Atendemos Canoas, Porto Alegre, Novo Hamburgo, Gravataí e toda a Região Metropolitana RS, além de Gramado, Canela, Litoral Norte Gaúcho e Santa Catarina (Balneário Camboriú, Florianópolis, Itapema, Porto Belo e Bombinhas). Entre em contato para agendar uma visita técnica."
+  },
+  {
+    "id": "faq-4",
+    "order": 4,
+    "question": "Qual a garantia dos serviços de impermeabilização?",
+    "answer": "Oferecemos garantia contratual de até 5 anos nos serviços de impermeabilização, dependendo do sistema aplicado. Todos os serviços estruturais são executados com emissão de ART por engenheiro civil registrado no CREA-RS."
+  },
+  {
+    "id": "faq-5",
+    "order": 5,
+    "question": "Como solicitar um orçamento de reforma de fachada?",
+    "answer": "Solicite pelo WhatsApp, telefone ou formulário de contato. Nossa equipe agenda uma visita técnica, avalia o local e apresenta laudo completo com proposta detalhada."
+  },
+  {
+    "id": "faq-6",
+    "order": 6,
+    "question": "Vocês emitem ART para os serviços de manutenção predial?",
+    "answer": "Sim. Todos os serviços estruturais são acompanhados por engenheiro civil com emissão de ART junto ao CREA-RS, garantindo respaldo técnico e jurídico total ao condomínio ou proprietário."
+  }
+]

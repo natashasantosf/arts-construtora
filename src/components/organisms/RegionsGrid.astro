@@ -1,0 +1,21 @@
+---
+import Container from "@/components/atoms/Container.astro";
+import Section from "@/components/atoms/Section.astro";
+import DividedGrid from "@/components/atoms/DividedGrid.astro";
+import RegionCard from "@/components/molecules/RegionCard.astro";
+
+interface Props {
+  regions: { name: string; status: string; description: string; cities: string[] }[];
+  class?: string;
+}
+
+const { regions, class: className } = Astro.props;
+---
+
+<Section tone="muted" spacing="md" class={className}>
+  <Container>
+    <DividedGrid cols="md2">
+      {regions.map((region) => <RegionCard {...region} />)}
+    </DividedGrid>
+  </Container>
+</Section>

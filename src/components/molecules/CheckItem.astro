@@ -1,0 +1,22 @@
+---
+import Icon from "@/components/atoms/Icon.astro";
+
+// Bordered checklist entry ("O que está incluído").
+interface Props {
+  class?: string;
+}
+
+const { class: className } = Astro.props;
+---
+
+<div
+  class:list={[
+    "flex items-start gap-3 border border-border p-4 transition-colors hover:border-primary",
+    className,
+  ]}
+>
+  <Icon name="circle-check" class="mt-0.5 size-5 text-primary" />
+  <span class="text-sm leading-relaxed text-muted-foreground">
+    <slot />
+  </span>
+</div>

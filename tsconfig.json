@@ -6,7 +6,10 @@
     "./worker-configuration.d.ts"
   ],
   "exclude": [
-    "dist"
+    ".claude",
+    "conversion",
+    "dist",
+    "inputs"
   ],
   "compilerOptions": {
     "baseUrl": ".",

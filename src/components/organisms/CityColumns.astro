@@ -1,0 +1,42 @@
+---
+import Container from "@/components/atoms/Container.astro";
+import Section from "@/components/atoms/Section.astro";
+import DividedGrid from "@/components/atoms/DividedGrid.astro";
+import Icon from "@/components/atoms/Icon.astro";
+import SectionHeading from "@/components/molecules/SectionHeading.astro";
+
+// Cities grouped in columns ("Onde atuamos").
+interface Props {
+  eyebrow?: string;
+  heading: string;
+  groups: { title: string; cities: string[] }[];
+  class?: string;
+}
+
+const { eyebrow, heading, groups, class: className } = Astro.props;
+---
+
+<Section spacing="md" class:list={["border-y border-border", className]}>
+  <Container>
+    <SectionHeading eyebrow={eyebrow} heading={heading} size="3xl" class="mb-12" />
+    <DividedGrid cols="md3" class="mx-auto max-w-4xl">
+      {
+        groups.map((group) => (
+          <div class="bg-card p-8">
+            <h3 class="mb-4 border-b border-border pb-3 text-xs font-bold tracking-widest text-primary uppercase">
+              {group.title}
+            </h3>
+            <ul class="space-y-2">
+              {group.cities.map((city) => (
+                <li class="flex items-center gap-2 text-sm text-muted-foreground">
+                  <Icon name="map-pin" class="size-3 text-primary" />
+                  {city}
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))
+      }
+    </DividedGrid>
+  </Container>
+</Section>

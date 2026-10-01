@@ -1,0 +1,32 @@
+---
+import Button from "@/components/atoms/Button.astro";
+import Icon from "@/components/atoms/Icon.astro";
+
+// Primary-colored call-to-action card for sidebars: WhatsApp + phone.
+interface Props {
+  heading: string;
+  text: string;
+  whatsapp: { label: string; href: string };
+  phone: { label: string; href: string };
+  size?: "md" | "lg";
+  sticky?: boolean;
+  class?: string;
+}
+
+const { heading, text, whatsapp, phone, size = "lg", sticky = false, class: className } = Astro.props;
+---
+
+<div class:list={["bg-primary p-8", sticky && "sticky top-28", className]}>
+  <h3 class:list={["mb-3 font-black text-inverse", size === "lg" ? "text-xl" : "text-lg"]}>{heading}</h3>
+  <p class:list={["text-sm text-inverse/80", size === "lg" ? "mb-6" : "mb-5"]}>{text}</p>
+  <div class="space-y-3">
+    <Button as="a" href={whatsapp.href} target="_blank" rel="noopener noreferrer" variant="secondary" block>
+      <Icon name="whatsapp" class="size-4" />
+      {whatsapp.label}
+    </Button>
+    <Button as="a" href={phone.href} variant="outline-inverse" block>
+      <Icon name="phone" class="size-4" />
+      {phone.label}
+    </Button>
+  </div>
+</div>

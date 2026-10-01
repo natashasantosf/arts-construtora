@@ -6,14 +6,18 @@ interface Props {
 }
 
 const { index, title, class: className } = Astro.props;
-
-const number = typeof index === "number" ? String(index).padStart(2, "0") : index;
 ---
 
-<div class:list={["space-y-3", className]}>
-  <span class="font-mono text-sm text-primary">{number}</span>
-  <h3 class="font-semibold text-foreground">{title}</h3>
-  <p class="text-sm text-muted-foreground">
-    <slot />
-  </p>
+<div class:list={["flex items-start gap-5 border border-border p-6", className]}>
+  <div
+    class="flex size-8 shrink-0 items-center justify-center bg-primary text-sm font-black text-primary-foreground"
+  >
+    {index}
+  </div>
+  <div>
+    <div class="mb-1 font-bold text-foreground">{title}</div>
+    <p class="text-sm leading-relaxed text-muted-foreground">
+      <slot />
+    </p>
+  </div>
 </div>

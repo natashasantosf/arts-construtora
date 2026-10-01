@@ -1,33 +1,25 @@
 ---
-import Avatar from "@/components/atoms/Avatar.astro";
+import Icon from "@/components/atoms/Icon.astro";
 
+// Review card for the dark testimonials band.
 interface Props {
   quote: string;
   name: string;
   role?: string;
-  avatarSrc?: string;
+  rating?: number;
   class?: string;
 }
 
-const { quote, name, role, avatarSrc, class: className } = Astro.props;
-
-const initials = name
-  .split(" ")
-  .map((part) => part[0])
-  .slice(0, 2)
-  .join("")
-  .toUpperCase();
+const { quote, name, role, rating = 5, class: className } = Astro.props;
 ---
 
-<figure
-  class:list={["space-y-4 rounded-lg border border-border bg-card p-6 text-card-foreground", className]}
->
-  <blockquote class="text-sm leading-relaxed">"{quote}"</blockquote>
-  <figcaption class="flex items-center gap-3">
-    <Avatar src={avatarSrc} alt={name} fallback={initials} size="sm" />
-    <div>
-      <p class="text-sm font-medium text-foreground">{name}</p>
-      {role && <p class="text-xs text-muted-foreground">{role}</p>}
-    </div>
+<figure class:list={["border border-inverse/10 bg-accent p-8", className]}>
+  <div class="mb-5 flex gap-1" aria-label={`${rating} de 5 estrelas`}>
+    {Array.from({ length: rating }).map(() => <Icon name="star" class="size-4 fill-rating text-rating" />)}
+  </div>
+  <blockquote class="mb-6 text-sm leading-relaxed text-inverse/70 italic">"{quote}"</blockquote>
+  <figcaption class="border-t border-inverse/10 pt-4">
+    <div class="text-sm font-bold text-inverse">{name}</div>
+    {role && <div class="mt-1 text-xs text-inverse/40">{role}</div>}
   </figcaption>
 </figure>

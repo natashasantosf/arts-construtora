@@ -1,17 +1,20 @@
 ---
 interface Props {
+  /** Short rule before the label (used on the "Empresa" page). */
+  line?: boolean;
   class?: string;
 }
 
-const { class: className } = Astro.props;
+const { line = false, class: className } = Astro.props;
 ---
 
 <p
   class:list={[
-    "flex items-center gap-3 font-mono text-xs tracking-widest text-primary uppercase",
+    "flex items-center gap-4 text-xs font-bold text-primary uppercase",
+    line ? "tracking-[0.25em]" : "tracking-widest",
     className,
   ]}
 >
+  {line && <span class="h-px w-10 bg-primary" aria-hidden="true"></span>}
   <span><slot /></span>
-  <span class="h-px flex-1 bg-border" aria-hidden="true"></span>
 </p>

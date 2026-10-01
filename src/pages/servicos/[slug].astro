@@ -1,0 +1,81 @@
+---
+import type { GetStaticPaths } from "astro";
+import { getCollection, render, type CollectionEntry } from "astro:content";
+import Layout from "@/layouts/main.astro";
+import PageHero from "@/components/organisms/PageHero.astro";
+import ServiceDetail from "@/components/organisms/ServiceDetail.astro";
+import CTASection from "@/components/organisms/CTASection.astro";
+import { site, whatsappUrl, serviceWhatsappMessages } from "@/data/site";
+
+export const getStaticPaths = (async () => {
+  const services = (await getCollection("services")).sort((a, b) => a.data.order - b.data.order);
+  return services.map((service) => ({
+    params: { slug: service.id },
+    props: { service, others: services.filter((s) => s.id !== service.id) },
+  }));
+}) satisfies GetStaticPaths;
+
+interface Props {
+  service: CollectionEntry<"services">;
+  others: CollectionEntry<"services">[];
+}
+
+const { service, others } = Astro.props;
+const { data } = service;
+const { Content } = await render(service);
+const messages = serviceWhatsappMessages(data.title);
+
+const meta = {
+  title: data.seo.title,
+  fullTitle: true,
+  description: data.seo.description,
+  img: { src: data.heroImage, alt: data.seo.title },
+  jsonLd: [
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      name: data.title,
+      description: data.seo.description,
+      provider: { "@type": "LocalBusiness", name: site.name, url: site.url },
+      areaServed: ["Rio Grande do Sul", "Santa Catarina"],
+    },
+  ],
+};
+---
+
+<Layout {meta}>
+  <PageHero
+    image={data.heroImage}
+    imageAlt={data.heroImageAlt}
+    height="lg"
+    headingSize="6xl"
+    brightness={22}
+    backLink={{ label: "Todos os Serviços", href: "/servicos" }}
+    badge="Serviço Especializado"
+    subtitle={data.subtitle}
+  >
+    {data.title}
+  </PageHero>
+
+  <ServiceDetail
+    included={data.included}
+    steps={data.steps}
+    quote={{
+      heading: "Solicitar Orçamento",
+      text: site.quoteText,
+      whatsappHref: whatsappUrl(messages.quote),
+      phone: { label: site.phone.display, href: site.phone.href },
+    }}
+    otherServices={others.slice(0, 6).map((s) => ({ label: s.data.title, href: `/servicos/${s.id}` }))}
+  >
+    <Content />
+  </ServiceDetail>
+
+  <CTASection
+    tone="muted"
+    size="sm"
+    heading={`Precisa de ${data.title}?`}
+    text={`Atendemos o Rio Grande do Sul e Santa Catarina. ${site.quoteText}`}
+    ctas={[{ label: "Solicite Seu Orçamento", href: whatsappUrl(messages.cta), icon: "whatsapp", external: true }]}
+  />
+</Layout>

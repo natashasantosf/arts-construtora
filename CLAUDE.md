@@ -20,3 +20,7 @@ Consult these guides before working on related tasks:
 - [Adding or managing content](https://docs.astro.build/en/guides/content-collections/)
 - [Adding styles or using Tailwind](https://docs.astro.build/en/guides/styling/)
 - [Supporting multiple languages](https://docs.astro.build/en/guides/internationalization/)
+
+## Converting a legacy site
+
+To migrate a downloaded site (`inputs/site-download/`) into this template, use the project skill `converter-site` (`.claude/skills/converter-site/SKILL.md`). Conversion artifacts (inventory, plan, report) live in `conversion/`.

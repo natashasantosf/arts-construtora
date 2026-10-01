@@ -1,0 +1,49 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "@/layouts/main.astro";
+import PageHero from "@/components/organisms/PageHero.astro";
+import TagBar from "@/components/organisms/TagBar.astro";
+import ProjectGrid from "@/components/organisms/ProjectGrid.astro";
+import CTASection from "@/components/organisms/CTASection.astro";
+import heroImage from "@/assets/heroes/page-projetos.jpg";
+import { whatsappUrl, site } from "@/data/site";
+
+const projects = (await getCollection("projects")).sort((a, b) => a.data.order - b.data.order);
+
+const meta = {
+  title: "Projetos — Portfólio de Obras",
+  description:
+    "Portfólio de obras da Art's Construtora no Rio Grande do Sul e Santa Catarina — construção civil, reformas prediais, pintura, impermeabilização, alpinismo industrial e acabamentos premium.",
+  img: { src: heroImage, alt: "Portfólio Art's Construtora" },
+};
+---
+
+<Layout {meta}>
+  <PageHero
+    image={heroImage}
+    imageAlt="Portfólio Art's Construtora"
+    eyebrow="Portfólio"
+    subtitle="Mais de 480 projetos executados com excelência técnica em reformas, construções industriais, manutenção predial, fachadas, impermeabilização e acabamentos de alto padrão no Rio Grande do Sul e Santa Catarina."
+  >
+    Nossas Especialidades
+  </PageHero>
+
+  <TagBar tags={projects.map((p) => p.data.category)} />
+
+  <ProjectGrid
+    items={projects.map((p) => ({
+      title: p.data.title,
+      category: p.data.category,
+      summary: p.data.summary,
+      image: p.data.image,
+      imageAlt: p.data.imageAlt,
+      href: `/servicos/${p.data.service.id}`,
+    }))}
+  />
+
+  <CTASection
+    heading="Precisa de alguma dessas especialidades?"
+    text={site.quoteText}
+    ctas={[{ label: "Solicitar Orçamento", href: whatsappUrl(), icon: "whatsapp", external: true }]}
+  />
+</Layout>

@@ -1,0 +1,145 @@
+---
+import Container from "@/components/atoms/Container.astro";
+import Section from "@/components/atoms/Section.astro";
+import Button from "@/components/atoms/Button.astro";
+import QuoteCard from "@/components/molecules/QuoteCard.astro";
+import InfoItem from "@/components/molecules/InfoItem.astro";
+import SocialLinks from "@/components/molecules/SocialLinks.astro";
+import type { IconName } from "@/components/atoms/icons";
+
+// Quote request form + contact sidebar.
+interface Props {
+  heading: string;
+  text: string;
+  serviceOptions: { value: string; label: string }[];
+  whatsappHref: string;
+  phone: { display: string; href: string };
+  email: string;
+  location: string;
+  locationNote: string;
+  hours: string[];
+  social: { label: string; href: string; icon: IconName }[];
+  class?: string;
+}
+
+const {
+  heading,
+  text,
+  serviceOptions,
+  whatsappHref,
+  phone,
+  email,
+  location,
+  locationNote,
+  hours,
+  social,
+  class: className,
+} = Astro.props;
+
+const field =
+  "flex w-full rounded-md border border-border bg-transparent px-3 text-base shadow-sm transition-colors placeholder:text-muted-foreground focus:border-primary focus:ring-1 focus:ring-primary focus-visible:outline-none md:text-sm";
+const label = "text-sm font-semibold text-foreground";
+---
+
+<Section spacing="lg" class={className}>
+  <Container>
+    <div class="grid gap-12 lg:grid-cols-3">
+      <div class="lg:col-span-2">
+        <h2 class="mb-2 text-2xl font-black text-foreground">{heading}</h2>
+        <p class="mb-8 text-sm text-muted-foreground">{text}</p>
+
+        <!--
+          TODO(conversão): o site original não trouxe o backend do formulário (o JS do app não veio no download).
+          Defina o destino do envio (ex.: Cloudflare Worker ou serviço de formulários) antes de publicar.
+          Até lá o envio é bloqueado para não expor os dados do visitante na URL.
+        -->
+        <form class="space-y-5" data-quote-form>
+          <div class="grid gap-5 sm:grid-cols-2">
+            <div class="space-y-2">
+              <label for="nome" class={label}>Nome completo *</label>
+              <input id="nome" name="nome" required placeholder="João da Silva" class:list={[field, "h-9 py-1"]} />
+            </div>
+            <div class="space-y-2">
+              <label for="telefone" class={label}>Telefone / WhatsApp *</label>
+              <input id="telefone" name="telefone" type="tel" required placeholder="(51) 99999-9999" class:list={[field, "h-9 py-1"]} />
+            </div>
+          </div>
+          <div class="grid gap-5 sm:grid-cols-2">
+            <div class="space-y-2">
+              <label for="email" class={label}>E-mail *</label>
+              <input id="email" name="email" type="email" required placeholder="joao@empresa.com.br" class:list={[field, "h-9 py-1"]} />
+            </div>
+            <div class="space-y-2">
+              <label for="cidade" class={label}>Cidade *</label>
+              <input id="cidade" name="cidade" required placeholder="Porto Alegre" class:list={[field, "h-9 py-1"]} />
+            </div>
+          </div>
+          <div class="space-y-2">
+            <label for="servico" class={label}>Tipo de serviço *</label>
+            <select id="servico" name="servico" required class:list={[field, "h-9 py-2 text-sm"]}>
+              <option value="">Selecione o serviço desejado...</option>
+              {serviceOptions.map((option) => <option value={option.value}>{option.label}</option>)}
+            </select>
+          </div>
+          <div class="space-y-2">
+            <label for="mensagem" class={label}>Descreva o serviço desejado *</label>
+            <textarea
+              id="mensagem"
+              name="mensagem"
+              required
+              rows="5"
+              placeholder="Ex: Prédio de 12 andares em Porto Alegre, fachada com pastilhas descascando e fissuras. Preciso de vistoria técnica e orçamento para reforma completa da fachada."
+              class:list={[field, "min-h-[60px] resize-none py-2"]}
+            ></textarea>
+          </div>
+          <Button type="submit" size="lg" block class="tracking-wide">Enviar Solicitação de Orçamento</Button>
+          <p class="text-center text-xs text-muted-foreground/80">
+            Seus dados são protegidos. Não compartilhamos informações com terceiros.
+          </p>
+        </form>
+      </div>
+
+      <aside class="space-y-6">
+        <QuoteCard
+          size="md"
+          heading="Resposta Rápida"
+          text="Para orçamentos urgentes, fale diretamente com nossa equipe técnica."
+          whatsapp={{ label: "WhatsApp Agora", href: whatsappHref }}
+          phone={{ label: phone.display, href: phone.href }}
+        />
+
+        <div class="space-y-5 border border-border p-6">
+          <h3 class="border-b border-border pb-3 text-sm font-bold tracking-widest text-foreground uppercase">
+            Informações
+          </h3>
+          <InfoItem icon="phone" label="Telefone">
+            <a href={phone.href} class="text-sm text-muted-foreground transition-colors hover:text-primary">{phone.display}</a>
+          </InfoItem>
+          <InfoItem icon="mail" label="E-mail">
+            <a href={`mailto:${email}`} class="text-sm break-all text-muted-foreground transition-colors hover:text-primary">{email}</a>
+          </InfoItem>
+          <InfoItem icon="map-pin" label="Localização">
+            <p class="text-sm text-muted-foreground">{location}</p>
+            <p class="mt-1 text-xs text-muted-foreground/80">{locationNote}</p>
+          </InfoItem>
+          <InfoItem icon="clock" label="Horário">
+            {hours.map((line) => <p class="text-sm text-muted-foreground">{line}</p>)}
+          </InfoItem>
+        </div>
+
+        <div class="border border-border p-6">
+          <p class="mb-4 text-sm font-bold tracking-widest text-foreground uppercase">Redes Sociais</p>
+          <SocialLinks links={social} size="md" class="gap-3" />
+        </div>
+      </aside>
+    </div>
+  </Container>
+</Section>
+
+<script>
+  // See the TODO above the form: block submission until a real endpoint exists.
+  document.querySelector<HTMLFormElement>("[data-quote-form]")?.addEventListener("submit", (event) => {
+    event.preventDefault();
+    console.warn("[contato] Formulário sem endpoint configurado — veja conversion/report.md.");
+  });
+</script>

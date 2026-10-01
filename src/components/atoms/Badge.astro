@@ -1,14 +1,16 @@
 ---
 interface Props {
-  variant?: "primary" | "secondary" | "accent" | "success" | "warning" | "danger" | "neutral";
-  size?: "sm" | "md";
+  variant?: "primary" | "soft" | "outline" | "secondary" | "accent" | "success" | "warning" | "danger" | "neutral";
+  size?: "sm" | "md" | "lg";
   class?: string;
 }
 
-const { variant = "neutral", size = "md", class: className } = Astro.props;
+const { variant = "primary", size = "md", class: className } = Astro.props;
 
 const variants = {
   primary: "bg-primary text-primary-foreground",
+  soft: "bg-primary/10 text-primary",
+  outline: "border border-border text-muted-foreground",
   secondary: "bg-secondary text-secondary-foreground",
   accent: "bg-accent text-accent-foreground",
   success: "bg-success text-success-foreground",
@@ -19,13 +21,14 @@ const variants = {
 
 const sizes = {
   sm: "px-2 py-0.5 text-xs",
-  md: "px-2.5 py-1 text-sm",
+  md: "px-3 py-1 text-xs",
+  lg: "px-3 py-1.5 text-xs",
 } as const;
 ---
 
 <span
   class:list={[
-    "inline-flex items-center rounded-full font-medium",
+    "inline-flex w-fit items-center gap-1 font-bold tracking-widest uppercase",
     variants[variant],
     sizes[size],
     className,

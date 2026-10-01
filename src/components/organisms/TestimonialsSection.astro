@@ -1,26 +1,32 @@
 ---
 import Container from "@/components/atoms/Container.astro";
+import Section from "@/components/atoms/Section.astro";
+import DividedGrid from "@/components/atoms/DividedGrid.astro";
+import SectionHeading from "@/components/molecules/SectionHeading.astro";
 import Testimonial from "@/components/molecules/Testimonial.astro";
 
 interface Item {
   quote: string;
   name: string;
   role?: string;
-  avatarSrc?: string;
+  rating?: number;
 }
 
 interface Props {
+  eyebrow?: string;
+  heading?: string;
   items: Item[];
   class?: string;
 }
 
-const { items, class: className } = Astro.props;
+const { eyebrow, heading, items, class: className } = Astro.props;
 ---
 
-<section class:list={["py-16 md:py-24", className]}>
-  <Container size="lg">
-    <div class="grid gap-6 md:grid-cols-3">
+<Section tone="accent" class={className}>
+  <Container>
+    {heading && <SectionHeading eyebrow={eyebrow} heading={heading} tone="inverse" class="mb-16" />}
+    <DividedGrid cols="md3" tone="inverse">
       {items.map((item) => <Testimonial {...item} />)}
-    </div>
+    </DividedGrid>
   </Container>
-</section>
+</Section>

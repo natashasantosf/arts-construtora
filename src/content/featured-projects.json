@@ -1,0 +1,26 @@
+[
+  {
+    "id": "construcao-civil-reformas",
+    "order": 1,
+    "category": "Construção Civil",
+    "title": "Construção Civil e Reformas",
+    "image": "../assets/projects/construcao-civil-reformas.webp",
+    "imageAlt": "Construção Civil e Reformas — Art's Construtora"
+  },
+  {
+    "id": "revitalizacao-predial-reforma-industrial",
+    "order": 2,
+    "category": "Reformas e Fachadas",
+    "title": "Revitalização Predial e Reforma Industrial",
+    "image": "../assets/projects/revitalizacao-predial-reforma-industrial.webp",
+    "imageAlt": "Revitalização Predial e Reforma Industrial — Art's Construtora"
+  },
+  {
+    "id": "revestimentos-alto-padrao",
+    "order": 3,
+    "category": "Acabamentos Premium",
+    "title": "Revestimentos de Alto Padrão",
+    "image": "../assets/projects/revestimentos-alto-padrao.webp",
+    "imageAlt": "Revestimentos de Alto Padrão — Art's Construtora"
+  }
+]

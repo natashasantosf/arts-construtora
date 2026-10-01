@@ -1,0 +1,61 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "@/layouts/main.astro";
+import PageHero from "@/components/organisms/PageHero.astro";
+import ContactStrip from "@/components/organisms/ContactStrip.astro";
+import ContactSection from "@/components/organisms/ContactSection.astro";
+import MapEmbed from "@/components/organisms/MapEmbed.astro";
+import heroImage from "@/assets/heroes/page-contato.jpg";
+import { site, whatsappUrl } from "@/data/site";
+
+const services = (await getCollection("services")).sort((a, b) => a.data.order - b.data.order);
+
+const meta = {
+  title: "Contato — Fale com Nossa Equipe",
+  description:
+    "Entre em contato com a Art's Construtora para orçamento de pintura predial, alpinismo, impermeabilização e manutenção em Porto Alegre, Canoas e RS.",
+  img: { src: heroImage, alt: "Contato Art's Construtora" },
+};
+---
+
+<Layout {meta}>
+  <PageHero
+    image={heroImage}
+    imageAlt="Contato Art's Construtora"
+    height="sm"
+    eyebrow="Fale Conosco"
+    subtitle="Respondemos em até 24h · Visita técnica"
+  >
+    Solicite um Orçamento
+  </PageHero>
+
+  <ContactStrip
+    text="Para resposta imediata, use o WhatsApp — atendemos em minutos."
+    cta={{ label: site.phone.display, href: whatsappUrl() }}
+  />
+
+  <ContactSection
+    heading="Formulário de Contato"
+    text="Preencha os campos abaixo e nossa equipe técnica retorna em até 24 horas com uma proposta personalizada."
+    serviceOptions={[
+      ...services.map((s) => ({ value: s.id, label: s.data.title })),
+      { value: "outros", label: "Outro / Não sei ainda" },
+    ]}
+    whatsappHref={whatsappUrl()}
+    phone={site.phone}
+    email={site.email}
+    location={site.location}
+    locationNote="Atendemos toda a Região Metropolitana RS e SC"
+    hours={site.hours}
+    social={[
+      ...site.social.map((s) => ({ label: s.name, href: s.href, icon: s.icon as "instagram" | "facebook" })),
+      { label: "WhatsApp", href: whatsappUrl(), icon: "whatsapp" as const },
+    ]}
+  />
+
+  <MapEmbed
+    layout="wide"
+    title="Art's Construtora — Porto Alegre, RS"
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d443756.3050095682!2d-51.49437305!3d-30.033056900000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95196f97b1b0d1a7%3A0x2c1e93e29e65ff!2sPorto%20Alegre%2C%20RS!5e0!3m2!1spt-BR!2sbr!4v1699000000000!5m2!1spt-BR!2sbr"
+  />
+</Layout>

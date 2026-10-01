@@ -1,0 +1,80 @@
+---
+import { Image } from "astro:assets";
+import type { ImageMetadata } from "astro";
+import Container from "@/components/atoms/Container.astro";
+import Heading from "@/components/atoms/Heading.astro";
+import Eyebrow from "@/components/atoms/Eyebrow.astro";
+import Badge from "@/components/atoms/Badge.astro";
+
+// Banner that opens every inner page: darkened photo, eyebrow/back link, h1 and optional lead.
+// The h1 content goes in the default slot so pages can add line breaks or a highlighted part.
+interface Props {
+  image: ImageMetadata;
+  imageAlt: string;
+  eyebrow?: string;
+  backLink?: { label: string; href: string };
+  badge?: string;
+  subtitle?: string;
+  /** sm: contact page · md: listing pages · lg: company and service pages */
+  height?: "sm" | "md" | "lg";
+  headingSize?: "5xl" | "6xl";
+  /** 20–25: how dark the photo is rendered (the original used CSS brightness filters). */
+  brightness?: 20 | 22 | 25;
+  class?: string;
+}
+
+const {
+  image,
+  imageAlt,
+  eyebrow,
+  backLink,
+  badge,
+  subtitle,
+  height = "md",
+  headingSize = "5xl",
+  brightness = 20,
+  class: className,
+} = Astro.props;
+
+const heights = { sm: "h-64 md:h-72", md: "h-72 md:h-80", lg: "h-80 md:h-96" } as const;
+const brightnessClass = { 20: "brightness-20", 22: "brightness-22", 25: "brightness-25" } as const;
+---
+
+<section class:list={["relative overflow-hidden", className]}>
+  <div class:list={["relative", heights[height]]}>
+    <Image
+      src={image}
+      alt={imageAlt}
+      widths={[768, 1280, 1920]}
+      sizes="100vw"
+      loading="eager"
+      fetchpriority="high"
+      class:list={["h-full w-full object-cover", brightnessClass[brightness]]}
+    />
+    <div class="absolute inset-0 bg-gradient-to-r from-accent-deep/90 to-transparent"></div>
+    <Container class={`absolute inset-0 flex items-end ${height === "lg" && !backLink ? "pb-12" : "pb-10"}`}>
+      <div class="motion-slide-up">
+        {
+          backLink && (
+            <a
+              href={backLink.href}
+              class="mb-4 flex items-center gap-1 text-xs font-bold tracking-widest text-primary uppercase hover:underline"
+            >
+              ← {backLink.label}
+            </a>
+          )
+        }
+        {badge && <Badge size="lg" class="mb-4">{badge}</Badge>}
+        {eyebrow && <Eyebrow class="mb-3">{eyebrow}</Eyebrow>}
+        <Heading as="h1" size={headingSize} tone="inverse" class="leading-tight">
+          <slot />
+        </Heading>
+        {
+          subtitle && (
+            <p class:list={["max-w-2xl", backLink ? "mt-3 text-lg text-inverse/70" : "mt-2 text-inverse/60"]}>{subtitle}</p>
+          )
+        }
+      </div>
+    </Container>
+  </div>
+</section>
