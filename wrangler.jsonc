@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "$schema": "node_modules/wrangler/config-schema.json",
   // Must match the Worker connected to Workers Builds.
   "name": "arts-construtora",
@@ -11,4 +12,11 @@
   "preview_urls": true,
   // Required by `wrangler preview`; empty because the site has no bindings or vars.
   "previews": {}
+=======
+  "name": "arts-construtora",
+  "compatibility_date": "2026-09-26",
+  "assets": {
+    "directory": "./dist"
+  }
+>>>>>>> origin/main
 }
