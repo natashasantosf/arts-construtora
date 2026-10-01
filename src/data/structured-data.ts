@@ -1,9 +1,8 @@
 /**
- * JSON-LD carried over verbatim from the original site (identical on every page).
+ * JSON-LD carried over from the original site (identical on every page).
  *
- * NOTE: it disagrees with the visible contact data — telephone +55-51-99958-3045 and
- * contato@ e-mail here vs. (51) 98403-3255 and comercial@ on the pages. Kept as-is
- * because the conversion does not change business data; see conversion/report.md.
+ * The original had a different phone (+55-51-99958-3045) and e-mail (contato@) here than on the
+ * pages; the client confirmed the visible contacts, so telephone and email now match `site.ts`.
  */
 export const localBusiness = {
   "@context": "https://schema.org",
@@ -11,8 +10,8 @@ export const localBusiness = {
   "name": "Art's Construtora",
   "description": "Empresa especializada em pintura predial, alpinismo predial, impermeabilização, reforma de fachadas e manutenção de condomínios em Porto Alegre e Região Metropolitana RS.",
   "url": "https://artsconstrutora.com.br",
-  "telephone": "+55-51-99958-3045",
-  "email": "contato@artsconstrutora.com.br",
+  "telephone": "+55-51-98403-3255",
+  "email": "comercial@artsconstrutora.com.br",
   "foundingDate": "2002",
   "address": {
     "@type": "PostalAddress",
