@@ -1,9 +1,8 @@
 {
-<<<<<<< HEAD
   "$schema": "node_modules/wrangler/config-schema.json",
   // Must match the Worker connected to Workers Builds.
   "name": "arts-construtora",
-  "compatibility_date": "2026-09-29",
+  "compatibility_date": "2026-09-26",
   // Static site: Astro builds to dist/ (build.format "file" → /servicos/x is served from servicos/x.html).
   "assets": {
     "directory": "./dist"
@@ -12,11 +11,4 @@
   "preview_urls": true,
   // Required by `wrangler preview`; empty because the site has no bindings or vars.
   "previews": {}
-=======
-  "name": "arts-construtora",
-  "compatibility_date": "2026-09-26",
-  "assets": {
-    "directory": "./dist"
-  }
->>>>>>> origin/main
 }
