@@ -63,7 +63,7 @@ Dados globais em `src/data/site.ts` (contatos, navegação, cidades em destaque,
 ## SEO técnico
 
 - Title, description, canonical, `og:*` e `twitter:*` únicos por página e **idênticos aos específicos da página no original**. O original tinha todas as tags duplicadas (genéricas + da página); a duplicação foi eliminada.
-- JSON-LD `LocalBusiness` do original preservado literalmente em todas as páginas. Adicionados `FAQPage` (home, derivado do FAQ visível) e `Service` (páginas de serviço).
+- JSON-LD `LocalBusiness` do original preservado em todas as páginas, com telefone e e-mail corrigidos para os contatos confirmados pelo cliente. Adicionados `FAQPage` (home, derivado do FAQ visível) e `Service` (páginas de serviço).
 - `og:image` gerada em 1200×630 a partir das imagens do site. Sitemap sem `/design-system`, `robots.txt` com o sitemap, `lang="pt-BR"`, favicon a partir do logo.
 - `meta keywords` descartada (ignorada pelos buscadores).
 
@@ -77,9 +77,9 @@ Dados globais em `src/data/site.ts` (contatos, navegação, cidades em destaque,
 
 ## Lacunas do input e pendências — decisão do cliente
 
-1. **Formulário de contato sem backend.** O JS do app não veio no download. O envio está bloqueado de propósito (para não colocar dados do visitante na URL) com um `TODO` em `ContactSection.astro`. **Pendência de go-live:** definir o destino (Cloudflare Worker, serviço de formulários ou WhatsApp).
+1. **Formulário de contato:** ~~sem backend~~ resolvido depois da conversão. `worker/index.ts` recebe `POST /api/contato` e grava na base D1 `arts-construtora-contatos` (tabela `contatos`, ver `migrations/`). **Pendente:** o encaminhamento por e-mail para `comercial@` já está no código, mas desligado até o domínio usar o DNS da Cloudflare e ser habilitado no Email Sending (instruções em `wrangler.jsonc`).
 2. **Posts do blog sem artigo:** os 6 cards não levam a lugar nenhum no original (confirmado pela auditoria) e foram mantidos assim, sem link. Os posts já existem como collection; basta escrever o corpo e criar a rota.
-3. **JSON-LD com dados divergentes:** telefone `+55-51-99958-3045` e e-mail `contato@` no JSON-LD, contra `(51) 98403-3255` e `comercial@` nas páginas. Mantido literal em `src/data/structured-data.ts`; o cliente deve confirmar qual está certo.
+3. **JSON-LD com dados divergentes:** ~~telefone `+55-51-99958-3045` e e-mail `contato@`~~ resolvido. O cliente confirmou `(51) 98403-3255` e `comercial@artsconstrutora.com.br`, e o JSON-LD foi corrigido.
 4. **Imagens ausentes no download:** `/opengraph.jpg` (og:image padrão) e `images/proj-manutencao-condominios.webp` (og:image da página de manutenção). Substituídas por imagens existentes.
 5. **Fotos de banco de imagens:** os heróis das páginas internas são fotos do Unsplash (baixadas em `_externo/`). Confirmar a licença ou trocar por fotos próprias.
 6. As imagens dos cards do blog e dos projetos têm resolução baixa no original (ex.: 405×224) e continuam assim.

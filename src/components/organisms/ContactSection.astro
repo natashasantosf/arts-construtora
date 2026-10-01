@@ -49,36 +49,40 @@ const label = "text-sm font-semibold text-foreground";
         <p class="mb-8 text-sm text-muted-foreground">{text}</p>
 
         <!--
-          TODO(conversão): o site original não trouxe o backend do formulário (o JS do app não veio no download).
-          Defina o destino do envio (ex.: Cloudflare Worker ou serviço de formulários) antes de publicar.
-          Até lá o envio é bloqueado para não expor os dados do visitante na URL.
+          Submitted to worker/index.ts (POST /api/contato), which stores it in D1 and forwards it by e-mail
+          once that is enabled. Works without JS too: the Worker answers plain posts with a redirect back here.
         -->
-        <form class="space-y-5" data-quote-form>
+        <form id="formulario" class="scroll-mt-32 space-y-5" action="/api/contato" method="post" data-quote-form>
+          <!-- Honeypot: hidden from people, filled in by bots; the Worker discards those submissions. -->
+          <div class="hidden" aria-hidden="true">
+            <label for="website">Não preencha este campo</label>
+            <input id="website" name="website" tabindex="-1" autocomplete="off" />
+          </div>
           <div class="grid gap-5 sm:grid-cols-2">
             <div class="space-y-2">
               <label for="nome" class={label}>Nome completo *</label>
-              <input id="nome" name="nome" required placeholder="João da Silva" class:list={[field, "h-9 py-1"]} />
+              <input id="nome" name="nome" required maxlength="120" autocomplete="name" placeholder="João da Silva" class:list={[field, "h-9 py-1"]} />
             </div>
             <div class="space-y-2">
               <label for="telefone" class={label}>Telefone / WhatsApp *</label>
-              <input id="telefone" name="telefone" type="tel" required placeholder="(51) 99999-9999" class:list={[field, "h-9 py-1"]} />
+              <input id="telefone" name="telefone" type="tel" required maxlength="40" autocomplete="tel" placeholder="(51) 99999-9999" class:list={[field, "h-9 py-1"]} />
             </div>
           </div>
           <div class="grid gap-5 sm:grid-cols-2">
             <div class="space-y-2">
               <label for="email" class={label}>E-mail *</label>
-              <input id="email" name="email" type="email" required placeholder="joao@empresa.com.br" class:list={[field, "h-9 py-1"]} />
+              <input id="email" name="email" type="email" required maxlength="200" autocomplete="email" placeholder="joao@empresa.com.br" class:list={[field, "h-9 py-1"]} />
             </div>
             <div class="space-y-2">
               <label for="cidade" class={label}>Cidade *</label>
-              <input id="cidade" name="cidade" required placeholder="Porto Alegre" class:list={[field, "h-9 py-1"]} />
+              <input id="cidade" name="cidade" required maxlength="120" autocomplete="address-level2" placeholder="Porto Alegre" class:list={[field, "h-9 py-1"]} />
             </div>
           </div>
           <div class="space-y-2">
             <label for="servico" class={label}>Tipo de serviço *</label>
             <select id="servico" name="servico" required class:list={[field, "h-9 py-2 text-sm"]}>
               <option value="">Selecione o serviço desejado...</option>
-              {serviceOptions.map((option) => <option value={option.value}>{option.label}</option>)}
+              {serviceOptions.map((option) => <option value={option.label}>{option.label}</option>)}
             </select>
           </div>
           <div class="space-y-2">
@@ -87,12 +91,14 @@ const label = "text-sm font-semibold text-foreground";
               id="mensagem"
               name="mensagem"
               required
+              maxlength="5000"
               rows="5"
               placeholder="Ex: Prédio de 12 andares em Porto Alegre, fachada com pastilhas descascando e fissuras. Preciso de vistoria técnica e orçamento para reforma completa da fachada."
               class:list={[field, "min-h-[60px] resize-none py-2"]}
             ></textarea>
           </div>
-          <Button type="submit" size="lg" block class="tracking-wide">Enviar Solicitação de Orçamento</Button>
+          <Button type="submit" size="lg" block class="tracking-wide" data-submit>Enviar Solicitação de Orçamento</Button>
+          <p data-form-status role="status" aria-live="polite" hidden class="border px-4 py-3 text-sm"></p>
           <p class="text-center text-xs text-muted-foreground/80">
             Seus dados são protegidos. Não compartilhamos informações com terceiros.
           </p>
@@ -137,9 +143,53 @@ const label = "text-sm font-semibold text-foreground";
 </Section>
 
 <script>
-  // See the TODO above the form: block submission until a real endpoint exists.
-  document.querySelector<HTMLFormElement>("[data-quote-form]")?.addEventListener("submit", (event) => {
+  const form = document.querySelector<HTMLFormElement>("[data-quote-form]");
+  const status = form?.querySelector<HTMLElement>("[data-form-status]");
+  const submit = form?.querySelector<HTMLButtonElement>("[data-submit]");
+
+  const messages = {
+    success: "Recebemos sua solicitação! Nossa equipe técnica retorna em até 24 horas.",
+    error: "Não foi possível enviar agora. Tente novamente ou fale com a gente pelo WhatsApp.",
+  };
+
+  function show(kind: "success" | "error", text = messages[kind]) {
+    if (!status) return;
+    status.textContent = text;
+    status.hidden = false;
+    status.className =
+      "border px-4 py-3 text-sm " +
+      (kind === "success" ? "border-success bg-success/10 text-foreground" : "border-danger bg-danger/10 text-foreground");
+  }
+
+  // Result of a no-JS submission (the Worker redirects back with ?enviado=1 or ?erro=1).
+  const params = new URLSearchParams(location.search);
+  if (params.has("enviado")) show("success");
+  if (params.has("erro")) show("error");
+
+  form?.addEventListener("submit", async (event) => {
     event.preventDefault();
-    console.warn("[contato] Formulário sem endpoint configurado — veja conversion/report.md.");
+    if (!submit || submit.disabled) return;
+    submit.disabled = true;
+    const label = submit.textContent;
+    submit.textContent = "Enviando...";
+    try {
+      const response = await fetch(form.action, {
+        method: "POST",
+        body: new FormData(form),
+        headers: { Accept: "application/json" },
+      });
+      const result = (await response.json().catch(() => ({}))) as { ok?: boolean; error?: string };
+      if (response.ok && result.ok) {
+        form.reset();
+        show("success");
+      } else {
+        show("error", result.error ?? messages.error);
+      }
+    } catch {
+      show("error");
+    } finally {
+      submit.disabled = false;
+      submit.textContent = label;
+    }
   });
 </script>
