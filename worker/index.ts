@@ -3,7 +3,7 @@
  * This script only runs for /api/* (see `assets.run_worker_first` in wrangler.jsonc).
  *
  * POST /api/contato — checks the Turnstile captcha, validates the quote form from /contato,
- * stores it in D1 and, when the EMAIL binding is configured, forwards it to the sales inbox.
+ * stores it in D1 and, when e-mail is configured (Resend or the EMAIL binding), forwards it to the sales inbox.
  */
 
 // Minimal types for the bindings used here (avoids adding @cloudflare/workers-types).
@@ -34,7 +34,9 @@ interface ExecutionContext {
 interface Env {
   ASSETS: { fetch(request: Request): Promise<Response> };
   DB: D1Database;
-  /** Optional until the domain is on Cloudflare and onboarded to Email Sending. */
+  /** Resend API key (Worker secret). When set, e-mail goes through Resend instead of the EMAIL binding. */
+  RESEND_API_KEY?: string;
+  /** Cloudflare Email Sending (Workers Paid plan only); alternative to Resend. */
   EMAIL?: SendEmail;
   EMAIL_TO?: string;
   EMAIL_FROM?: string;
@@ -123,7 +125,7 @@ async function handleContact(request: Request, env: Env, ctx: ExecutionContext):
   }
 
   // E-mail never blocks or fails the visitor's submission: the row is already saved.
-  if (env.EMAIL && env.EMAIL_TO && env.EMAIL_FROM) ctx.waitUntil(forwardByEmail(env, id, contact));
+  if ((env.RESEND_API_KEY || env.EMAIL) && env.EMAIL_TO && env.EMAIL_FROM) ctx.waitUntil(forwardByEmail(env, id, contact));
 
   return respond(true);
 }
@@ -184,18 +186,45 @@ async function forwardByEmail(env: Env, id: number, c: Record<Field, string>) {
     ["Tipo de serviço", c.servico],
     ["Mensagem", c.mensagem],
   ];
+  const message = {
+    to: env.EMAIL_TO!,
+    fromName: "Site Art's Construtora",
+    from: env.EMAIL_FROM!,
+    replyTo: c.email,
+    subject: `Novo pedido de orçamento — ${c.nome} (${c.cidade})`,
+    text: `Novo contato pelo site (#${id})\n\n${rows.map(([k, v]) => `${k}: ${v}`).join("\n")}\n`,
+    html: `<h2>Novo contato pelo site (#${id})</h2><table cellpadding="6">${rows
+      .map(([k, v]) => `<tr><th align="left" valign="top">${k}</th><td>${escapeHtml(v).replace(/\n/g, "<br>")}</td></tr>`)
+      .join("")}</table>`,
+  };
   let status = "enviado";
   try {
-    await env.EMAIL!.send({
-      to: env.EMAIL_TO!,
-      from: { email: env.EMAIL_FROM!, name: "Site Art's Construtora" },
-      replyTo: c.email,
-      subject: `Novo pedido de orçamento — ${c.nome} (${c.cidade})`,
-      text: `Novo contato pelo site (#${id})\n\n${rows.map(([k, v]) => `${k}: ${v}`).join("\n")}\n`,
-      html: `<h2>Novo contato pelo site (#${id})</h2><table cellpadding="6">${rows
-        .map(([k, v]) => `<tr><th align="left" valign="top">${k}</th><td>${escapeHtml(v).replace(/\n/g, "<br>")}</td></tr>`)
-        .join("")}</table>`,
-    });
+    if (env.RESEND_API_KEY) {
+      // Resend (free tier) — used instead of Cloudflare Email Sending, which needs the Workers Paid plan.
+      const response = await fetch("https://api.resend.com/emails", {
+        method: "POST",
+        headers: { Authorization: `Bearer ${env.RESEND_API_KEY}`, "Content-Type": "application/json" },
+        body: JSON.stringify({
+          from: `${message.fromName} <${message.from}>`,
+          to: [message.to],
+          reply_to: message.replyTo,
+          subject: message.subject,
+          text: message.text,
+          html: message.html,
+        }),
+        signal: AbortSignal.timeout(10_000),
+      });
+      if (!response.ok) throw new Error(`Resend ${response.status}: ${(await response.text()).slice(0, 300)}`);
+    } else {
+      await env.EMAIL!.send({
+        to: message.to,
+        from: { email: message.from, name: message.fromName },
+        replyTo: message.replyTo,
+        subject: message.subject,
+        text: message.text,
+        html: message.html,
+      });
+    }
   } catch (error) {
     status = "falhou";
     console.error("[contato] falha ao enviar e-mail", error);
