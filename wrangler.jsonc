@@ -20,8 +20,10 @@
       "migrations_dir": "migrations"
     }
   ],
+  // Turnstile captcha on the contact form. The secret is a Worker secret: `wrangler secret put TURNSTILE_SECRET`.
   "vars": {
-    "EMAIL_TO": "comercial@artsconstrutora.com.br"
+    "EMAIL_TO": "comercial@artsconstrutora.com.br",
+    "TURNSTILE_HOSTNAMES": "artsconstrutora.com.br"
   },
   // E-mail forwarding is ready in worker/index.ts but off until artsconstrutora.com.br uses
   // Cloudflare DNS and is onboarded to Email Sending. Then add here (and in "previews"):
@@ -41,8 +43,10 @@
         "migrations_dir": "migrations"
       }
     ],
+    // For the captcha to work on a preview, add its workers.dev hostname here and to the Turnstile widget.
     "vars": {
-      "EMAIL_TO": "comercial@artsconstrutora.com.br"
+      "EMAIL_TO": "comercial@artsconstrutora.com.br",
+      "TURNSTILE_HOSTNAMES": "artsconstrutora.com.br"
     }
   }
 }

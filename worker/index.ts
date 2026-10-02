@@ -2,8 +2,8 @@
  * Worker entry: the site itself is static (Astro → dist/), served by the assets binding.
  * This script only runs for /api/* (see `assets.run_worker_first` in wrangler.jsonc).
  *
- * POST /api/contato — validates the quote form from /contato, stores it in D1 and,
- * when the EMAIL binding is configured, forwards it to the sales inbox.
+ * POST /api/contato — checks the Turnstile captcha, validates the quote form from /contato,
+ * stores it in D1 and, when the EMAIL binding is configured, forwards it to the sales inbox.
  */
 
 // Minimal types for the bindings used here (avoids adding @cloudflare/workers-types).
@@ -38,6 +38,10 @@ interface Env {
   EMAIL?: SendEmail;
   EMAIL_TO?: string;
   EMAIL_FROM?: string;
+  /** Turnstile widget secret (set as a Worker secret, never in wrangler.jsonc). */
+  TURNSTILE_SECRET?: string;
+  /** Comma-separated hostnames the form may be served from; subdomains of each are accepted. */
+  TURNSTILE_HOSTNAMES?: string;
 }
 
 const LIMITS = { nome: 120, telefone: 40, email: 200, cidade: 120, servico: 120, mensagem: 5000 } as const;
@@ -46,6 +50,9 @@ const FIELDS = Object.keys(LIMITS) as Field[];
 
 /** Hidden field real visitors never fill in; bots that fill every input do. */
 const HONEYPOT = "website";
+
+/** Must match data-action on the widget in ContactSection.astro. */
+const TURNSTILE_ACTION = "contato";
 
 export default {
   async fetch(request: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
@@ -78,6 +85,10 @@ async function handleContact(request: Request, env: Env, ctx: ExecutionContext):
 
   // Pretend success so bots don't learn they were filtered.
   if (data[HONEYPOT]) return respond(true);
+
+  if (!(await verifyTurnstile(env, data["cf-turnstile-response"], request.headers.get("CF-Connecting-IP")))) {
+    return respond(false, "Não conseguimos confirmar que você não é um robô. Faça a verificação e envie de novo.", 403);
+  }
 
   const contact = {} as Record<Field, string>;
   for (const field of FIELDS) {
@@ -115,6 +126,39 @@ async function handleContact(request: Request, env: Env, ctx: ExecutionContext):
   if (env.EMAIL && env.EMAIL_TO && env.EMAIL_FROM) ctx.waitUntil(forwardByEmail(env, id, contact));
 
   return respond(true);
+}
+
+/** Server-side check of the Turnstile token; fails closed on any error or missing config. */
+async function verifyTurnstile(env: Env, token: string | undefined, ip: string | null): Promise<boolean> {
+  const hostnames = (env.TURNSTILE_HOSTNAMES ?? "")
+    .split(",")
+    .map((h) => h.trim().toLowerCase())
+    .filter(Boolean);
+  if (!env.TURNSTILE_SECRET || hostnames.length === 0) {
+    console.error("[contato] TURNSTILE_SECRET ou TURNSTILE_HOSTNAMES não configurado");
+    return false;
+  }
+  if (!token || token.length > 2048) return false;
+
+  const body = new URLSearchParams({ secret: env.TURNSTILE_SECRET, response: token });
+  if (ip) body.set("remoteip", ip);
+  try {
+    const response = await fetch("https://challenges.cloudflare.com/turnstile/v0/siteverify", {
+      method: "POST",
+      body,
+      signal: AbortSignal.timeout(10_000),
+    });
+    if (!response.ok) throw new Error(`siteverify ${response.status}`);
+    const result = (await response.json()) as { success?: boolean; action?: string; hostname?: string; "error-codes"?: string[] };
+    const host = (result.hostname ?? "").toLowerCase();
+    const hostOk = hostnames.some((h) => host === h || host.endsWith(`.${h}`));
+    if (result.success && result.action === TURNSTILE_ACTION && hostOk) return true;
+    console.warn("[contato] turnstile recusado", { codes: result["error-codes"], action: result.action, hostname: result.hostname });
+    return false;
+  } catch (error) {
+    console.error("[contato] falha no siteverify", error);
+    return false;
+  }
 }
 
 async function readBody(request: Request): Promise<Record<string, string>> {
