@@ -6,6 +6,7 @@ import QuoteCard from "@/components/molecules/QuoteCard.astro";
 import InfoItem from "@/components/molecules/InfoItem.astro";
 import SocialLinks from "@/components/molecules/SocialLinks.astro";
 import type { IconName } from "@/components/atoms/icons";
+import { site } from "@/data/site";
 
 // Quote request form + contact sidebar.
 interface Props {
@@ -49,8 +50,8 @@ const label = "text-sm font-semibold text-foreground";
         <p class="mb-8 text-sm text-muted-foreground">{text}</p>
 
         <!--
-          Submitted to worker/index.ts (POST /api/contato), which stores it in D1 and forwards it by e-mail
-          once that is enabled. Works without JS too: the Worker answers plain posts with a redirect back here.
+          Submitted to worker/index.ts (POST /api/contato), which checks the Turnstile captcha, stores it in D1
+          and forwards it by e-mail. The captcha needs JS, so submissions without JS are rejected.
         -->
         <form id="formulario" class="scroll-mt-32 space-y-5" action="/api/contato" method="post" data-quote-form>
           <!-- Honeypot: hidden from people, filled in by bots; the Worker discards those submissions. -->
@@ -97,6 +98,8 @@ const label = "text-sm font-semibold text-foreground";
               class:list={[field, "min-h-[60px] resize-none py-2"]}
             ></textarea>
           </div>
+          <!-- Cloudflare Turnstile captcha; rendered by the script below, verified by the Worker. -->
+          <div data-turnstile data-sitekey={site.turnstileSiteKey} class="min-h-[65px]"></div>
           <Button type="submit" size="lg" block class="tracking-wide" data-submit>Enviar Solicitação de Orçamento</Button>
           <p data-form-status role="status" aria-live="polite" hidden class="border px-4 py-3 text-sm"></p>
           <p class="text-center text-xs text-muted-foreground/80">
@@ -147,6 +150,29 @@ const label = "text-sm font-semibold text-foreground";
   const status = form?.querySelector<HTMLElement>("[data-form-status]");
   const submit = form?.querySelector<HTMLButtonElement>("[data-submit]");
 
+  // Turnstile is rendered explicitly so the widget can be reset after each attempt (tokens are single-use).
+  const container = form?.querySelector<HTMLElement>("[data-turnstile]");
+  let widgetId: string | undefined;
+  type Turnstile = {
+    render(el: HTMLElement, options: Record<string, unknown>): string;
+    reset(id?: string): void;
+  };
+  const turnstile = () => (window as unknown as { turnstile?: Turnstile }).turnstile;
+
+  if (container) {
+    (window as unknown as Record<string, unknown>).onTurnstileLoad = () => {
+      widgetId = turnstile()?.render(container, {
+        sitekey: container.dataset.sitekey,
+        action: "contato",
+        language: "pt-br",
+      });
+    };
+    const script = document.createElement("script");
+    script.src = "https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit&onload=onTurnstileLoad";
+    script.async = true;
+    document.head.append(script);
+  }
+
   const messages = {
     success: "Recebemos sua solicitação! Nossa equipe técnica retorna em até 24 horas.",
     error: "Não foi possível enviar agora. Tente novamente ou fale com a gente pelo WhatsApp.",
@@ -169,6 +195,10 @@ const label = "text-sm font-semibold text-foreground";
   form?.addEventListener("submit", async (event) => {
     event.preventDefault();
     if (!submit || submit.disabled) return;
+    if (!new FormData(form).get("cf-turnstile-response")) {
+      show("error", "Aguarde a verificação anti-robô (logo acima do botão) e tente de novo.");
+      return;
+    }
     submit.disabled = true;
     const label = submit.textContent;
     submit.textContent = "Enviando...";
@@ -188,6 +218,7 @@ const label = "text-sm font-semibold text-foreground";
     } catch {
       show("error");
     } finally {
+      if (widgetId !== undefined) turnstile()?.reset(widgetId);
       submit.disabled = false;
       submit.textContent = label;
     }

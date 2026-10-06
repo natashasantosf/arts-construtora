@@ -27,6 +27,8 @@ export const site = {
     defaultMessage: "Olá! Gostaria de solicitar um orçamento para meu projeto.",
   },
   email: "comercial@artsconstrutora.com.br",
+  /** Public sitekey of the Cloudflare Turnstile widget on the contact form (the secret lives in the Worker). */
+  turnstileSiteKey: "0x4AAAAAAFMRpKw06sz0Atv0",
   location: "Canoas, RS — Brasil",
   hours: ["Seg a Sex: 8h às 18h", "Sábado: 8h às 12h"],
   social: [
