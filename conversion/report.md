@@ -77,7 +77,7 @@ Dados globais em `src/data/site.ts` (contatos, navegação, cidades em destaque,
 
 ## Lacunas do input e pendências — decisão do cliente
 
-1. **Formulário de contato:** ~~sem backend~~ resolvido depois da conversão. `worker/index.ts` recebe `POST /api/contato` e grava na base D1 `arts-construtora-contatos` (tabela `contatos`, ver `migrations/`). **Pendente:** o encaminhamento por e-mail para `comercial@` já está no código, mas desligado até o domínio usar o DNS da Cloudflare e ser habilitado no Email Sending (instruções em `wrangler.jsonc`).
+1. **Formulário de contato:** ~~sem backend~~ resolvido depois da conversão. `worker/index.ts` recebe `POST /api/contato`, confere o captcha Turnstile, grava na base D1 `arts-construtora-contatos` (tabela `contatos`, ver `migrations/`) e encaminha por e-mail para `comercial@` pelo Resend (plano gratuito). Secrets do Worker: `TURNSTILE_SECRET` e `RESEND_API_KEY` (os nomes precisam ser exatamente esses). Testado em produção em 07/10/2026: contato gravado e e-mail entregue. **Pendente:** o primeiro e-mail caiu no spam (domínio novo como remetente; SPF, DKIM e DMARC já configurados).
 2. **Posts do blog sem artigo:** os 6 cards não levam a lugar nenhum no original (confirmado pela auditoria) e foram mantidos assim, sem link. Os posts já existem como collection; basta escrever o corpo e criar a rota.
 3. **JSON-LD com dados divergentes:** ~~telefone `+55-51-99958-3045` e e-mail `contato@`~~ resolvido. O cliente confirmou `(51) 98403-3255` e `comercial@artsconstrutora.com.br`, e o JSON-LD foi corrigido.
 4. **Imagens ausentes no download:** `/opengraph.jpg` (og:image padrão) e `images/proj-manutencao-condominios.webp` (og:image da página de manutenção). Substituídas por imagens existentes.
@@ -95,4 +95,5 @@ Dados globais em `src/data/site.ts` (contatos, navegação, cidades em destaque,
   - **Mobile (390px):** idêntica em 6 das 8 páginas. Na home há 4px de diferença (botão padronizado) e em /projetos, 2px.
 - Screenshots comparados em desktop e mobile. Funcionaram o menu mobile, o dropdown de serviços, o acordeão de FAQ, o header transparente → sólido, o link ativo e o dark mode.
 - Nenhuma cor hex, `rgb()` ou da paleta padrão do Tailwind em `src/components`, `src/pages` ou `src/layouts`.
-- Não verificado: Lighthouse e envio real do formulário (não há endpoint).
+- Envio real do formulário testado em produção (captcha, D1 e e-mail).
+- Não verificado: Lighthouse.
