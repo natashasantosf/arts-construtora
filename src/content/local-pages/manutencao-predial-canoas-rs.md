@@ -4,7 +4,7 @@ city: "Canoas"
 serviceName: "Manutenção Predial"
 title: "Manutenção Predial em Canoas"
 h1: "Manutenção Predial em Canoas/RS"
-subtitle: "Plano de manutenção preventiva para condomínios e prédios comerciais de Canoas, com equipe próxima para atender rápido quando algo dá errado."
+subtitle: "Plano de manutenção preventiva para condomínios e prédios comerciais de Canoas, com equipe próxima que conhece os prédios da cidade."
 heroImage: "../../assets/projects/proj-revitalizacao-condominiais.webp"
 heroImageAlt: "Manutenção predial em condomínio residencial de Canoas, RS"
 localFactors:
@@ -21,7 +21,7 @@ localFactors:
 highlights:
   - "Plano anual de manutenção conforme a ABNT NBR 5674, com o que verificar em cada sistema do prédio e em qual frequência."
   - "Relatório periódico ao síndico, com fotos, serviços executados e próximos passos, pronto para apresentar em assembleia."
-  - "Equipe na Grande Porto Alegre para chamados corretivos, com prioridade de resposta em até 2 horas."
+  - "Inspeções periódicas de fachada, cobertura, calhas e impermeabilização, os pontos que mais sofrem com a umidade de Canoas."
 neighborhoods:
   - "Centro"
   - "Marechal Rondon"
@@ -49,7 +49,7 @@ faqs:
     answer: "Depende da idade do prédio e do revestimento, mas uma inspeção visual anual é o mínimo recomendado. Fachadas com pastilha ou cerâmica, comuns nos prédios mais antigos de Canoas, merecem atenção especial por causa do risco de desplacamento."
 seo:
   title: "Manutenção Predial em Canoas/RS | Art's Construtora"
-  description: "Manutenção predial preventiva e corretiva para condomínios e prédios comerciais em Canoas/RS. Plano conforme NBR 5674, relatório ao síndico e resposta rápida."
+  description: "Manutenção predial preventiva e corretiva para condomínios e prédios comerciais em Canoas/RS. Plano conforme NBR 5674, relatório periódico ao síndico."
 ---
 
 Manter um prédio em Canoas exige atenção a um fator que nem sempre aparece no orçamento do condomínio: a umidade. A cidade fica entre os rios dos Sinos e Gravataí, em uma região baixa e úmida, e isso acelera o desgaste de impermeabilizações, calhas, rufos, fachadas e instalações. Um plano de **manutenção predial** ajuda a encontrar esses problemas cedo, quando ainda são baratos de resolver.
@@ -58,7 +58,7 @@ Para o síndico, a manutenção também é uma questão de responsabilidade. Qua
 
 ## Atendimento de quem conhece a cidade
 
-A Art's Construtora começou em Canoas e mantém aqui a base das suas operações na Grande Porto Alegre. Isso significa visitas técnicas sem longos deslocamentos, equipe que chega rápido quando há um chamado corretivo e conhecimento do perfil dos prédios em cada bairro, dos edifícios mais antigos do Centro aos condomínios recentes do Igara.
+A Art's Construtora começou em Canoas e mantém aqui a base das suas operações na Grande Porto Alegre. Isso significa visitas técnicas sem longos deslocamentos e conhecimento do perfil dos prédios em cada bairro, dos edifícios mais antigos do Centro aos condomínios recentes do Igara.
 
 ## Como montamos o plano de manutenção
 
