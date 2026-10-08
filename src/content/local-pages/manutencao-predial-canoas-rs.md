@@ -43,8 +43,6 @@ faqs:
     answer: "A ABNT NBR 5674 estabelece que toda edificação deve ter um sistema de gestão de manutenção, com programa, registros e responsáveis. Na prática, é esse plano que comprova que o síndico cuidou do prédio e que preserva as garantias da construtora em prédios mais novos."
   - question: "Qual a diferença entre manutenção preventiva e corretiva?"
     answer: "A preventiva segue um calendário: limpeza de calhas, revisão de impermeabilização, inspeção de fachada, teste de bombas. A corretiva resolve o que já quebrou. Em Canoas, com a umidade da região, investir na preventiva costuma sair bem mais barato do que esperar a infiltração aparecer."
-  - question: "Vocês atendem emergência em condomínio de Canoas?"
-    answer: "Sim. Como a empresa começou em Canoas e mantém equipe na Grande Porto Alegre, condomínios com contrato de manutenção têm prioridade de resposta em até 2 horas para chamados corretivos."
   - question: "O contrato de manutenção atende prédios comerciais também?"
     answer: "Sim. Atendemos condomínios residenciais, prédios comerciais e empresas de Canoas. O plano é montado a partir da vistoria inicial, de acordo com os sistemas e o uso de cada edificação."
   - question: "Com que frequência a fachada do prédio precisa ser inspecionada?"
