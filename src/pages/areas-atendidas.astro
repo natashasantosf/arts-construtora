@@ -11,6 +11,7 @@ import heroImage from "@/assets/heroes/page-areas-atendidas.jpg";
 import { site, whatsappUrl } from "@/data/site";
 
 const regions = (await getCollection("regions")).sort((a, b) => a.data.order - b.data.order);
+const canoasPages = (await getCollection("localPages")).filter((p) => p.data.city === "Canoas");
 const citiesOf = (...ids: string[]) => regions.filter((r) => ids.includes(r.id)).flatMap((r) => r.data.cities);
 
 const meta = {
@@ -37,6 +38,19 @@ const meta = {
       Canela), o <strong>Litoral Norte Gaúcho</strong> (Xangri-Lá, Capão da Canoa e Torres) e todo o
       <strong>estado de Santa Catarina</strong>, incluindo Balneário Camboriú, Grande Florianópolis, Itapema, Porto
       Belo e Bombinhas.
+    </p>
+    <p class="mt-4">
+      Em <strong>Canoas</strong>, onde a empresa começou, veja também:{" "}
+      {
+        canoasPages.map((p, i) => (
+          <>
+            <a href={`/${p.id}`} class="text-primary underline-offset-4 hover:underline">
+              {p.data.serviceName.toLowerCase()} em Canoas
+            </a>
+            {i < canoasPages.length - 2 ? ", " : i === canoasPages.length - 2 ? " e " : "."}
+          </>
+        ))
+      }
     </p>
   </LeadSection>
 

@@ -9,18 +9,24 @@ import { site, whatsappUrl, serviceWhatsappMessages } from "@/data/site";
 
 export const getStaticPaths = (async () => {
   const services = (await getCollection("services")).sort((a, b) => a.data.order - b.data.order);
+  const localPages = await getCollection("localPages");
   return services.map((service) => ({
     params: { slug: service.id },
-    props: { service, others: services.filter((s) => s.id !== service.id) },
+    props: {
+      service,
+      others: services.filter((s) => s.id !== service.id),
+      localPages: localPages.filter((p) => p.data.service.id === service.id),
+    },
   }));
 }) satisfies GetStaticPaths;
 
 interface Props {
   service: CollectionEntry<"services">;
   others: CollectionEntry<"services">[];
+  localPages: CollectionEntry<"localPages">[];
 }
 
-const { service, others } = Astro.props;
+const { service, others, localPages } = Astro.props;
 const { data } = service;
 const { Content } = await render(service);
 const messages = serviceWhatsappMessages(data.title);
@@ -67,6 +73,7 @@ const meta = {
       phone: { label: site.phone.display, href: site.phone.href },
     }}
     otherServices={others.slice(0, 6).map((s) => ({ label: s.data.title, href: `/servicos/${s.id}` }))}
+    localPages={localPages.map((p) => ({ label: p.data.title, href: `/${p.id}` }))}
   >
     <Content />
   </ServiceDetail>
