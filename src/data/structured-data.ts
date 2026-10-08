@@ -3,6 +3,7 @@
  *
  * The original had a different phone (+55-51-99958-3045) and e-mail (contato@) here than on the
  * pages; the client confirmed the visible contacts, so telephone and email now match `site.ts`.
+ * The original address said Porto Alegre; it now says Canoas, the company's base (site.location, /areas-atendidas map).
  */
 export const localBusiness = {
   "@context": "https://schema.org",
@@ -15,14 +16,14 @@ export const localBusiness = {
   "foundingDate": "2002",
   "address": {
     "@type": "PostalAddress",
-    "addressLocality": "Porto Alegre",
+    "addressLocality": "Canoas",
     "addressRegion": "RS",
     "addressCountry": "BR"
   },
   "geo": {
     "@type": "GeoCoordinates",
-    "latitude": -30.0346,
-    "longitude": -51.2177
+    "latitude": -29.9178,
+    "longitude": -51.1834
   },
   "areaServed": [
     "Porto Alegre",

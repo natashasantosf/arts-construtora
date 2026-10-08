@@ -1,0 +1,193 @@
+---
+// City landing pages at the site root (/pintura-predial-canoas-rs …), one per entry of the localPages collection.
+// They target "<serviço> em <cidade>" searches; the service itself is described on /servicos/<slug>, linked from here.
+import type { GetStaticPaths } from "astro";
+import { getCollection, getEntry, render, type CollectionEntry } from "astro:content";
+import Layout from "@/layouts/main.astro";
+import PageHero from "@/components/organisms/PageHero.astro";
+import FAQ from "@/components/organisms/FAQ.astro";
+import CTASection from "@/components/organisms/CTASection.astro";
+import Container from "@/components/atoms/Container.astro";
+import Section from "@/components/atoms/Section.astro";
+import Heading from "@/components/atoms/Heading.astro";
+import Icon from "@/components/atoms/Icon.astro";
+import Breadcrumbs from "@/components/molecules/Breadcrumbs.astro";
+import CheckItem from "@/components/molecules/CheckItem.astro";
+import QuoteCard from "@/components/molecules/QuoteCard.astro";
+import { site, whatsappUrl } from "@/data/site";
+
+export const getStaticPaths = (async () => {
+  const pages = await getCollection("localPages");
+  return pages.map((page) => ({
+    params: { local: page.id },
+    props: { page, siblings: pages.filter((p) => p.id !== page.id && p.data.city === page.data.city) },
+  }));
+}) satisfies GetStaticPaths;
+
+interface Props {
+  page: CollectionEntry<"localPages">;
+  siblings: CollectionEntry<"localPages">[];
+}
+
+const { page, siblings } = Astro.props;
+const { data } = page;
+const service = await getEntry(data.service);
+if (!service) throw new Error(`Serviço desconhecido em local-pages/${page.id}: ${data.service.id}`);
+const { Content } = await render(page);
+
+const serviceHref = `/servicos/${service.id}`;
+const pageUrl = new URL(`/${page.id}`, site.url).href;
+const quoteMessage = `Olá, preciso de orçamento de ${data.serviceName.toLowerCase()} em ${data.city}`;
+
+const breadcrumbs = [
+  { label: "Início", href: "/" },
+  { label: "Serviços", href: "/servicos" },
+  { label: data.title },
+];
+
+const meta = {
+  title: data.seo.title,
+  fullTitle: true,
+  description: data.seo.description,
+  img: { src: data.heroImage, alt: data.heroImageAlt },
+  jsonLd: [
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      name: data.title,
+      serviceType: data.serviceName,
+      description: data.seo.description,
+      url: pageUrl,
+      provider: { "@type": "LocalBusiness", name: site.name, url: site.url },
+      areaServed: { "@type": "City", name: data.city, containedInPlace: { "@type": "State", name: "Rio Grande do Sul" } },
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: breadcrumbs.map((b, i) => ({
+        "@type": "ListItem",
+        position: i + 1,
+        name: b.label,
+        item: new URL(b.href ?? `/${page.id}`, site.url).href,
+      })),
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: data.faqs.map((f) => ({
+        "@type": "Question",
+        name: f.question,
+        acceptedAnswer: { "@type": "Answer", text: f.answer },
+      })),
+    },
+  ],
+};
+---
+
+<Layout {meta}>
+  <PageHero
+    image={data.heroImage}
+    imageAlt={data.heroImageAlt}
+    height="lg"
+    headingSize="6xl"
+    brightness={22}
+    badge={`${data.city}, RS`}
+    subtitle={data.subtitle}
+  >
+    {data.h1}
+  </PageHero>
+
+  <Section spacing="xs" class="border-b border-border">
+    <Container>
+      <Breadcrumbs items={breadcrumbs} />
+    </Container>
+  </Section>
+
+  <Section spacing="lg">
+    <Container>
+      <div class="grid gap-12 lg:grid-cols-3">
+        <div class="space-y-12 lg:col-span-2">
+          <div class="motion-slide-up space-y-4 text-base leading-relaxed text-muted-foreground [&_h2]:mt-8 [&_h2]:mb-4 [&_h2]:text-2xl [&_h2]:font-black [&_h2]:text-foreground [&_strong]:text-foreground">
+            <Content />
+          </div>
+
+          <div>
+            <Heading size="lg" class="mb-6">{data.localFactors.heading}</Heading>
+            <div class="grid gap-4 sm:grid-cols-2">
+              {
+                data.localFactors.items.map((item) => (
+                  <div class="border border-border p-6 transition-colors hover:border-primary">
+                    <h3 class="mb-2 text-sm font-bold text-foreground">{item.title}</h3>
+                    <p class="text-sm leading-relaxed text-muted-foreground">{item.description}</p>
+                  </div>
+                ))
+              }
+            </div>
+          </div>
+
+          <div>
+            <Heading size="lg" class="mb-6">Como a Art's executa o serviço</Heading>
+            <div class="space-y-3">
+              {data.highlights.map((item) => <CheckItem>{item}</CheckItem>)}
+            </div>
+            <a
+              href={serviceHref}
+              class="mt-6 inline-flex items-center gap-2 text-sm font-bold text-primary transition-colors hover:text-foreground"
+            >
+              Conheça o serviço completo de {service.data.title.toLowerCase()}
+              <Icon name="arrow-right" class="size-4" />
+            </a>
+          </div>
+
+          <div>
+            <Heading size="lg" class="mb-4">Bairros atendidos em {data.city}</Heading>
+            <p class="mb-4 text-sm leading-relaxed text-muted-foreground">
+              Atendemos condomínios, prédios comerciais e empresas em todos os bairros de {data.city}, entre eles:
+            </p>
+            <ul class="flex flex-wrap gap-2">
+              {data.neighborhoods.map((n) => <li class="border border-border px-3 py-1 text-sm text-muted-foreground">{n}</li>)}
+            </ul>
+          </div>
+        </div>
+
+        <aside class="space-y-6">
+          <QuoteCard
+            sticky
+            heading={`Orçamento em ${data.city}`}
+            text={site.quoteText}
+            whatsapp={{ label: "WhatsApp", href: whatsappUrl(quoteMessage) }}
+            phone={{ label: site.phone.display, href: site.phone.href }}
+          />
+          {
+            siblings.length > 0 && (
+              <div class="border border-border p-6">
+                <h3 class="mb-4 text-sm font-bold tracking-widest text-foreground uppercase">Também em {data.city}</h3>
+                <div class="space-y-1">
+                  {siblings.map((s) => (
+                    <a
+                      href={`/${s.id}`}
+                      class="flex items-center gap-2 border-b border-border py-2 text-sm text-muted-foreground transition-colors last:border-0 hover:text-primary"
+                    >
+                      <Icon name="arrow-right" class="size-3 text-primary" />
+                      {s.data.title}
+                    </a>
+                  ))}
+                </div>
+              </div>
+            )
+          }
+        </aside>
+      </div>
+    </Container>
+  </Section>
+
+  <FAQ eyebrow="Dúvidas Frequentes" heading={`${data.serviceName} em ${data.city}: perguntas comuns`} items={data.faqs} />
+
+  <CTASection
+    tone="muted"
+    size="sm"
+    heading={`Orçamento de ${data.serviceName.toLowerCase()} em ${data.city}`}
+    text={`Fazemos a visita técnica no seu prédio em ${data.city} e enviamos a proposta. ${site.quoteText}`}
+    ctas={[{ label: "Falar pelo WhatsApp", href: whatsappUrl(quoteMessage), icon: "whatsapp", external: true }]}
+  />
+</Layout>
