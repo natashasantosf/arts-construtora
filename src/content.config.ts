@@ -28,6 +28,39 @@ const services = defineCollection({
     }),
 });
 
+/**
+ * City landing pages served at the site root (e.g. /pintura-predial-canoas-rs). The file name is the URL.
+ * Copy must be written for the city, not copied from the service page, so the two don't compete as duplicates.
+ */
+const localPages = defineCollection({
+  loader: glob({ pattern: "**/*.md", base: "./src/content/local-pages" }),
+  schema: ({ image }) =>
+    z.object({
+      service: reference("services"),
+      city: z.string(),
+      /** How people search for the service, e.g. "Manutenção Predial" (the service page may be named differently). */
+      serviceName: z.string(),
+      /** Short name used in breadcrumbs and cross links, e.g. "Pintura Predial em Canoas". */
+      title: z.string(),
+      h1: z.string(),
+      subtitle: z.string(),
+      heroImage: image(),
+      heroImageAlt: z.string(),
+      localFactors: z.object({
+        heading: z.string(),
+        items: z.array(z.object({ title: z.string(), description: z.string() })),
+      }),
+      /** A few points about the service, linking to its full page; not the service's `included` list. */
+      highlights: z.array(z.string()).max(3),
+      neighborhoods: z.array(z.string()),
+      faqs: z.array(z.object({ question: z.string(), answer: z.string() })),
+      seo: z.object({
+        title: z.string(),
+        description: z.string(),
+      }),
+    }),
+});
+
 const projects = defineCollection({
   loader: file("src/content/projects.json"),
   schema: ({ image }) =>
@@ -100,4 +133,4 @@ const regions = defineCollection({
   }),
 });
 
-export const collections = { services, projects, featuredProjects, posts, testimonials, faqs, regions };
+export const collections = { services, localPages, projects, featuredProjects, posts, testimonials, faqs, regions };
