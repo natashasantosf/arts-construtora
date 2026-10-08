@@ -45,8 +45,6 @@ faqs:
     answer: "Depende do sistema aplicado e da exposição da fachada. Com a umidade de Canoas, fachadas com pintura comum costumam mostrar desgaste em poucos anos. Sistemas elastoméricos, com boa preparação, duram bem mais. A inspeção anual indica a hora certa de repintar."
   - question: "O bolor na fachada sai só com a pintura nova?"
     answer: "Não. Se a tinta for aplicada sobre fungos, eles voltam a aparecer através da nova camada. É preciso lavar, aplicar tratamento antifungo e deixar secar antes de pintar. Essa etapa faz parte da preparação que incluímos em todas as obras."
-  - question: "Meu prédio foi atingido pela enchente. Posso pintar agora?"
-    answer: "Antes de pintar é preciso confirmar que a alvenaria secou e que o reboco não perdeu aderência. Em muitos prédios de Canoas atingidos em 2024, a faixa inferior das paredes ainda precisa de tratamento de umidade. Avaliamos isso na visita técnica."
   - question: "Vocês fazem orçamento de pintura predial em Canoas?"
     answer: "Sim. Agendamos a visita técnica pelo WhatsApp ou telefone, avaliamos a fachada e enviamos a proposta com sistema de pintura, prazo e garantia. A Art's começou em Canoas e mantém equipe na cidade."
 seo:

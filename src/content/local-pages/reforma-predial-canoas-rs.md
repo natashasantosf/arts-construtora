@@ -10,10 +10,10 @@ heroImageAlt: "Reforma predial de edifício residencial em Canoas, RS"
 localFactors:
   heading: "O que encontramos nos prédios de Canoas"
   items:
-    - title: "Marcas da enchente de 2024"
-      description: "Em bairros alagados em maio de 2024, como Mathias Velho, Harmonia, Rio Branco e Fátima, é comum encontrar reboco esfarelando, revestimento solto e pintura descascando até a altura que a água atingiu."
-    - title: "Umidade que sobe pelas paredes"
-      description: "Mesmo depois de secas na superfície, alvenarias que ficaram submersas continuam puxando umidade do solo e mostram manchas, salitre e bolor meses depois."
+    # - title: "Marcas da enchente de 2024"
+      # description: "Em bairros alagados em maio de 2024, como Mathias Velho, Harmonia, Rio Branco e Fátima, é comum encontrar reboco esfarelando, revestimento solto e pintura descascando até a altura que a água atingiu."
+    # - title: "Umidade que sobe pelas paredes"
+      # description: "Mesmo depois de secas na superfície, alvenarias que ficaram submersas continuam puxando umidade do solo e mostram manchas, salitre e bolor meses depois."
     - title: "Prédios das décadas de 1970 a 1990"
       description: "Boa parte dos edifícios do Centro e do Marechal Rondon tem fachadas originais com pastilhas e rebocos que já passaram do fim da vida útil e precisam de recuperação completa."
     - title: "Reforma com moradores dentro"
@@ -43,8 +43,8 @@ faqs:
     answer: "Normalmente não. Alvenaria que ficou submersa retém umidade e sais por muito tempo, e a tinta nova descasca em poucos meses. Antes de qualquer acabamento é preciso avaliar o reboco, remover o que perdeu aderência, tratar a umidade e só então refazer revestimento e pintura. O laudo inicial indica o que precisa ser refeito e o que pode ser mantido."
   - question: "O condomínio precisa de alguma documentação para fazer a reforma?"
     answer: "Sim. A ABNT NBR 16280 exige que reformas em edificações tenham um plano assinado por profissional habilitado, apresentado ao síndico antes do início da obra. A Art's Construtora elabora esse plano e emite a ART do engenheiro responsável, o que protege o síndico e o condomínio."
-  - question: "Vocês fazem a visita técnica em Canoas sem custo?"
-    answer: "A visita técnica para avaliar o prédio e montar a proposta é agendada pelo WhatsApp ou telefone. Como a empresa começou em Canoas e mantém equipe na Grande Porto Alegre, conseguimos encaixar visitas na cidade com rapidez."
+  # - question: "Vocês fazem a visita técnica em Canoas sem custo?"
+    # answer: "A visita técnica para avaliar o prédio e montar a proposta é agendada pelo WhatsApp ou telefone. Como a empresa começou em Canoas e mantém equipe na Grande Porto Alegre, conseguimos encaixar visitas na cidade com rapidez."
   - question: "Quanto tempo dura uma reforma de fachada em um prédio de Canoas?"
     answer: "Depende da altura, do estado da fachada e do sistema escolhido. Um prédio de quatro a seis andares com reboco comprometido costuma levar algumas semanas; edifícios maiores ou com troca de revestimento levam mais. O cronograma sai junto com a proposta, depois do laudo."
   - question: "A reforma pode ser feita sem andaime na calçada?"
@@ -54,7 +54,7 @@ seo:
   description: "Reforma predial e recuperação de fachadas em Canoas/RS, inclusive prédios atingidos pela enchente. Laudo, plano conforme NBR 16280, ART e alpinismo industrial."
 ---
 
-Canoas é uma das cidades mais populosas do Rio Grande do Sul, e boa parte dos seus prédios residenciais e comerciais foi construída entre as décadas de 1970 e 1990. Muitos desses edifícios chegaram ao ponto em que pintar não resolve mais: o reboco está fissurado, o revestimento cerâmico começa a soltar e a água encontra caminho pela fachada. Para esses casos, a solução é uma **reforma predial** planejada.
+Canoas é uma das cidades mais populosas do Rio Grande do Sul, e boa parte dos seus prédios residenciais e comerciais foram construídos entre as décadas de 1970 e 1990. Muitos desses edifícios chegaram ao ponto em que pintar não resolve mais: o reboco está fissurado, o revestimento cerâmico começa a soltar e a água encontra caminho pela fachada. Para esses casos, a solução é uma **reforma predial** planejada.
 
 A enchente de maio de 2024 tornou isso ainda mais urgente. Bairros como Mathias Velho, Harmonia, Rio Branco e Fátima ficaram dias com água acima do térreo, e a alvenaria desses prédios absorveu umidade e sais que continuam aparecendo na forma de manchas, bolor e reboco esfarelando. Reformar um prédio atingido pela cheia exige diagnóstico antes do acabamento, ou o problema volta em poucos meses.
 
