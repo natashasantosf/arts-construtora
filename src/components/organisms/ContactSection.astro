@@ -210,12 +210,26 @@ const label = "text-sm font-semibold text-foreground";
       });
       const result = (await response.json().catch(() => ({}))) as { ok?: boolean; error?: string };
       if (response.ok && result.ok) {
+        const posthog = (window as typeof window & {
+          posthog?: {
+            capture: (event: string, properties?: Record<string, unknown>) => void;
+            logger?: { info: (message: string, attributes?: Record<string, unknown>) => void };
+          };
+        }).posthog;
+        posthog?.capture("quote_request_submitted");
+        posthog?.logger?.info("quote request accepted", { channel: "contact_form" });
         form.reset();
         show("success");
       } else {
+        (window as typeof window & {
+          posthog?: { logger?: { warn: (message: string, attributes?: Record<string, unknown>) => void } };
+        }).posthog?.logger?.warn("quote request rejected", { status_code: response.status });
         show("error", result.error ?? messages.error);
       }
     } catch {
+      (window as typeof window & {
+        posthog?: { logger?: { error: (message: string, attributes?: Record<string, unknown>) => void } };
+      }).posthog?.logger?.error("quote request unavailable", { channel: "contact_form" });
       show("error");
     } finally {
       if (widgetId !== undefined) turnstile()?.reset(widgetId);
