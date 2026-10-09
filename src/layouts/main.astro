@@ -75,6 +75,24 @@ const areaLinks = (cities: string[]) => cities.map((city) => ({ label: city, hre
 		{!bare && <WhatsAppFloat href={whatsappUrl()} />}
 		<script>
 			import "@/utils/animation-classes";
+
+			type PostHogClient = {
+				capture: (event: string, properties?: Record<string, unknown>) => void;
+			};
+
+			document.addEventListener("click", (event) => {
+				if (!(event.target instanceof Element)) return;
+				const link = event.target.closest<HTMLAnchorElement>("a[href]");
+				if (!link) return;
+
+				// Read on each click: the loader stub in window.posthog is replaced once the library loads.
+				const posthog = (window as typeof window & { posthog?: PostHogClient }).posthog;
+				if (link.href.startsWith("https://wa.me/")) {
+					posthog?.capture("whatsapp_contact_started");
+				} else if (link.href.startsWith("tel:")) {
+					posthog?.capture("phone_contact_started");
+				}
+			});
 		</script>
 	</body>
 </html>

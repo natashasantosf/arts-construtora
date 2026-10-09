@@ -1,0 +1,4 @@
+# Cloudflare static assets redirects (https://developers.cloudflare.com/workers/static-assets/redirects/)
+# URLs from the old site that changed.
+/fale-conosco /contato 301
+/fale-conosco/ /contato 301
