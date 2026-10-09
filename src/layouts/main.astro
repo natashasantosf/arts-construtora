@@ -75,23 +75,25 @@ const areaLinks = (cities: string[]) => cities.map((city) => ({ label: city, hre
 		{!bare && <WhatsAppFloat href={whatsappUrl()} />}
 		<script>
 			import "@/utils/animation-classes";
+			import { events, posthog } from "@/utils/posthog";
 
-			type PostHogClient = {
-				capture: (event: string, properties?: Record<string, unknown>) => void;
-			};
-
+			// WhatsApp and phone clicks have no name or e-mail of their own. PostHog attaches them to the
+			// person once the same browser sends the quote form (see ContactSection).
 			document.addEventListener("click", (event) => {
 				if (!(event.target instanceof Element)) return;
 				const link = event.target.closest<HTMLAnchorElement>("a[href]");
 				if (!link) return;
 
-				// Read on each click: the loader stub in window.posthog is replaced once the library loads.
-				const posthog = (window as typeof window & { posthog?: PostHogClient }).posthog;
-				if (link.href.startsWith("https://wa.me/")) {
-					posthog?.capture("whatsapp_contact_started");
-				} else if (link.href.startsWith("tel:")) {
-					posthog?.capture("phone_contact_started");
-				}
+				const name = link.href.startsWith("https://wa.me/")
+					? events.whatsapp
+					: link.href.startsWith("tel:")
+						? events.phone
+						: null;
+				if (!name) return;
+				posthog()?.capture(name, {
+					page: location.pathname,
+					link_label: (link.textContent?.trim() || link.getAttribute("aria-label")) ?? undefined,
+				});
 			});
 		</script>
 	</body>

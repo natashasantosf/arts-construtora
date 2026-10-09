@@ -146,6 +146,8 @@ const label = "text-sm font-semibold text-foreground";
 </Section>
 
 <script>
+  import { events, posthog } from "@/utils/posthog";
+
   const form = document.querySelector<HTMLFormElement>("[data-quote-form]");
   const status = form?.querySelector<HTMLElement>("[data-form-status]");
   const submit = form?.querySelector<HTMLButtonElement>("[data-submit]");
@@ -202,34 +204,30 @@ const label = "text-sm font-semibold text-foreground";
     submit.disabled = true;
     const label = submit.textContent;
     submit.textContent = "Enviando...";
+    const data = new FormData(form);
+    const field = (name: string) => String(data.get(name) ?? "").trim();
     try {
       const response = await fetch(form.action, {
         method: "POST",
-        body: new FormData(form),
+        body: data,
         headers: { Accept: "application/json" },
       });
       const result = (await response.json().catch(() => ({}))) as { ok?: boolean; error?: string };
       if (response.ok && result.ok) {
-        const posthog = (window as typeof window & {
-          posthog?: {
-            capture: (event: string, properties?: Record<string, unknown>) => void;
-            logger?: { info: (message: string, attributes?: Record<string, unknown>) => void };
-          };
-        }).posthog;
-        posthog?.capture("quote_request_submitted");
-        posthog?.logger?.info("quote request accepted", { channel: "contact_form" });
+        // The e-mail is the person's id in PostHog, so earlier anonymous visits and WhatsApp clicks
+        // from this browser are merged into the same person.
+        const email = field("email").toLowerCase();
+        posthog()?.identify(email, { name: field("nome"), email, phone: field("telefone"), city: field("cidade") });
+        posthog()?.capture(events.quoteRequest, { service: field("servico"), city: field("cidade"), page: location.pathname });
+        posthog()?.logger?.info("quote request accepted", { channel: "contact_form" });
         form.reset();
         show("success");
       } else {
-        (window as typeof window & {
-          posthog?: { logger?: { warn: (message: string, attributes?: Record<string, unknown>) => void } };
-        }).posthog?.logger?.warn("quote request rejected", { status_code: response.status });
+        posthog()?.logger?.warn("quote request rejected", { status_code: response.status });
         show("error", result.error ?? messages.error);
       }
     } catch {
-      (window as typeof window & {
-        posthog?: { logger?: { error: (message: string, attributes?: Record<string, unknown>) => void } };
-      }).posthog?.logger?.error("quote request unavailable", { channel: "contact_form" });
+      posthog()?.logger?.error("quote request unavailable", { channel: "contact_form" });
       show("error");
     } finally {
       if (widgetId !== undefined) turnstile()?.reset(widgetId);
